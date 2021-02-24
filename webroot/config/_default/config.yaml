@@ -1,6 +1,6 @@
 languageCode: "en-gb"
 uglyURLs: false
-title: "COAR Notify Models"
+title: "COAR Notify Documentation"
 enableRobotsTXT: true
 disableKinds: ["RSS","taxonomy","taxonomyTerm"]
 metaDataFormat: "yaml"
