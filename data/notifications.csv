@@ -1,0 +1,5 @@
+scenario_id,title,scope,position,sender,pattern_id,description
+repository_requests_review,Request Review,notify,1,actor_1,request_review_of_resource,The repository request a review from the review service
+repository_requests_review,Review,actor_2,2,,,The review service conducts the review
+repository_requests_review,Review Notification,notify,3,actor_2,announce_review_of_resource,The review service notifies the repository of a new review
+repository_requests_review,Repository Links to Review,actor_1,4,,,The repository creates a links to the review

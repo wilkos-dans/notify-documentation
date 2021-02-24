@@ -1,0 +1,36 @@
+id,title,description,payload_example_1,payload_example_2,payload_example_3,payload_example_4
+request_review_of_resource,Requesting a review of a resource,"Requesting a review of a resource. In payload example 1, the actor is the author of the original resource, requesting a review. In payload example 2, the request is 'anonymous'.","{
+  ""@context"": ""https://www.w3.org/ns/activitystreams"",
+  ""@id"": """",
+  ""@type"": ""Offer"",
+  ""actor"": ""https://orcid.org/0000-0002-1825-0097"",
+  ""object"": ""http://example.org/repository_articlew"",
+  ""updated"": ""2016-06-28T19:56:20.114Z""
+}
+","{
+  ""@context"": ""https://www.w3.org/ns/activitystreams"",
+  ""@id"": """",
+  ""@type"": ""Offer"",
+  ""actor"": """",
+  ""object"": ""http://example.org/repository_articlew"",
+  ""updated"": ""2016-06-28T19:56:20.114Z""
+}",,
+announce_review_of_resource,Announcing a review of a resource,"Announcing a review of a resource. IN payload example 1, the actor is an identiifed reviewer. In payload example 2, the reviewr is not identified.","
+{
+  ""@context"": ""https://www.w3.org/ns/activitystreams"",
+  ""@id"": """",
+  ""@type"": ""Announce"",
+  ""actor"": ""https://orcid.org/0000-0002-1825-0097"",
+  ""object"": ""http://example.net/review"",
+  ""target"": ""http://example.org/repository_article"",
+  ""updated"": ""2016-06-28T19:56:20.114Z""
+}
+","{
+  ""@context"": ""https://www.w3.org/ns/activitystreams"",
+  ""@id"": """",
+  ""@type"": ""Announce"",
+  ""actor"": """",
+  ""object"": ""http://example.net/review"",
+  ""target"": ""http://example.org/repository_article"",
+  ""updated"": ""2016-06-28T19:56:20.114Z""
+}",,

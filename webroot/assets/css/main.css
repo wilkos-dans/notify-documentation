@@ -1,0 +1,179 @@
+html {
+  background-color: white;
+  max-width: 2000px;
+  margin: 0 auto;
+  padding: 1%;
+}
+
+body {
+  margin: 0 auto;
+  background-color: white;
+  border-radius: 8px;
+  font-family: 'Muli','Helvetica',sans-serif;
+  color: #555555;
+  font-size: 16px;
+}
+
+.force-word-wrap {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  /* Adds a hyphen where the word breaks */
+  -webkit-hyphens: auto;
+  -ms-hyphens: auto;
+  -moz-hyphens: auto;
+  hyphens: auto;
+}
+
+a,a:visited,a:hover {
+  color: #23527c;
+}
+
+a {
+  text-decoration: underline;
+}
+
+a.header-title,a.card-title-link {
+  text-decoration: none;
+  color: #555555;
+}
+
+a.card-title-link-white {
+  text-decoration: none;
+  color: white;
+}
+
+h1 {
+  font-size: 30px;
+}
+h2 {
+  font-size: 24px;
+}
+h3 {
+  font-size: 20px;
+}
+h4 {
+  font-size: 18px;
+}
+h5 {
+  font-size: 16px;
+}
+h6 {
+  font-size: 15px;
+}
+
+
+/*HEADER*/
+
+div#header {
+  margin-top: 20px;
+}
+
+div#footer {
+  margin-top: 20px;
+  padding-top: 10px;
+  border-top: 1px solid #cdcdcd;
+  font-size: x-small;
+  text-align: right;
+}
+
+a.site-title:hover {
+  text-decoration: underline;
+}
+
+img#header-logo {
+  max-width: 100%;
+  float: left;
+  margin-top: 5px;
+}
+
+h1.header-title {
+  font-size:3.5vw;
+}
+
+img#title-image {
+  max-width: 100%;
+}
+
+h1.page-title {
+  text-align: center;
+  border-top: 1px solid #cdcdcd;
+  border-bottom: 1px solid #cdcdcd;
+  padding-bottom: 3px;
+}
+
+/****** Layout table ******/
+table.invisible-layout-table tr, table.invisible-layout-table td {
+  border: none;
+}
+
+td.field-name {
+  text-align: right;
+  /*font-weight: bold;*/
+  white-space: nowrap;
+}
+
+/****** Swim lanes ******/
+
+div.column-left {
+  border-right: 4px dashed #cdcdcd;
+}
+
+div.column-right {
+  border-left: 4px dashed #cdcdcd;
+}
+
+.swim-lane-title {
+  text-align: center;
+  border-bottom: 4px solid #cdcdcd;
+}
+
+div.card {
+  margin-bottom: 15px;
+}
+
+div.card-body {
+  font-size: 90%;
+}
+
+div.notify-card-header {
+  background-color: #4682b4;
+  color: white;
+}
+
+div.notify-card-body {
+  background-color: #ffffe0;
+}
+
+div.card-header {
+  font-weight: bold;
+  /*font-size: 90%;*/
+}
+
+img.arrow-left {
+  float: left;
+}
+
+img.arrow-right {
+  float: right;
+}
+
+.step-number {
+  color: white;
+  font-weight: bold;
+  border-radius: 50%;
+  width: 100%;
+  height: 100%;
+  padding-top: 1px;
+  padding-bottom: 1px;
+  padding-left: 4px;
+  padding-right: 4px;
+  background: orange;
+  border: 1px solid #666;
+  text-align: center;
+}
+
+pre,code {
+  padding: 0px;
+}
+
+

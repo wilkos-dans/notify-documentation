@@ -1,0 +1,71 @@
+{{ range (.Data.Pages.ByParam "step.position") }}
+  {{ if eq .Params.step.scope "notify" }}
+    <div class="row">
+      <div class="col-3 column-left">
+      </div>
+      <div class="col-6 column-center">
+          <div class="card">
+            <div class="card-header notify-card-header">
+              <a class="card-title-link-white" href="{{ .Permalink }}"><span class="step-number">{{ .Params.step.position }}</span>&nbsp;{{ .Title }}</a>
+            </div>
+            <div class="card-body notify-card-body">
+              {{ if eq .Params.step.sender "actor_1" }}
+                <img class="arrow-right" src="/images/arrow_right.png"/>
+              {{ end }}
+              
+              {{ if eq .Params.step.sender "actor_2" }}
+                <img class="arrow-left" src="/images/arrow_left.png"/>
+              {{ end }}
+              <p>{{ .Description }}</p>
+              {{ with .Site.GetPage (print "/notification_patterns/" .Params.pattern_id) }}
+                Uses notification pattern: <i><a href="{{ .Permalink }}">{{ .Title  }}</a></i>
+              {{ end }}
+            </div>
+          </div>
+
+      </div>
+      <div class="col-3 column-right">
+      </div>
+    </div>
+  {{ end }}
+  {{ if eq .Params.step.scope "actor_1" }}
+    <div class="row">
+      <div class="col-3 column-left">
+        <a class="card-title-link" href="{{ .Permalink }}">
+          <div class="card">
+            <div class="card-header">
+              <span class="step-number">{{ .Params.step.position }}</span>&nbsp;{{ .Title }}
+            </div>
+            <div class="card-body">
+              {{ .Description }}
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="col-6 column-center">
+      </div>
+      <div class="col-3 column-right">
+      </div>
+    </div>
+  {{ end }}
+  {{ if eq .Params.step.scope "actor_2" }}
+    <div class="row">
+      <div class="col-3 column-left">
+      </div>
+      <div class="col-6 column-center">
+      </div>
+      <div class="col-3 column-right">
+        <a class="card-title-link" href="{{ .Permalink }}">
+          <div class="card">
+            <div class="card-header">
+              <span class="step-number">{{ .Params.step.position }}</span>&nbsp;{{ .Title }}
+            </div>
+            <div class="card-body">
+              {{ .Description }}
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+  {{ end }}
+{{ end }}

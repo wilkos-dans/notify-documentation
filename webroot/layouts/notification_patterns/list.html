@@ -1,0 +1,27 @@
+{{ define "main" }}
+<div class="row">
+  <div class="col">
+    <h1 class="page-title">{{ .Title }}</h1>
+  </div>
+</div>
+<div class="row">
+  <div class="col">
+    {{ .Content }}
+  </div>
+</div>
+<div class="row">
+  {{ range .Sections }}
+  <div class="col-12 col-sm-6 col-lg-4">
+    <div class="card">
+      <div class="card-header">
+        <a class="card-title-link" href="{{ .Permalink }}">{{ .Title }}</a>
+      </div>
+      <div class="card-body">
+        <p>{{ .Description }}</p>
+      </div>
+    </div>
+  </div>
+  {{ end }}
+</div>
+
+{{ end }}

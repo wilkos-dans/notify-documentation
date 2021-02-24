@@ -1,0 +1,8 @@
+debugging: true
+webroot: "./webroot"
+#scenarios_csv_source: "./data/scenarios.csv"
+#notifications_csv_source: "./data/notifications.csv"
+#notification_patterns_csv_source: "./data/notification_patterns.csv"
+scenarios_csv_source: "https://docs.google.com/spreadsheets/d/e/2PACX-1vSRpf-bIxqFlvLRawKBf8evhhYwYh_zuG3Zd55DeZIPc6VffoQOvI5Phha0EaVWOJSUYD-0TOFGzVtB/pub?gid=0&single=true&output=csv"
+notifications_csv_source: "https://docs.google.com/spreadsheets/d/e/2PACX-1vSRpf-bIxqFlvLRawKBf8evhhYwYh_zuG3Zd55DeZIPc6VffoQOvI5Phha0EaVWOJSUYD-0TOFGzVtB/pub?gid=456087922&single=true&output=csv"
+notification_patterns_csv_source: "https://docs.google.com/spreadsheets/d/e/2PACX-1vSRpf-bIxqFlvLRawKBf8evhhYwYh_zuG3Zd55DeZIPc6VffoQOvI5Phha0EaVWOJSUYD-0TOFGzVtB/pub?gid=379897871&single=true&output=csv"

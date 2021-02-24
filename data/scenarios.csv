@@ -1,0 +1,2 @@
+id,title,actor_1,actor_2,description
+repository_requests_review,Repository Requests Review,Repository,Review Service,"A repository requests a review, for one of its resources, from a trusted review service"
