@@ -1,4 +1,4 @@
-module "COAR Notify Diagramming"
+module "notify_diagramming"
 
 go 1.15
 

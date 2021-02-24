@@ -1,0 +1,22 @@
+{{ define "main" }}
+<div class="row">
+  <div class="col">
+    <h1 class="page-title">{{ .Title }}</h1>
+  </div>
+</div>
+<div class="row">
+  <div class="col">
+    {{ .Description }}
+    <br />
+    {{ if eq .Params.step.scope "notify" }}
+      This is a notification that uses the notification pattern:
+      {{ with .Site.GetPage (print "/notification_patterns/" .Params.pattern_id) }}
+        <i><a href="{{ .Permalink }}">{{ .Title  }}</a></i>
+      {{ end }}
+    {{ else }}
+      This is an operation that is internal to one of the participating systems so no further detail is captured here.
+    {{ end }}
+
+  </div>
+</div>
+{{ end }}
