@@ -7,11 +7,10 @@ import (
 )
 
 type Config struct {
-	Debugging              bool   `yaml:"debugging"`
-	WebrootFolderPath      string `yaml:"webroot"`
-	ScenariosCsvDataSource string `yaml:"scenarios_csv_source"`
+	Debugging                  bool   `yaml:"debugging"`
+	WebrootFolderPath          string `yaml:"webroot"`
+	ScenariosCsvDataSource     string `yaml:"scenarios_csv_source"`
 	NotificationsCsvDataSource string `yaml:"notifications_csv_source"`
-	NotificationPatternsCsvSource string `yaml:"notification_patterns_csv_source"`
 }
 
 func (config *Config) unmarshal(filePath string) error {

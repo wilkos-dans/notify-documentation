@@ -141,13 +141,22 @@ div.notify-card-header {
 }
 
 div.notify-card-body {
-  background-color: #ffffe0;
+  /*background-color: #ffffe0;*/
 }
 
 div.card-header {
   font-weight: bold;
   /*font-size: 90%;*/
 }
+/*img.arrow {*/
+/*  max-width: 90%;*/
+/*  position: absolute;*/
+/*  top: 0;*/
+/*  bottom: 0;*/
+/*  margin-top: auto;*/
+/*  margin-bottom: auto;*/
+/*  !*border: 1px solid red;*!*/
+/*}*/
 
 img.arrow-left {
   float: left;

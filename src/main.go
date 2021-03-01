@@ -26,7 +26,7 @@ func main() {
 	} else {
 		zapLogger.Info("Configuration loaded OK")
 	}
-	err = website.Initialise(config.WebrootFolderPath, config.ScenariosCsvDataSource,config.NotificationsCsvDataSource,config.NotificationPatternsCsvSource)
+	err = website.Initialise(config.WebrootFolderPath, config.ScenariosCsvDataSource, config.NotificationsCsvDataSource)
 	if err != nil {
 		zapLogger.Fatal("Unable to initialise - halting execution")
 	} else {
@@ -35,7 +35,7 @@ func main() {
 
 	//scenario1 := website.GetScenarioById("repository_requests_review_OLD")
 	//for _,notification := range scenario1.Notifications {
-	//	fmt.Printf("Notification: %s \n",notification.Step.From)
+	//	fmt.Printf("WorkflowStep: %s \n",notification.Step.From)
 	//}
 
 	website.WriteWebPages()

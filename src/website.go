@@ -11,23 +11,21 @@ import (
 )
 
 type Website struct {
-	WebrootFolderPath               string
-	ContentFolderPath               string
-	ScenariosFolderPath             string
-	NotificationsFolderPath         string
+	WebrootFolderPath              string
+	ContentFolderPath              string
+	ScenariosFolderPath            string
+	NotificationsFolderPath        string
 	NotificationPatternsFolderPath string
-	StaticContentFolderPath         string
-	Scenarios                       []*Scenario
-	NotificationsPatterns          []NotificationPattern
+	StaticContentFolderPath        string
+	Scenarios                      []*Scenario
 }
 
-func (website *Website) Initialise(webrootPath, scenariosCsvSource, notificationsCsvSource, notificationPatternsCsvSource string) error {
+func (website *Website) Initialise(webrootPath, scenariosCsvSource, notificationsCsvSource string) error {
 	var err error
 	website.WebrootFolderPath = webrootPath
 	website.ContentFolderPath = filepath.Join(website.WebrootFolderPath, "content")
 	website.ScenariosFolderPath = filepath.Join(website.ContentFolderPath, "scenarios")
 	website.NotificationsFolderPath = filepath.Join(website.ContentFolderPath, "notifications")
-	website.NotificationPatternsFolderPath = filepath.Join(website.ContentFolderPath, "notification_patterns")
 	website.StaticContentFolderPath = filepath.Join(website.WebrootFolderPath, "static")
 	scenariosCsvInput, err := readBytesFromFileOrUrl(scenariosCsvSource)
 	if err != nil {
@@ -52,32 +50,40 @@ func (website *Website) Initialise(webrootPath, scenariosCsvSource, notification
 	for _, notificationConfig := range notificationConfigs {
 		scenario := website.GetScenarioById(notificationConfig.ScenarioId)
 		if scenario != nil {
-			notification := Notification{
-				ScenarioId:  notificationConfig.ScenarioId,
-				Title:       notificationConfig.Title,
-				Description: notificationConfig.Description,
-				Updated:     time.Now().Format("2006-01-02"),
-				PatternId: notificationConfig.PatternId,
-				Step: StepStruct{
-					Scope:    notificationConfig.Scope,
-					Position: notificationConfig.Position,
-					Sender:   notificationConfig.Sender,
-				},
+			workflowStep := WorkflowStep{
+				ScenarioId:       notificationConfig.ScenarioId,
+				Title:            notificationConfig.Title,
+				Description:      notificationConfig.Description,
+				Updated:          time.Now().Format("2006-01-02"),
+				Scope:            notificationConfig.Scope,
+				Position:         notificationConfig.Position,
+				Sender:           notificationConfig.Sender,
+				MandatoryPayload: notificationConfig.MandatoryPayload,
+				PayloadExamples:  make([]PayloadExample, 0),
 			}
-			scenario.Notifications = append(scenario.Notifications, notification)
+			workflowStep.PayloadExamples = append(workflowStep.PayloadExamples, PayloadExample{
+				Number:      1,
+				Example:     notificationConfig.PayloadExample1,
+				Description: notificationConfig.PayloadDescription1,
+			})
+			workflowStep.PayloadExamples = append(workflowStep.PayloadExamples, PayloadExample{
+				Number:      2,
+				Example:     notificationConfig.PayloadExample2,
+				Description: notificationConfig.PayloadDescription2,
+			})
+			workflowStep.PayloadExamples = append(workflowStep.PayloadExamples, PayloadExample{
+				Number:      3,
+				Example:     notificationConfig.PayloadExample3,
+				Description: notificationConfig.PayloadDescription3,
+			})
+			workflowStep.PayloadExamples = append(workflowStep.PayloadExamples, PayloadExample{
+				Number:      4,
+				Example:     notificationConfig.PayloadExample4,
+				Description: notificationConfig.PayloadDescription4,
+			})
+			scenario.Notifications = append(scenario.Notifications, workflowStep)
 		}
 	}
-	notificationPatternsCsvInput, err := readBytesFromFileOrUrl(notificationPatternsCsvSource)
-	if err != nil {
-		zapLogger.Error(err.Error())
-		return err
-	}
-	err = csvutil.Unmarshal(notificationPatternsCsvInput, &website.NotificationsPatterns)
-	if err != nil {
-		zapLogger.Error(err.Error())
-		return err
-	}
-	zapLogger.Info("Notification Patterns loaded OK")
 	return err
 }
 
@@ -112,7 +118,7 @@ func (website *Website) WriteWebPages() error {
 			return scenarioPageWriteErr
 		}
 		for _, notification := range scenario.Notifications {
-			notificationFilePath := filepath.Join(scenarioFolderPath, fmt.Sprintf("%v.md", notification.Step.Position))
+			notificationFilePath := filepath.Join(scenarioFolderPath, fmt.Sprintf("%v.md", notification.Position))
 			notificationPage, notificationMarshallErr := notification.Marshal()
 			if notificationMarshallErr != nil {
 				zapLogger.Error(notificationMarshallErr.Error())
@@ -124,25 +130,6 @@ func (website *Website) WriteWebPages() error {
 				return notificationPageWriteErr
 			}
 		}
-	}
-	for _, notificationPattern := range website.NotificationsPatterns {
-		notificationPatternFolderPath := filepath.Join(website.NotificationPatternsFolderPath, notificationPattern.Id)
-		err = resetVolatileFolder(notificationPatternFolderPath)
-		if err != nil {
-			zapLogger.Error(err.Error())
-			return err
-		}
-		notificationPatternPage, notificationPatternPageMarshallErr := notificationPattern.Marshal()
-		if notificationPatternPageMarshallErr != nil {
-			zapLogger.Error(notificationPatternPageMarshallErr.Error())
-			return notificationPatternPageMarshallErr
-		}
-		notificationPatternPageWriteErr := ioutil.WriteFile(filepath.Join(notificationPatternFolderPath, "_index.md"), notificationPatternPage, os.ModePerm)
-		if notificationPatternPageWriteErr != nil {
-			zapLogger.Error(notificationPatternPageWriteErr.Error())
-			return notificationPatternPageWriteErr
-		}
-
 	}
 	return err
 }

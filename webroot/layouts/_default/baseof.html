@@ -4,7 +4,7 @@
   <body>
     <div class="container-fluid">
       {{partial "header" .}}
-      {{partial "navbar" .}}
+      {{ partial "navbar" . }}
       {{ block "main" . }}
     {{end}}
     {{ partial "footer" .}}

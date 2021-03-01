@@ -7,14 +7,20 @@
 <div class="row">
   <div class="col">
     {{ .Description }}
-    <br />
-    {{ if eq .Params.step.scope "notify" }}
-      This is a notification that uses the notification pattern:
-      {{ with .Site.GetPage (print "/notification_patterns/" .Params.pattern_id) }}
-        <i><a href="{{ .Permalink }}">{{ .Title  }}</a></i>
+  </div>
+  <div class="col">
+    {{ if eq .Params.scope "notify" }}
+      {{ with .Params.payload_examples }}
+        {{ range . }}
+          {{ if ne .example "" }}
+            <h3>Payload example {{ .number }}</h3>
+            <p>{{ .description }}</p>
+            <pre><code class="language-json">{{ .example }}</code></pre>
+          {{ end }}
+        {{ end }}
       {{ end }}
     {{ else }}
-      This is an operation that is internal to one of the participating systems so no further detail is captured here.
+    <i>This is an operation that is internal to one of the participating systems so no further detail is captured here.</i>
     {{ end }}
 
   </div>

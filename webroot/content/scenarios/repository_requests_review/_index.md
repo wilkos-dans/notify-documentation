@@ -4,6 +4,6 @@ description: A repository requests a review, for one of its resources, from a tr
 actor_1: Repository
 actor_2: Review Service
 layout: scenario
-date: "2021-02-24"
+date: "2021-03-01"
 ---
 
