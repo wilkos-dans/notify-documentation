@@ -1,28 +1,28 @@
 {{ define "main" }}
-<div class="row">
-  <div class="col">
-    <h1 class="page-title">{{ .Title }}</h1>
+  <div class="row">
+    <div class="col">
+      <h1 class="page-title">{{ .Title }}</h1>
+    </div>
   </div>
-</div>
-<div class="row">
-  <div class="col">
-    {{ .Description }}
-  </div>
-  <div class="col">
-    {{ if eq .Params.scope "notify" }}
-      {{ with .Params.payload_examples }}
-        {{ range . }}
-          {{ if ne .example "" }}
-            <h3>Payload example {{ .number }}</h3>
-            <p>{{ .description }}</p>
-            <pre><code class="language-json">{{ .example }}</code></pre>
-          {{ end }}
+  <div class="row">
+    <div class="col">
+        {{ .Description }}
+    </div>
+    <div class="col">
+        {{ if eq .Params.scope "notify" }}
+            {{ with .Params.payload_examples }}
+                {{ range . }}
+                    {{ if ne .example "" }}
+                      <h3>Payload example {{ .number }}</h3>
+                      <p>{{ .description }}</p>
+                      <pre><code class="language-json">{{ .example }}</code></pre>
+                    {{ end }}
+                {{ end }}
+            {{ end }}
+        {{ else }}
+          <i>This is an operation that is internal to one of the participating systems so no further detail is captured
+            here.</i>
         {{ end }}
-      {{ end }}
-    {{ else }}
-    <i>This is an operation that is internal to one of the participating systems so no further detail is captured here.</i>
-    {{ end }}
-
+    </div>
   </div>
-</div>
 {{ end }}

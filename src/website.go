@@ -7,7 +7,6 @@ import (
 	"io/ioutil"
 	"os"
 	"path/filepath"
-	"time"
 )
 
 type Website struct {
@@ -20,7 +19,7 @@ type Website struct {
 	Scenarios                      []*Scenario
 }
 
-func (website *Website) Initialise(webrootPath, scenariosCsvSource, notificationsCsvSource string) error {
+func (website *Website) Initialise(webrootPath, scenariosCsvSource, workflowStepsCsvSource string) error {
 	var err error
 	website.WebrootFolderPath = webrootPath
 	website.ContentFolderPath = filepath.Join(website.WebrootFolderPath, "content")
@@ -36,51 +35,21 @@ func (website *Website) Initialise(webrootPath, scenariosCsvSource, notification
 		return err
 	}
 	zapLogger.Info("Scenarios loaded OK")
-	notificationsCsvInput, err := readBytesFromFileOrUrl(notificationsCsvSource)
+	workflowStepsCsvInput, err := readBytesFromFileOrUrl(workflowStepsCsvSource)
 	if err != nil {
 		zapLogger.Error(err.Error())
 		return err
 	}
-	var notificationConfigs []NotificationConfig
-	err = csvutil.Unmarshal(notificationsCsvInput, &notificationConfigs)
+
+	var workflowSteps []WorkflowStep
+	err = csvutil.Unmarshal(workflowStepsCsvInput, &workflowSteps)
 	if err != nil {
 		zapLogger.Error(err.Error())
 		return err
 	}
-	for _, notificationConfig := range notificationConfigs {
-		scenario := website.GetScenarioById(notificationConfig.ScenarioId)
+	for _, workflowStep := range workflowSteps {
+		scenario := website.GetScenarioById(workflowStep.ScenarioId)
 		if scenario != nil {
-			workflowStep := WorkflowStep{
-				ScenarioId:       notificationConfig.ScenarioId,
-				Title:            notificationConfig.Title,
-				Description:      notificationConfig.Description,
-				Updated:          time.Now().Format("2006-01-02"),
-				Scope:            notificationConfig.Scope,
-				Position:         notificationConfig.Position,
-				Sender:           notificationConfig.Sender,
-				MandatoryPayload: notificationConfig.MandatoryPayload,
-				PayloadExamples:  make([]PayloadExample, 0),
-			}
-			workflowStep.PayloadExamples = append(workflowStep.PayloadExamples, PayloadExample{
-				Number:      1,
-				Example:     notificationConfig.PayloadExample1,
-				Description: notificationConfig.PayloadDescription1,
-			})
-			workflowStep.PayloadExamples = append(workflowStep.PayloadExamples, PayloadExample{
-				Number:      2,
-				Example:     notificationConfig.PayloadExample2,
-				Description: notificationConfig.PayloadDescription2,
-			})
-			workflowStep.PayloadExamples = append(workflowStep.PayloadExamples, PayloadExample{
-				Number:      3,
-				Example:     notificationConfig.PayloadExample3,
-				Description: notificationConfig.PayloadDescription3,
-			})
-			workflowStep.PayloadExamples = append(workflowStep.PayloadExamples, PayloadExample{
-				Number:      4,
-				Example:     notificationConfig.PayloadExample4,
-				Description: notificationConfig.PayloadDescription4,
-			})
 			scenario.Notifications = append(scenario.Notifications, workflowStep)
 		}
 	}

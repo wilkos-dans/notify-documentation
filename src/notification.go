@@ -11,43 +11,16 @@ type PayloadExample struct {
 	Description string `yaml:"description"`
 }
 
-type NotificationConfig struct {
-	ScenarioId          string `csv:"scenario_id"`
-	Title               string `csv:"title"`
-	Description         string `csv:"description"`
-	Updated             string `csv:"-"`
-	Scope               string `csv:"scope"`
-	Position            int    `csv:"position"`
-	Sender              string `csv:"sender"`
-	MandatoryPayload    string `csv:"mandatory_payload"`
-	PayloadExample1     string `csv:"payload_example_1"`
-	PayloadDescription1 string `csv:"payload_description_1"`
-	PayloadExample2     string `csv:"payload_example_2"`
-	PayloadDescription2 string `csv:"payload_description_2"`
-	PayloadExample3     string `csv:"payload_example_3"`
-	PayloadDescription3 string `csv:"payload_description_3"`
-	PayloadExample4     string `csv:"payload_example_4"`
-	PayloadDescription4 string `csv:"payload_description_4"`
-}
-
 type WorkflowStep struct {
-	ScenarioId       string           `yaml:"-"`
-	Title            string           `yaml:"title"`
-	Description      string           `yaml:"description"`
-	Updated          string           `yaml:"date"`
-	Scope            string           `yaml:"scope"`
-	Position         int              `yaml:"position"`
-	Sender           string           `yaml:"sender"`
-	MandatoryPayload string           `yaml:"mandatory_payload"`
-	PayloadExamples  []PayloadExample `yaml:"payload_examples"`
-	//PayloadExample1     string `yaml:"payload_example_1"`
-	//PayloadDescription1 string `yaml:"payload_description_1"`
-	//PayloadExample2     string `yaml:"payload_example_2"`
-	//PayloadDescription2 string `yaml:"payload_description_2"`
-	//PayloadExample3     string `yaml:"payload_example_3"`
-	//PayloadDescription3 string `yaml:"payload_description_3"`
-	//PayloadExample4     string `yaml:"payload_example_4"`
-	//PayloadDescription4 string `yaml:"payload_description_4"`
+	ScenarioId          string `csv:"scenario_id" yaml:"-"`
+	Title               string `csv:"title" yaml:"title"`
+	Description         string `csv:"description" yaml:"description"`
+	Updated             string `csv:"-" yaml:"date"`
+	Scope               string `csv:"scope" yaml:"scope"`
+	Position            int    `csv:"position" yaml:"position"`
+	Sender              string `csv:"sender" yaml:"sender"`
+	MandatoryProperties string `csv:"mandatory_properties" yaml:"mandatory_properties"`
+	JsonPayload         string `csv:"json_payload" yaml:"json_payload"`
 }
 
 func (notification *WorkflowStep) Marshal() ([]byte, error) {

@@ -6,22 +6,22 @@
   </div>
   <div class="row">
     <div class="col">
-      {{ .Content }}
+        {{ .Content }}
     </div>
   </div>
   <div class="row">
-    {{ range .Sections }}
-      <div class="col-12 col-sm-6 col-lg-4">
-        <div class="card">
-          <div class="card-header">
-            <a class="card-title-link" href="{{ .Permalink }}">{{ .Title }}</a>
-          </div>
-          <div class="card-body">
-            <p>{{ .Description }}</p>
+      {{ range .Sections }}
+        <div class="col-12 col-sm-6 col-lg-4">
+          <div class="card">
+            <div class="card-header">
+              <a class="card-title-link" href="{{ .Permalink }}">{{ .Title }}</a>
+            </div>
+            <div class="card-body">
+              <p>{{ .Description }}</p>
+            </div>
           </div>
         </div>
-      </div>
-    {{ end }}
+      {{ end }}
   </div>
 
 {{ end }}

@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
-  {{partial "head" .}}
-  <body>
-    <div class="container-fluid">
-      {{partial "header" .}}
-      {{ partial "navbar" . }}
-      {{ block "main" . }}
+{{partial "head" .}}
+<body>
+<div class="container-fluid">
+    {{partial "header" .}}
+    {{ partial "navbar" . }}
+    {{ block "main" . }}
     {{end}}
     {{ partial "footer" .}}
     {{ if (eq .Site.Params.showDebugInfo true) }}
-      {{partial "debugging" .}}
+        {{partial "debugging" .}}
     {{ end }}
-  </div>
-  </body>
+</div>
+</body>
 </html>
