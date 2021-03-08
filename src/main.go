@@ -26,7 +26,7 @@ func main() {
 	} else {
 		zapLogger.Info("Configuration loaded OK")
 	}
-	err = website.Initialise(config.WebrootFolderPath, config.ScenariosCsvDataSource, config.NotificationsCsvDataSource)
+	err = website.Initialise(config.WebrootFolderPath, config.ScenariosCsvDataSource, config.NotificationsCsvDataSource, config.PatternsCsvDataSource)
 	if err != nil {
 		zapLogger.Fatal("Unable to initialise - halting execution")
 	} else {

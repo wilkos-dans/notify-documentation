@@ -11,6 +11,9 @@ The documentation has the following structure:
 **Scenarios:**
 These describe an operation, typically involving a repository system and one other service. The operation is enabled by the exchange of *notifications*.
 
+**Notification Pattern**
+These describe the payload for a re-usable notification - a kind of template.
+
 **Notifications:**
 These describe the individual LDNs sent between repositories and services, one or more of which may be used in a *scenario*.
-A given *notification* is defined in the context of a *scenario*.
+A given *notification* is defined in the context of a *scenario*, and uses a *pattern*.

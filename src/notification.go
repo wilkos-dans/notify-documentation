@@ -5,22 +5,23 @@ import (
 	"time"
 )
 
-type PayloadExample struct {
-	Number      int    `yaml:"number"`
-	Example     string `yaml:"example"`
-	Description string `yaml:"description"`
-}
+//type PayloadExample struct {
+//	Number      int    `yaml:"number"`
+//	Example     string `yaml:"example"`
+//	Description string `yaml:"description"`
+//}
 
 type WorkflowStep struct {
-	ScenarioId          string `csv:"scenario_id" yaml:"-"`
-	Title               string `csv:"title" yaml:"title"`
-	Description         string `csv:"description" yaml:"description"`
-	Updated             string `csv:"-" yaml:"date"`
-	Scope               string `csv:"scope" yaml:"scope"`
-	Position            int    `csv:"position" yaml:"position"`
-	Sender              string `csv:"sender" yaml:"sender"`
-	MandatoryProperties string `csv:"mandatory_properties" yaml:"mandatory_properties"`
-	JsonPayload         string `csv:"json_payload" yaml:"json_payload"`
+	ScenarioId  string `csv:"scenario_id" yaml:"-"`
+	Title       string `csv:"title" yaml:"title"`
+	Description string `csv:"description" yaml:"description"`
+	Updated     string `csv:"-" yaml:"date"`
+	Scope       string `csv:"scope" yaml:"scope"`
+	Position    int    `csv:"position" yaml:"position"`
+	Sender      string `csv:"sender" yaml:"sender"`
+	PatternId   string `csv:"pattern_id" yaml:"pattern"`
+	//MandatoryProperties string `csv:"mandatory_properties" yaml:"mandatory_properties"`
+	//JsonPayload         string `csv:"json_payload" yaml:"json_payload"`
 }
 
 func (notification *WorkflowStep) Marshal() ([]byte, error) {

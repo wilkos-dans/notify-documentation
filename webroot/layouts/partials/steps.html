@@ -1,75 +1,87 @@
 {{ range (.Data.Pages.ByParam "position") }}
-    {{ if eq .Params.scope "notify" }}
-      <div class="row">
-        <div class="col-3 column-left">
-        </div>
-        <div class="col-6 column-center">
-          <div class="card notify-card">
-              {{ if eq .Params.sender "actor_1" }}
-                <div class="card-header notify-card-header notify-card-header-right">
-                  <span class="step-number">{{ .Params.position }}</span>&nbsp;{{ .Title }}
-                </div>
-              {{ else }}
-                <div class="card-header notify-card-header notify-card-header-left">
-                  <span class="step-number">{{ .Params.position }}</span>&nbsp;{{ .Title }}
-                </div>
-              {{ end }}
-            <div class="card-body notify-card-body">
-              <h5>Mandatory Properties</h5>
-              <p>{{ .Params.mandatory_properties | markdownify }}</p>
-                {{ with .Description }}
-                  <h5>Description</h5>
-                  <p>{{ . }}</p>
-                {{ end }}
-              <button class="btn btn-default btn-sm" type="button" data-toggle="collapse"
-                      data-target="#collapseJson_{{ .Params.position }}" aria-expanded="false"
-                      aria-controls="collapseJson_{{ .Params.position }}">
-                View JSON payload
-              </button>
-              <div class="collapse" id="collapseJson_{{ .Params.position }}">
-                <pre><code class="language-json">{{ .Params.json_payload }}</code></pre>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-3 column-right">
-        </div>
+{{ if eq .Params.scope "notify" }}
+<div class="row">
+  <div class="col-3 column-left">
+  </div>
+  <div class="col-6 column-center">
+    <div class="card notify-card">
+      {{ if eq .Params.sender "actor_1" }}
+      <div class="card-header notify-card-header notify-card-header-right">
+        <span class="step-number">{{ .Params.position }}</span>&nbsp;{{ .Title }}
       </div>
-    {{ end }}
-    {{ if eq .Params.scope "actor_1" }}
-      <div class="row">
-        <div class="col-3 column-left">
-          <div class="card">
-            <div class="card-header">
-              <span class="step-number">{{ .Params.position }}</span>&nbsp;{{ .Title }}
-            </div>
-            <div class="card-body">
-                {{ .Description }}
-            </div>
-          </div>
-        </div>
-        <div class="col-6 column-center">
-        </div>
-        <div class="col-3 column-right">
-        </div>
+      {{ else }}
+      <div class="card-header notify-card-header notify-card-header-left">
+        <span class="step-number">{{ .Params.position }}</span>&nbsp;{{ .Title }}
       </div>
-    {{ end }}
-    {{ if eq .Params.scope "actor_2" }}
-      <div class="row">
-        <div class="col-3 column-left">
+      {{ end }}
+      <div class="card-body notify-card-body">
+        {{ with .Description }}
+        <h5>Description</h5>
+        <p>{{ . }}</p>
+        {{ end }}
+        {{ with .Site.GetPage (print "/patterns/" .Params.pattern) }}
+        {{ with .Params.mandatory_properties }}
+        <h5>Mandatory Properties</h5>
+        <p>{{ . | markdownify }}</p>
+        {{ end }}
+        {{ with .Params.optional_properties }}
+        <h5>Optional Properties</h5>
+        <p>{{ . | markdownify }}</p>
+        {{ end }}
+        <div class="notification-step-pattern">Using notification pattern '<a href="{{ .Permalink }}">{{ .Title }}</a>'</div>
+        {{ end }}
+
+        {{/*
+        <button class="btn btn-default btn-sm" type="button" data-toggle="collapse"
+                data-target="#collapseJson_{{ .Params.position }}" aria-expanded="false"
+                aria-controls="collapseJson_{{ .Params.position }}">
+          View JSON payload
+        </button>
+        <div class="collapse" id="collapseJson_{{ .Params.position }}">
+          <pre><code class="language-json">{{ .Params.json_payload }}</code></pre>
         </div>
-        <div class="col-6 column-center">
-        </div>
-        <div class="col-3 column-right">
-          <div class="card">
-            <div class="card-header">
-              <span class="step-number">{{ .Params.position }}</span>&nbsp;{{ .Title }}
-            </div>
-            <div class="card-body">
-                {{ .Description }}
-            </div>
-          </div>
-        </div>
+        */}}
       </div>
-    {{ end }}
+    </div>
+  </div>
+  <div class="col-3 column-right">
+  </div>
+</div>
+{{ end }}
+{{ if eq .Params.scope "actor_1" }}
+<div class="row">
+  <div class="col-3 column-left">
+    <div class="card">
+      <div class="card-header">
+        <span class="step-number">{{ .Params.position }}</span>&nbsp;{{ .Title }}
+      </div>
+      <div class="card-body">
+        {{ .Description }}
+      </div>
+    </div>
+  </div>
+  <div class="col-6 column-center">
+  </div>
+  <div class="col-3 column-right">
+  </div>
+</div>
+{{ end }}
+{{ if eq .Params.scope "actor_2" }}
+<div class="row">
+  <div class="col-3 column-left">
+  </div>
+  <div class="col-6 column-center">
+  </div>
+  <div class="col-3 column-right">
+    <div class="card">
+      <div class="card-header">
+        <span class="step-number">{{ .Params.position }}</span>&nbsp;{{ .Title }}
+      </div>
+      <div class="card-body">
+        {{ .Description }}
+      </div>
+    </div>
+  </div>
+</div>
+{{ end }}
 {{ end }}

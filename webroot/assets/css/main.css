@@ -195,4 +195,7 @@ pre,code {
   padding: 0px;
 }
 
-
+div.notification-step-pattern {
+  text-align: right;
+  font-style: italic;
+}

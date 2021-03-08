@@ -11,6 +11,7 @@ type Config struct {
 	WebrootFolderPath          string `yaml:"webroot"`
 	ScenariosCsvDataSource     string `yaml:"scenarios_csv_source"`
 	NotificationsCsvDataSource string `yaml:"notifications_csv_source"`
+	PatternsCsvDataSource      string `yaml:"patterns_csv_source"`
 }
 
 func (config *Config) unmarshal(filePath string) error {

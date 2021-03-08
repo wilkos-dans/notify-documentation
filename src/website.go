@@ -10,21 +10,23 @@ import (
 )
 
 type Website struct {
-	WebrootFolderPath              string
-	ContentFolderPath              string
-	ScenariosFolderPath            string
-	NotificationsFolderPath        string
-	NotificationPatternsFolderPath string
-	StaticContentFolderPath        string
-	Scenarios                      []*Scenario
+	WebrootFolderPath       string
+	ContentFolderPath       string
+	ScenariosFolderPath     string
+	PatternsFolderPath      string
+	StaticContentFolderPath string
+	Scenarios               []*Scenario
+	Patterns                []*Pattern
+	//NotificationsFolderPath        string
 }
 
-func (website *Website) Initialise(webrootPath, scenariosCsvSource, workflowStepsCsvSource string) error {
+func (website *Website) Initialise(webrootPath, scenariosCsvSource, workflowStepsCsvSource, patternsCsvSource string) error {
 	var err error
 	website.WebrootFolderPath = webrootPath
 	website.ContentFolderPath = filepath.Join(website.WebrootFolderPath, "content")
 	website.ScenariosFolderPath = filepath.Join(website.ContentFolderPath, "scenarios")
-	website.NotificationsFolderPath = filepath.Join(website.ContentFolderPath, "notifications")
+	website.PatternsFolderPath = filepath.Join(website.ContentFolderPath, "patterns")
+	//website.NotificationsFolderPath = filepath.Join(website.ContentFolderPath, "notifications")
 	website.StaticContentFolderPath = filepath.Join(website.WebrootFolderPath, "static")
 	scenariosCsvInput, err := readBytesFromFileOrUrl(scenariosCsvSource)
 	if err != nil {
@@ -35,12 +37,20 @@ func (website *Website) Initialise(webrootPath, scenariosCsvSource, workflowStep
 		return err
 	}
 	zapLogger.Info("Scenarios loaded OK")
+	patternsCsvInput, err := readBytesFromFileOrUrl(patternsCsvSource)
+	if err != nil {
+		return err
+	}
+	err = csvutil.Unmarshal(patternsCsvInput, &website.Patterns)
+	if err != nil {
+		return err
+	}
+	zapLogger.Info("Patterns loaded OK")
 	workflowStepsCsvInput, err := readBytesFromFileOrUrl(workflowStepsCsvSource)
 	if err != nil {
 		zapLogger.Error(err.Error())
 		return err
 	}
-
 	var workflowSteps []WorkflowStep
 	err = csvutil.Unmarshal(workflowStepsCsvInput, &workflowSteps)
 	if err != nil {
@@ -98,6 +108,26 @@ func (website *Website) WriteWebPages() error {
 				zapLogger.Error(notificationPageWriteErr.Error())
 				return notificationPageWriteErr
 			}
+		}
+	}
+	for _, pattern := range website.Patterns {
+		zapLogger.Debug("Pattern:", zap.String("ID", pattern.Id))
+		patternFolderPath := filepath.Join(website.PatternsFolderPath, pattern.Id)
+		zapLogger.Debug("Pattern folder path:", zap.String("Path", patternFolderPath))
+		err = resetVolatileFolder(patternFolderPath)
+		if err != nil {
+			zapLogger.Error(err.Error())
+			return err
+		}
+		patternPage, patternPageMarshallErr := pattern.Marshal()
+		if patternPageMarshallErr != nil {
+			zapLogger.Error(patternPageMarshallErr.Error())
+			return patternPageMarshallErr
+		}
+		patternPageWriteErr := ioutil.WriteFile(filepath.Join(patternFolderPath, "index.md"), patternPage, os.ModePerm)
+		if patternPageWriteErr != nil {
+			zapLogger.Error(patternPageWriteErr.Error())
+			return patternPageWriteErr
 		}
 	}
 	return err
