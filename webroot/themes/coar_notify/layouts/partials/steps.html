@@ -1,0 +1,67 @@
+{{ range (.Data.Pages.ByParam "position") }}
+{{ if eq .Params.scope "notify" }}
+<div class="row">
+  <div class="col-3 column-left">
+  </div>
+  <div class="col-6 column-center">
+    <div class="card notify-card">
+      {{ if eq .Params.sender "actor_1" }}
+      <div class="card-header notify-card-header notify-card-header-right">
+        <span class="step-number">{{ .Params.position }}</span>&nbsp;{{ .Title }}
+      </div>
+      {{ else }}
+      <div class="card-header notify-card-header notify-card-header-left">
+        <span class="step-number">{{ .Params.position }}</span>&nbsp;{{ .Title }}
+      </div>
+      {{ end }}
+      <div class="card-body notify-card-body">
+        <p>{{ .Description }}</p>
+        {{ .Content }}
+
+        {{ with .Site.GetPage (print "/patterns/" .Params.pattern) }}
+        <div class="notification-step-pattern">Using notification pattern '<a href="{{ .Permalink }}">{{ .Title }}</a>'</div>
+        {{ end }}
+      </div>
+    </div>
+  </div>
+  <div class="col-3 column-right">
+  </div>
+</div>
+{{ end }}
+{{ if eq .Params.scope "actor_1" }}
+<div class="row">
+  <div class="col-3 column-left">
+    <div class="card">
+      <div class="card-header">
+        <span class="step-number">{{ .Params.position }}</span>&nbsp;{{ .Title }}
+      </div>
+      <div class="card-body">
+        {{ .Description }}
+      </div>
+    </div>
+  </div>
+  <div class="col-6 column-center">
+  </div>
+  <div class="col-3 column-right">
+  </div>
+</div>
+{{ end }}
+{{ if eq .Params.scope "actor_2" }}
+<div class="row">
+  <div class="col-3 column-left">
+  </div>
+  <div class="col-6 column-center">
+  </div>
+  <div class="col-3 column-right">
+    <div class="card">
+      <div class="card-header">
+        <span class="step-number">{{ .Params.position }}</span>&nbsp;{{ .Title }}
+      </div>
+      <div class="card-body">
+        {{ .Description }}
+      </div>
+    </div>
+  </div>
+</div>
+{{ end }}
+{{ end }}

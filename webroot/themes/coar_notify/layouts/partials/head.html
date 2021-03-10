@@ -1,0 +1,32 @@
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 2 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>{{.Site.Title}}{{if .Title}}: {{ .Title | markdownify }}{{end}}</title>
+    {{hugo.Generator}}
+
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+
+    {{ $style_bootstrap := resources.Get "css/bootstrap.css" | resources.Minify | resources.Fingerprint }}
+    <link rel="stylesheet" href="{{ $style_bootstrap.Permalink }}">
+    {{ $style_main := resources.Get "css/main.css" | resources.Minify | resources.Fingerprint }}
+    <link rel="stylesheet" href="{{ $style_main.Permalink }}">
+    {{ $style_prism := resources.Get "css/prism.css" }}
+    <link rel="stylesheet" href="{{ $style_prism.Permalink }}">
+    {{ $style_header := resources.Get "css/header.css" }}
+    <link rel="stylesheet" href="{{ $style_header.Permalink }}">
+    {{ $style_footer := resources.Get "css/footer.css" }}
+    <link rel="stylesheet" href="{{ $style_footer.Permalink }}">
+    {{ $style_swim_lanes := resources.Get "css/swim_lanes.css" }}
+    <link rel="stylesheet" href="{{ $style_swim_lanes.Permalink }}">
+
+
+    {{ $js_prism := resources.Get "js/prism.js" }}
+    <script type="text/javascript" src="{{ $js_prism.Permalink }}"></script>
+    {{/*
+    {{ $js_bootstrap := resources.Get "js/bootstrap.bundle.js" | resources.Minify | resources.Fingerprint }}
+    <script type="text/javascript" src="{{ $js_bootstrap.Permalink }}"></script>
+    */}}
+
+
+</head>

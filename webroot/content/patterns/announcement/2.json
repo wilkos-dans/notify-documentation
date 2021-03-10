@@ -1,0 +1,37 @@
+{
+  "@context": [
+    "https://www.w3.org/ns/activitystreams#",
+    {
+      "sorg": "http://schema.org/",
+      "ldp": "http://www.w3.org/ns/ldp#",
+      "ietf": "http://www.iana.org/assignments/relation/",
+      "ext1": "http://purl.org/external-vocab/v1#"
+    }
+  ],
+  "@id": "",
+  "@type": [
+    "Announce",
+    "ext1:more-specific-announcement-type"
+  ],
+  "inReplyTo": {
+    "@id": "",
+    "@type": [
+      "Offer",
+      "ext1:more-specific-offer-type"
+    ],
+    "object": {
+      "@id": "",
+      "ietf:cite-as": ""
+    }
+  },
+  "origin": {
+    "@id": "",
+    "@type": "Service",
+    "ldp:inbox": ""
+  },
+  "target": {
+    "@id": "",
+    "@type": "Service",
+    "ldp:inbox": ""
+  }
+}

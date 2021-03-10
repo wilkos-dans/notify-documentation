@@ -1,5 +1,5 @@
 ---
-title: Home Page
+title: Home
 description:
 date: 2018-12-20
 ---
@@ -8,11 +8,11 @@ This is an experimental website, documenting community conventions in the use of
 
 The documentation has the following structure:
 
-**Scenarios:**
-These describe an operation, typically involving a repository system and one other service. The operation is enabled by the exchange of *notifications*.
-
 **Notification Pattern**
 These describe the payload for a re-usable notification - a kind of template.
+
+**Example Scenarios:**
+These describe an operation, typically involving a repository system and one other service. The operation is enabled by the exchange of *notifications*.
 
 **Notifications:**
 These describe the individual LDNs sent between repositories and services, one or more of which may be used in a *scenario*.

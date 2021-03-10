@@ -1,0 +1,86 @@
+div.column-left {
+    border-right: 4px dashed #cdcdcd;
+}
+
+div.column-right {
+    border-left: 4px dashed #cdcdcd;
+}
+
+.swim-lane-title {
+    text-align: center;
+    border-bottom: 4px solid #cdcdcd;
+}
+
+div.card {
+    margin-bottom: 15px;
+}
+
+div.notify-card {
+    margin-bottom: 15px;
+    border: 2px solid #4682b4;
+}
+
+div.card-body {
+    font-size: 90%;
+}
+
+div.notify-card-header {
+    background-color: #4682b4;
+    color: white;
+}
+div.notify-card-header-left {
+    background-image: url("/images/arrow_left_small.png");
+    background-repeat: no-repeat;
+    background-position: left;
+}
+div.notify-card-header-right {
+    background-image: url("/images/arrow_right_small.png");
+    background-repeat: no-repeat;
+    background-position: right;
+}
+
+div.card-header {
+    font-weight: bold;
+    /*font-size: 120%;*/
+    text-align: center;
+}
+
+
+
+img.arrow {
+    max-width: 100%;
+    height: 50px;
+}
+
+img.arrow-left {
+    float: left;
+}
+
+img.arrow-right {
+    float: right;
+}
+
+.step-number {
+    color: white;
+    font-weight: bold;
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    padding-left: 4px;
+    padding-right: 4px;
+    background: orange;
+    border: 1px solid #666;
+    text-align: center;
+}
+
+div.notification-step-pattern {
+    text-align: right;
+    font-style: italic;
+}
+
+div.json-caption {
+    text-align: center;
+    font-style: italic;
+}
