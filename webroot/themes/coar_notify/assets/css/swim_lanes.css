@@ -21,7 +21,7 @@ div.notify-card {
 }
 
 div.card-body {
-    font-size: 90%;
+    /*font-size: 90%;*/
 }
 
 div.notify-card-header {
@@ -83,4 +83,5 @@ div.notification-step-pattern {
 div.json-caption {
     text-align: center;
     font-style: italic;
+    font-size: 90%;
 }
