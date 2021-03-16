@@ -1,0 +1,7 @@
+{{ with .Page.Resources.Match "*.json" }}
+<ul>
+{{ range . }}
+    <li>{{ .Params.caption | markdownify }}</li>
+{{ end }}
+</ul>
+{{ end }}

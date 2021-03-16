@@ -1,0 +1,29 @@
+{
+  "@context": [
+    "https://www.w3.org/ns/activitystreams#",
+    {
+      "sorg": "http://schema.org/",
+      "ldp": "http://www.w3.org/ns/ldp#",
+      "ext1": "http://purl.org/external-vocab/v1#"
+    }
+  ],
+  "@id": "",
+  "@type": "Undo",
+  "object": {
+    "@id": "",
+    "@type": [
+      "Offer",
+      "ext1:more-specific-offer-type"
+    ]
+  },
+  "origin": {
+    "@id": "",
+    "@type": "Service",
+    "ldp:inbox": ""
+  },
+  "target": {
+    "@id": "",
+    "@type": "Service",
+    "ldp:inbox": ""
+  }
+}

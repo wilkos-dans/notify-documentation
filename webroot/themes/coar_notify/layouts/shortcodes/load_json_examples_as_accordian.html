@@ -1,0 +1,25 @@
+{{ $pageName := .Page.File.UniqueID }}
+{{ range .Page.Resources.Match "*.json" }}
+{{ $exampleNum := print $pageName "_" (index (split .Name ".") 0) }}
+
+<div class="accordion" id="accordion{{ $exampleNum }}">
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="heading{{ $exampleNum }}">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapse{{ $exampleNum }}" aria-expanded="true"
+                    aria-controls="collapse{{ $exampleNum }}">
+                {{ .Params.caption | markdownify }}
+            </button>
+        </h2>
+        <div id="collapse{{ $exampleNum }}" class="accordion-collapse collapse"
+             aria-labelledby="heading{{ $exampleNum }}" data-bs-parent="#accordion{{ $exampleNum }}">
+            <div class="accordion-body">
+                <pre><code class="language-json">{{ readFile .RelPermalink }}</code></pre>
+            </div>
+        </div>
+    </div>
+</div>
+<br/>
+
+{{ end }}
+

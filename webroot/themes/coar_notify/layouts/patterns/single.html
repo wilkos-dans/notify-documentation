@@ -7,7 +7,16 @@
   <div class="row">
     <div class="col">
       <p>{{ .Description | markdownify }}</p>
-      {{ .Content }}
+      {{ range .Page.Resources.Match "*.json" }}
+      <h3>
+        {{ .Params.caption | markdownify }}
+      </h3>
+      <pre><code class="language-json">{{ readFile .RelPermalink }}</code></pre>
+      <br/>
+
+      {{ end }}
+
+
     </div>
   </div>
 {{ end }}
