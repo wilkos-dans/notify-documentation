@@ -6,10 +6,11 @@ description: "This pattern is used to *acknowledge* an *offer* activity, indicat
 resources:
 - src: 1.json
   params:
-    caption: "Example 1: Acceptance of offer"
+    caption: "Acceptance of offer"
 - src: 2.json
   params:
-    caption: "Example 2: Rejection of offer"
+    caption: "Rejection of offer"
 ---
 
+#### Examples
 {{< list_json_examples_as_ul >}}

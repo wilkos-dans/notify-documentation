@@ -6,7 +6,8 @@ description: "This pattern describes an *offer* activity, where one system offer
 resources:
 - src: 1.json
   params:
-    caption: "Example 1: Generic offer"
+    caption: "Generic offer"
 ---
 
+#### Examples
 {{< list_json_examples_as_ul >}}

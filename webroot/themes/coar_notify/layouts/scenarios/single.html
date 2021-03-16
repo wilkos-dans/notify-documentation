@@ -1,28 +1,21 @@
 {{ define "main" }}
-  <div class="row">
+<div class="row">
     <div class="col">
-      <h1 class="page-title">{{ .Title }}</h1>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col">
-        {{ .Description }}
-    </div>
-    <div class="col">
+        <h1 class="page-title">{{ .Title }}</h1>
+        (This is a notification from the <i><a href="{{ .Page.CurrentSection.Permalink }}">{{ .Page.CurrentSection.Title }}</a></i> scenario)
+        <br/><br/>
+      <p>{{ .Description | markdownify }}</p>
         {{ if eq .Params.scope "notify" }}
-            {{ with .Params.payload_examples }}
-                {{ range . }}
-                    {{ if ne .example "" }}
-                      <h3>Payload example {{ .number }}</h3>
-                      <p>{{ .description }}</p>
-                      <pre><code class="language-json">{{ .example }}</code></pre>
-                    {{ end }}
-                {{ end }}
-            {{ end }}
-        {{ else }}
-          <i>This is an operation that is internal to one of the participating systems so no further detail is captured
-            here.</i>
+        {{ range .Page.Resources.Match "*.json" }}
+        <h3 id='example_{{ index (split .Name ".") 0 }}'>
+            Example {{ (index (split .Name ".") 0) }}: {{ .Params.caption | markdownify }}
+        </h3>
+        <pre><code class="language-json">{{ readFile .RelPermalink }}</code></pre>
+        <br/>
+
+        {{ end }}
+
         {{ end }}
     </div>
-  </div>
+</div>
 {{ end }}

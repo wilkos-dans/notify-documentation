@@ -6,7 +6,8 @@ description: "This pattern describes the retraction of an *offer* activity."
 resources:
 - src: 1.json
   params:
-    caption: "Example 1: Retraction of offer"
+    caption: "Retraction of offer"
 ---
 
+#### Examples
 {{< list_json_examples_as_ul >}}

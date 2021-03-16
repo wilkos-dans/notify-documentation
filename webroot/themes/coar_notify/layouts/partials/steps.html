@@ -7,16 +7,23 @@
     <div class="card notify-card">
       {{ if eq .Params.sender "actor_1" }}
       <div class="card-header notify-card-header notify-card-header-right">
-        <span class="step-number">{{ .Params.position }}</span>&nbsp;{{ .Title }}
+        <span class="step-number">{{ .Params.position }}</span>&nbsp;<a href="{{ .Permalink }}">{{ .Title }}</a>
       </div>
       {{ else }}
       <div class="card-header notify-card-header notify-card-header-left">
-        <span class="step-number">{{ .Params.position }}</span>&nbsp;{{ .Title }}
+        <span class="step-number">{{ .Params.position }}</span>&nbsp;<a href="{{ .Permalink }}">{{ .Title }}</a>
       </div>
       {{ end }}
       <div class="card-body notify-card-body">
         <p>{{ .Description }}</p>
-        {{ .Content }}
+        {{ range .Page.Resources.Match "*.json" }}
+        <h3 id='example_{{ index (split .Name ".") 0 }}'>
+          Example {{ (index (split .Name ".") 0) }}: {{ .Params.caption | markdownify }}
+        </h3>
+        <pre><code class="language-json">{{ readFile .RelPermalink }}</code></pre>
+        <br/>
+
+        {{ end }}
 
         {{ with .Site.GetPage (print "/patterns/" .Params.pattern) }}
         <div class="notification-step-pattern">Using notification pattern '<a href="{{ .Permalink }}">{{ .Title }}</a>'</div>
@@ -33,7 +40,7 @@
   <div class="col-3 column-left">
     <div class="card">
       <div class="card-header">
-        <span class="step-number">{{ .Params.position }}</span>&nbsp;{{ .Title }}
+        <span class="step-number">{{ .Params.position }}</span>&nbsp;<a href="{{ .Permalink }}">{{ .Title }}</a>
       </div>
       <div class="card-body">
         {{ .Description }}
@@ -55,7 +62,7 @@
   <div class="col-3 column-right">
     <div class="card">
       <div class="card-header">
-        <span class="step-number">{{ .Params.position }}</span>&nbsp;{{ .Title }}
+        <span class="step-number">{{ .Params.position }}</span>&nbsp;<a href="{{ .Permalink }}">{{ .Title }}</a>
       </div>
       <div class="card-body">
         {{ .Description }}

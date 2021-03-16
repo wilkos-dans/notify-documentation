@@ -28,6 +28,24 @@ div.notify-card-header {
     background-color: #4682b4;
     color: white;
 }
+
+div.notify-card-header a {
+    color: white;
+    text-decoration: none;
+}
+
+div.notify-card-header a:hover {
+    text-decoration: underline;
+}
+
+div.card-header a {
+    text-decoration: none;
+}
+
+div.card-header a:hover {
+    text-decoration: underline;
+}
+
 div.notify-card-header-left {
     background-image: url("/images/arrow_left_small.png");
     background-repeat: no-repeat;

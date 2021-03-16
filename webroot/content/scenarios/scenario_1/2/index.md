@@ -6,7 +6,10 @@ scope: notify
 position: 2
 sender: actor_1
 pattern: offer
+resources:
+- src: 1.json
+  params:
+    caption: "An offer is made to a review service to review a pre-print"
 ---
 
-<div class="json-caption">Example 1: An offer is made to a review service to review a pre-print</div>
-{{< load_json "/scenarios/scenario_1/2.json" >}}
+
