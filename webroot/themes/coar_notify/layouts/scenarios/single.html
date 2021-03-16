@@ -2,10 +2,11 @@
 <div class="row">
     <div class="col">
         <h1 class="page-title">{{ .Title }}</h1>
-        (This is a notification from the <i><a href="{{ .Page.CurrentSection.Permalink }}">{{ .Page.CurrentSection.Title }}</a></i> scenario)
-        <br/><br/>
+
       <p>{{ .Description | markdownify }}</p>
         {{ if eq .Params.scope "notify" }}
+        (This is a <i>Notify</i> notification from the <i><a href="{{ .Page.CurrentSection.Permalink }}">{{ .Page.CurrentSection.Title }}</a></i> scenario)<br/><br/>
+
         {{ range .Page.Resources.Match "*.json" }}
         <h3 id='example_{{ index (split .Name ".") 0 }}'>
             Example {{ (index (split .Name ".") 0) }}: {{ .Params.caption | markdownify }}
@@ -13,8 +14,10 @@
         <pre><code class="language-json">{{ readFile .RelPermalink }}</code></pre>
         <br/>
 
-        {{ end }}
 
+        {{ end }}
+        {{ else }}
+        (This is not a <i>Notify</i> notification, but is included as an indication of a logical step in the scenario. The details of this step are out-of-scope of <i>Notify</i> and should be considered opaque to the service undertaking the step.)
         {{ end }}
     </div>
 </div>

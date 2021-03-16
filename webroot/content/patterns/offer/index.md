@@ -9,5 +9,7 @@ resources:
     caption: "Generic offer"
 ---
 
+
+
 #### Examples
 {{< list_json_examples_as_ul >}}

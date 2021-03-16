@@ -15,6 +15,11 @@
             <li class="nav-item">{{ end }}
                 <a class="nav-link" href="/patterns/">Notification Patterns</a>
             </li>
+            {{ if eq .Section "vocabularies"}}
+            <li class="nav-item nav-item-selected">{{ else }}
+            <li class="nav-item">{{ end }}
+                <a class="nav-link" href="/vocabularies/">Vocabularies</a>
+            </li>
             {{ if eq .Section "scenarios"}}
             <li class="nav-item nav-item-selected">{{ else }}
             <li class="nav-item">{{ end }}
