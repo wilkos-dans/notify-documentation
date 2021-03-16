@@ -5,13 +5,14 @@
       "sorg": "http://schema.org/",
       "ldp": "http://www.w3.org/ns/ldp#",
       "ietf": "http://www.iana.org/assignments/relation/",
-      "ext1": "http://purl.org/external-vocab/v1#"
+      "nat": "http://purl.org/coar/notify_activity_type/",
+      "rt": "http://purl.org/coar/resource_type"
     }
   ],
   "@id": "",
   "@type": [
     "Offer",
-    "ext1:more-specific-offer-type"
+    "nat:?"
   ],
   "object": {
     "@id": "",
@@ -20,9 +21,9 @@
     "url": {
       "@id": "",
       "@type": [
-        "Article",
+        "?",
         "sorg:?",
-        "ext1:more-specific-resource-type"
+        "rt:?"
       ],
       "mediaType": ""
     }

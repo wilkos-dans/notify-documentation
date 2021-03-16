@@ -4,7 +4,7 @@
     {
       "sorg": "http://schema.org/",
       "ldp": "http://www.w3.org/ns/ldp#",
-      "ext1": "http://purl.org/external-vocab/v1#"
+      "nat": "http://purl.org/coar/notify_activity_type/"
     }
   ],
   "@id": "",
@@ -13,7 +13,7 @@
     "@id": "",
     "@type": [
       "Offer",
-      "ext1:more-specific-offer-type"
+      "nat:?"
     ]
   },
   "origin": {

@@ -5,19 +5,20 @@
       "sorg": "http://schema.org/",
       "ldp": "http://www.w3.org/ns/ldp#",
       "ietf": "http://www.iana.org/assignments/relation/",
-      "ext1": "http://purl.org/external-vocab/v1#"
+      "nat": "http://purl.org/coar/notify_activity_type/",
+      "rt": "http://purl.org/coar/resource_type"
     }
   ],
   "@id": "",
   "@type": [
     "Announce",
-    "ext1:more-specific-announcement-type"
+    "nat:?"
   ],
   "inReplyTo": {
     "@id": "",
     "@type": [
       "Offer",
-      "ext1:more-specific-offer-type"
+      "nat:?"
     ],
     "object": {
       "@id": "",
@@ -27,9 +28,9 @@
   "object": {
     "@id": "",
     "@type": [
-      "Document",
+      "?",
       "sorg:?",
-      "ext1:more-specific-resource-type"
+      "rt:?"
     ],
     "ietf:cite-as": ""
   },

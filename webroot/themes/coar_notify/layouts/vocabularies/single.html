@@ -4,6 +4,25 @@
       <h1 class="page-title">{{ .Title }}</h1>
     </div>
   </div>
+<div class="row">
+  <div class="col">
+    {{ .Description | markdownify }}<br/><br/>
+    {{ $namespace := .Params.namespace}}
+    <h3>Namespace</h3>
+    {{ $namespace }}<br/><br/>
+    {{ with .Params.terms }}
+    <h3>Terms</h3>
+    <ul>
+      {{ range . }}
+        <li>
+          <span style="font-weight: bold;">{{ .name }}</span><span style="font-size: 90%;"> ({{ $namespace }}{{ .name }} )</span><br/>
+          <span style="font-size: 90%; font-style: italic;">{{ .definition }}</span>
+        </li>
+      {{ end }}
+    </ul>
+    {{ end }}
+  </div>
+</div>
   <div class="row">
     <div class="col">
       {{ .Content }}

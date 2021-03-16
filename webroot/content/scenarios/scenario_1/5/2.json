@@ -5,19 +5,19 @@
       "sorg": "http://schema.org/",
       "ldp": "http://www.w3.org/ns/ldp#",
       "ietf": "http://www.iana.org/assignments/relation/",
-      "ext1": "http://purl.org/external-vocab/v1#"
+      "nat": "http://purl.org/coar/notify_activity_type/"
     }
   ],
   "@id": "94ecae35-dcfd-4182-8550-22c7164fe23f",
   "@type": [
     "Announce",
-    "ext1:review-failure"
+    "nat:review-failure"
   ],
   "inReplyTo": {
     "@id": "urn:uuid:0370c0fb-bb78-4a9b-87f5-bed307a509dd",
     "@type": [
       "Offer",
-      "ext1:review-request"
+      "nat:review-request"
     ],
     "object": {
       "@id": "https://repository.org/preprint/201203/421/",

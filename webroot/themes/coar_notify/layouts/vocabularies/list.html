@@ -17,7 +17,8 @@
                 <a class="card-title-link" href="{{ .Permalink }}">{{ .Title }}</a>
             </div>
             <div class="card-body">
-                <p>{{ .Description }}</p>
+                {{ .Description | markdownify }}<br/>
+                <b>Namespace:</b> {{ .Params.namespace }}<br/>
             </div>
         </div>
     </div>

@@ -1,6 +1,6 @@
 html {
   background-color: white;
-  max-width: 2000px;
+  max-width: 1500px;
   margin: 0 auto;
   padding: 1%;
 }
@@ -64,7 +64,7 @@ a.site-title:hover {
 h1.page-title {
   /*text-align: center;*/
   /*border-top: 1px solid #cdcdcd;*/
-  /*border-bottom: 1px solid #cdcdcd;*/
+  border-bottom: 1px solid #cdcdcd;
   margin-bottom: 10px;
 }
 
