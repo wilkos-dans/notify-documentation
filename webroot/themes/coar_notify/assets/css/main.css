@@ -39,7 +39,7 @@ a.card-title-link-white {
 }
 
 h1 {
-  font-size: 40px;
+  font-size: 30px;
 }
 h2 {
   font-size: 24px;
@@ -65,7 +65,7 @@ h1.page-title {
   /*text-align: center;*/
   /*border-top: 1px solid #cdcdcd;*/
   border-bottom: 1px solid #cdcdcd;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
 }
 
 /****** Layout table ******/

@@ -5,7 +5,8 @@
       "sorg": "http://schema.org/",
       "ldp": "http://www.w3.org/ns/ldp#",
       "ietf": "http://www.iana.org/assignments/relation/",
-      "nat": "http://purl.org/coar/notify_activity_type/"
+      "nat": "http://purl.org/coar/notify_activity_type/",
+      "revt": "http://purl.org/coar/notify_review_type/"
     }
   ],
   "@id": "94ecae35-dcfd-4182-8550-22c7164fe23f",
@@ -29,7 +30,7 @@
     "@type": [
       "Document",
       "sorg:Review",
-      "rt:c_efa0"
+      "revt:blind-peer-review"
     ],
     "ietf:cite-as": "https://doi.org/10.3214/987654"
   },

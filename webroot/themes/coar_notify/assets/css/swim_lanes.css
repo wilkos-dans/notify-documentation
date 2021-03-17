@@ -47,12 +47,12 @@ div.card-header a:hover {
 }
 
 div.notify-card-header-left {
-    background-image: url("/images/arrow_left_small.png");
+    background-image: url("/images/arrow_left_double_small.png");
     background-repeat: no-repeat;
     background-position: left;
 }
 div.notify-card-header-right {
-    background-image: url("/images/arrow_right_small.png");
+    background-image: url("/images/arrow_right_double_small.png");
     background-repeat: no-repeat;
     background-position: right;
 }
