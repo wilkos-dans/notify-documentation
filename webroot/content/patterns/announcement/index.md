@@ -6,10 +6,13 @@ description: "This pattern is used to *announce* the outcome of an activity, som
 resources:
 - src: 1.json
   params:
-    caption: "Announcement of result of activity with details of new resource"
+    caption: "Announcement of new resource, relating to a different resource, in response to a previously made offer"
 - src: 2.json
   params:
-    caption: "Announcement of result of activity, where **no** new resource has resulted"
+    caption: "Announcement of result of activity, where **no** new resource has resulted, in response to a previously made offer"
+- src: 3.json
+  params:
+    caption: "Announcement of new resource, relating to a different resource, **not** in response to a previously made offer"
 ---
 
 #### Examples

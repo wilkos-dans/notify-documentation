@@ -53,25 +53,22 @@ By default, repository resources SHOULD be represented as follows:
   <div class="col">
     <h5>Example</h5>
     <pre><code class="language-json">"object": {
-      "@id": "https://repository.org/preprint/201203/421/",
-      "@type": "sorg:AboutPage",
-      "ietf:cite-as": "https://doi.org/10.5555/12345680",
-      "url": {
-        "@id": "https://repository.org/preprint/201203/421/content.pdf",
-        "@type": [
-          "Article",
-          "sorg:ScholarlyArticle",
-          "rt:c_816b"
-        ],
-        "mediaType": "application/pdf"
-      }
-    }
-    </code></pre>
+  "@id": "https://repository.org/preprint/201203/421/",
+  "@type": "sorg:AboutPage",
+  "ietf:cite-as": "https://doi.org/10.5555/12345680",
+  "url": {
+    "@id": "https://repository.org/preprint/201203/421/content.pdf",
+    "@type": [
+      "Article",
+      "sorg:ScholarlyArticle",
+      "rt:c_816b"
+    ],
+    "mediaType": "application/pdf"
+  }
+}</code></pre>
   </div>
 </div>
 <br />
-
-
 
 
 The following notification patterns are defined to be widely reusable. Their re-use is illustrated in

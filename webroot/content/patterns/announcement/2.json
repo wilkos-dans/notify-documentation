@@ -5,33 +5,34 @@
       "sorg": "http://schema.org/",
       "ldp": "http://www.w3.org/ns/ldp#",
       "ietf": "http://www.iana.org/assignments/relation/",
-      "nat": "http://purl.org/coar/notify_activity_type/"
+      "nat": "http://purl.org/coar/notify_activity_type/",
+      "rt": "http://purl.org/coar/resource_type"
     }
   ],
-  "@id": "",
+  "@id": "urn:uuid:94ecae35-dcfd-4182-8550-22c7164fe23f",
   "@type": [
     "Announce",
-    "nat:?"
+    "nat:review-failure"
   ],
   "inReplyTo": {
-    "@id": "",
+    "@id": "urn:uuid:0370c0fb-bb78-4a9b-87f5-bed307a509dd",
     "@type": [
       "Offer",
-      "nat:?"
+      "nat:review-request"
     ],
     "object": {
-      "@id": "",
-      "ietf:cite-as": ""
+      "@id": "https://repository.org/preprint/201203/421/",
+      "ietf:cite-as": "https://doi.org/10.5555/12345680"
     }
   },
   "origin": {
-    "@id": "",
+    "@id": "https://reviewservice.org/",
     "@type": "Service",
-    "ldp:inbox": ""
+    "ldp:inbox": "https://reviewservice.org/requests/inbox"
   },
   "target": {
-    "@id": "",
+    "@id": "https://repository.org/",
     "@type": "Service",
-    "ldp:inbox": ""
+    "ldp:inbox": "https://repository.org/inbox/"
   }
 }

@@ -9,39 +9,39 @@
       "rt": "http://purl.org/coar/resource_type"
     }
   ],
-  "@id": "",
+  "@id": "urn:uuid:94ecae35-dcfd-4182-8550-22c7164fe23f",
   "@type": [
     "Announce",
-    "nat:?"
+    "nat:review-success"
   ],
   "inReplyTo": {
-    "@id": "",
+    "@id": "urn:uuid:0370c0fb-bb78-4a9b-87f5-bed307a509dd",
     "@type": [
       "Offer",
-      "nat:?"
+      "nat:review-request"
     ],
     "object": {
-      "@id": "",
-      "ietf:cite-as": ""
+      "@id": "https://repository.org/preprint/201203/421/",
+      "ietf:cite-as": "https://doi.org/10.5555/12345680"
     }
   },
   "object": {
-    "@id": "",
+    "@id": "https://reviewservice.org/review/geo/202103/0021",
     "@type": [
-      "?",
-      "sorg:?",
-      "rt:?"
+      "Document",
+      "sorg:Review",
+      "rt:blind-peer-review"
     ],
-    "ietf:cite-as": ""
+    "ietf:cite-as": "https://doi.org/10.3214/987654"
   },
   "origin": {
-    "@id": "",
+    "@id": "https://reviewservice.org/",
     "@type": "Service",
-    "ldp:inbox": ""
+    "ldp:inbox": "https://reviewservice.org/requests/inbox"
   },
   "target": {
-    "@id": "",
+    "@id": "https://repository.org/",
     "@type": "Service",
-    "ldp:inbox": ""
+    "ldp:inbox": "https://repository.org/inbox/"
   }
 }

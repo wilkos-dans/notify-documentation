@@ -2,15 +2,18 @@
   "@context": [
     "https://www.w3.org/ns/activitystreams#",
     {
+      "sorg": "http://schema.org/",
       "ldp": "http://www.w3.org/ns/ldp#",
       "ietf": "http://www.iana.org/assignments/relation/",
-      "nat": "http://purl.org/coar/notify_activity_type/"
+      "nat": "http://purl.org/coar/notify_activity_type/",
+      "rt": "http://purl.org/coar/resource_type",
+      "cito": "http://purl.org/spar/cito/"
     }
   ],
-  "@id": "urn:uuid:4fb3af44-d4f8-4226-9475-2d09c2d8d9e0",
+  "@id": "urn:uuid:94ecae35-dcfd-4182-8550-22c7164fe23f",
   "@type": [
-    "Accept",
-    "nat:reject-review-request"
+    "Announce",
+    "nat:review-success"
   ],
   "inReplyTo": {
     "@id": "urn:uuid:0370c0fb-bb78-4a9b-87f5-bed307a509dd",
@@ -23,14 +26,28 @@
       "ietf:cite-as": "https://doi.org/10.5555/12345680"
     }
   },
+  "object": {
+    "@id": "https://reviewservice.org/review/geo/202103/0021",
+    "@type": [
+      "Document",
+      "sorg:Review",
+      "rt:blind-peer-review"
+    ],
+    "ietf:cite-as": "https://doi.org/10.3214/987654"
+  },
+  "cito:reviews": {
+    "object": {
+      "@id": "https://repository.org/preprint/201203/421/",
+      "ietf:cite-as": "https://doi.org/10.5555/12345680"
+    },
   "origin": {
     "@id": "https://reviewservice.org/",
     "@type": "Service",
     "ldp:inbox": "https://reviewservice.org/requests/inbox"
   },
   "target": {
-    "@id": "https://repository.org",
+    "@id": "https://repository.org/",
     "@type": "Service",
     "ldp:inbox": "https://repository.org/inbox/"
   }
-}
+},

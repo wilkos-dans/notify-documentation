@@ -9,33 +9,33 @@
       "rt": "http://purl.org/coar/resource_type"
     }
   ],
-  "@id": "",
+  "@id": "urn:uuid:0370c0fb-bb78-4a9b-87f5-bed307a509dd",
   "@type": [
     "Offer",
-    "nat:?"
+    "nat:review-request"
   ],
   "object": {
-    "@id": "",
-    "@type": "sorg:?",
-    "ietf:cite-as": "",
+    "@id": "https://repository.org/preprint/201203/421/",
+    "@type": "sorg:AboutPage",
+    "ietf:cite-as": "https://doi.org/10.5555/12345680",
     "url": {
-      "@id": "",
+      "@id": "https://repository.org/preprint/201203/421/content.pdf",
       "@type": [
-        "?",
-        "sorg:?",
-        "rt:?"
+        "Article",
+        "sorg:ScholarlyArticle",
+        "rt:c_816b"
       ],
-      "mediaType": ""
+      "mediaType": "application/pdf"
     }
   },
   "origin": {
-    "@id": "",
+    "@id": "https://repository.org",
     "@type": "Service",
-    "ldp:inbox": ""
+    "ldp:inbox": "https://repository.org/inbox/"
   },
   "target": {
-    "@id": "",
+    "@id": "https://reviewservice.org",
     "@type": "Service",
-    "ldp:inbox": ""
+    "ldp:inbox": "https://reviewservice.org/requests/inbox"
   }
 }

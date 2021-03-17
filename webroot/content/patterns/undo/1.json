@@ -7,23 +7,23 @@
       "nat": "http://purl.org/coar/notify_activity_type/"
     }
   ],
-  "@id": "",
+  "@id": "urn:uuid:6eafed1d-935c-41b1-a5bb-645be4b7533f",
   "@type": "Undo",
   "object": {
-    "@id": "",
+    "@id": "urn:uuid:0370c0fb-bb78-4a9b-87f5-bed307a509dd",
     "@type": [
       "Offer",
-      "nat:?"
+      "nat:review-request"
     ]
   },
   "origin": {
-    "@id": "",
+    "@id": "https://repository.org",
     "@type": "Service",
-    "ldp:inbox": ""
+    "ldp:inbox": "https://repository.org/inbox/"
   },
   "target": {
-    "@id": "",
+    "@id": "https://reviewservice.org",
     "@type": "Service",
-    "ldp:inbox": ""
+    "ldp:inbox": "https://reviewservice.org/requests/inbox"
   }
 }
