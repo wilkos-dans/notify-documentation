@@ -15,17 +15,6 @@
     "Announce",
     "nat:review-success"
   ],
-  "inReplyTo": {
-    "@id": "urn:uuid:0370c0fb-bb78-4a9b-87f5-bed307a509dd",
-    "@type": [
-      "Offer",
-      "nat:review-request"
-    ],
-    "object": {
-      "@id": "https://repository.org/preprint/201203/421/",
-      "ietf:cite-as": "https://doi.org/10.5555/12345680"
-    }
-  },
   "object": {
     "@id": "https://reviewservice.org/review/geo/202103/0021",
     "@type": [
