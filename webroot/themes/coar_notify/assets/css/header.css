@@ -38,11 +38,12 @@ li.nav-item-selected {
 
 nav#navbar-breadcrumbs {
     padding: 0px 0px 0px 10px;
+    font-size: 80%;
 }
 
 ol.breadcrumb-notify {
-    background-color: white;
-    padding: 0px;
+    /*background-color: white;*/
+    /*padding: 0px;*/
 }
 
 li.breadcrumb-item {
