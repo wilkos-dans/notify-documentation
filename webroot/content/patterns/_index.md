@@ -1,6 +1,6 @@
 ---
 title: Notification Patterns
-description: 
+description:
 date: 2018-12-20
 ---
 
@@ -20,55 +20,61 @@ notification patterns:
 * **origin:** The originator of the activity, typically the service responsible for sending the notification.
 * **target:** The intended destination of the activity, typically the service which *consumes* the notification.
 * **activity:**
-    * **@id:** This MUST be a URI. The use of URN:UUID is RECOMMENDED. An HTTP URI MAY be used, but in such cases the
-      URI SHOULD resolve to a useful resource.
-    * **@type:** This MUST be an array, which MUST include one of the Activity Stream 2.0 Activity Types, and which MUST
-      also include a type from the [Notify Activity Types vocabulary](/vocabularies/activity_types/)
+* **@id:** This MUST be a URI. The use of URN:UUID is RECOMMENDED. An HTTP URI MAY be used, but in such cases the
+URI SHOULD resolve to a useful resource.
+* **@type:** This MUST be an array, which MUST include one of the Activity Stream 2.0 Activity Types, and which MUST
+also include a type from the [Notify Activity Types vocabulary](/vocabularies/activity_types/)
 
 ## Representation of repository resources
 
 By default, repository resources SHOULD be represented as follows:
 
 <div class="row">
-  <div class="col">
-  <h5>Properties</h5>  
-    <ul>
-      <li>the repository resource is represented as an <i>object</i></li>
-      <li>the <i>@id</i> property of the <i>object</i> contains the HTTP URI to the "landing page" for the resource</li>
-      <li>the <i>@type</i> property of the <i>object</i> contains the value <i>AboutPage</i> from the <a href="https://schema.org/AboutPage">schema.org</a> vocabulary</li>
-      <li>the <i>ietf:cite-as</i> property of the <i>object</i> contains the persistent HTTP URI (sometimes called the "PID") which is to be used to cite or link to the resource.</li>
-      <li>the <i>url</i> property contains the details of the actual content resource</li>
-      <ul>
-        <li>the <i>@id</i> property of the <i>url</i> contains the HTTP URI to the content file for the resource</li>
-        <li>the <i>@type</i> property of the <i>url</i> describes the content file, including values from three vocabularies:</li>
+    <div class="col">
+        <h5>Properties</h5>
         <ul>
-          <li>Activity Streams 2.0</li>
-          <li>schema.org</li>
-          <li>COAR Resource Types</li>
+            <li>The default <code>context</code> is Activity Streams 2.0</li>
+            <li>Other contexts (namespaces) used:</li>
+            <ul>
+                <li><a href="https://schema.org">schema.org</a></li>
+                <li><a href="http://purl.org/coar/resource_type">COAR Resource Types</a></li>
+            </ul>
+            <li>the repository resource is represented as an <code>object</code></li>
+            <ul>
+                <li>the <code>@id</code> property of the <code>object</code> contains the HTTP URI to the "landing page"
+                    for the
+                    resource
+                </li>
+                <li>the <code>@type</code> property of the <code>object</code> contains the value <i>AboutPage</i> from
+                    the <a
+                            href="https://schema.org/AboutPage">schema.org</a> vocabulary
+                </li>
+                <li>the <code>ietf:cite-as</code> property of the <code>object</code> contains the persistent HTTP URI
+                    (sometimes called
+                    the "PID") which is to be used to cite or link to the resource.
+                </li>
+                <li>the <code>url</code> property contains the details of the actual content resource</li>
+                <ul>
+                    <li>the <code>@id</code> property of the <code>url</code> contains the HTTP URI to the content file
+                        for the resource
+                    </li>
+                    <li>the <code>@type</code> property of the <code>url</code> describes the content file, including
+                        values from three
+                        vocabularies
+                    </li>
+                    <li>the <code>mediaType</code> property of the <code>url</code> contains the MIME Type of the
+                        content file
+                    </li>
+                </ul>
+            </ul>
         </ul>
-        <li>the <i>mediaType</i> property of the <i>url</i> contains the MIME Type of the content file</li>
-      </ul>
-    </ul>
-  </div>
-  <div class="col">
-    <h5>Example</h5>
-    <pre><code class="language-json">"object": {
-  "@id": "https://repository.org/preprint/201203/421/",
-  "@type": "sorg:AboutPage",
-  "ietf:cite-as": "https://doi.org/10.5555/12345680",
-  "url": {
-    "@id": "https://repository.org/preprint/201203/421/content.pdf",
-    "@type": [
-      "Article",
-      "sorg:ScholarlyArticle",
-      "rt:c_816b"
-    ],
-    "mediaType": "application/pdf"
-  }
-}</code></pre>
-  </div>
+    </div>
+    <div class="col">
+        <h5>Example</h5>
+        {{< load_json "/patterns/repo_object_example.json" >}}
+    </div>
 </div>
-<br />
+<br/>
 
 
 The following notification patterns are defined to be widely reusable. Their re-use is illustrated in

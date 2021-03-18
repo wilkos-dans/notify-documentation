@@ -3,27 +3,9 @@
     "https://www.w3.org/ns/activitystreams#",
     {
       "sorg": "http://schema.org/",
-      "ldp": "http://www.w3.org/ns/ldp#",
-      "ietf": "http://www.iana.org/assignments/relation/",
-      "nat": "http://purl.org/coar/notify_activity_type/",
       "rt": "http://purl.org/coar/resource_type"
     }
   ],
-  "@id": "urn:uuid:0370c0fb-bb78-4a9b-87f5-bed307a509dd",
-  "@type": [
-    "Offer",
-    "nat:review-request"
-  ],
-  "origin": {
-    "@id": "https://repository.org",
-    "@type": "Service",
-    "ldp:inbox": "https://repository.org/inbox/"
-  },
-  "target": {
-    "@id": "https://reviewservice.org",
-    "@type": "Service",
-    "ldp:inbox": "https://reviewservice.org/requests/inbox"
-  },
   "object": {
     "@id": "https://repository.org/preprint/201203/421/",
     "@type": "sorg:AboutPage",
