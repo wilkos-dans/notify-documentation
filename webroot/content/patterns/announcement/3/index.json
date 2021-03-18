@@ -15,20 +15,6 @@
     "Announce",
     "nat:review-success"
   ],
-  "object": {
-    "@id": "https://reviewservice.org/review/geo/202103/0021",
-    "@type": [
-      "Document",
-      "sorg:Review",
-      "rt:blind-peer-review"
-    ],
-    "ietf:cite-as": "https://doi.org/10.3214/987654"
-  },
-  "cito:reviews": {
-    "object": {
-      "@id": "https://repository.org/preprint/201203/421/",
-      "ietf:cite-as": "https://doi.org/10.5555/12345680"
-    },
   "origin": {
     "@id": "https://reviewservice.org/",
     "@type": "Service",
@@ -38,5 +24,20 @@
     "@id": "https://repository.org/",
     "@type": "Service",
     "ldp:inbox": "https://repository.org/inbox/"
+  },
+  "object": {
+    "@id": "https://reviewservice.org/review/geo/202103/0021",
+    "@type": [
+      "Document",
+      "sorg:Review",
+      "rt:blind-peer-review"
+    ],
+    "ietf:cite-as": "https://doi.org/10.3214/987654",
+    "cito:reviews": {
+      "object": {
+        "@id": "https://repository.org/preprint/201203/421/",
+        "ietf:cite-as": "https://doi.org/10.5555/12345680"
+      }
+    }
   }
-},
+}

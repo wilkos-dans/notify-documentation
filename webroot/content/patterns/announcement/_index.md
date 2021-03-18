@@ -18,6 +18,8 @@ layout: pattern
     </div>
 </div>
 
+<hr/>
+
 ## Announcement of result of activity, where **no** new resource has resulted, in response to a previously made offer
 <div class="row">
     <div class="col">
@@ -29,6 +31,8 @@ layout: pattern
         {{< load_local_json "2/index.json" >}}
     </div>
 </div>
+
+<hr/>
 
 ## Announcement of new resource, relating to a different resource, **not** in response to a previously made offer
 <div class="row">
