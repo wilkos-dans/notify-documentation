@@ -26,11 +26,12 @@ By default, repository resources SHOULD be represented as follows:
 
 <div class="row">
     <div class="col">
-        {{< load_local_html "repo_object_example.html" >}}
+        <h5>Properties</h5>
+        {{< load_local_md "repo_object_example" >}}
     </div>
     <div class="col">
         <h5>Example</h5>
-        {{< load_local_json "repo_object_example.json" >}}
+        {{< load_local_json "repo_object_example/index.json" >}}
     </div>
 </div>
 <br/>

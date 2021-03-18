@@ -9,13 +9,6 @@
   ],
   "@id": "urn:uuid:6eafed1d-935c-41b1-a5bb-645be4b7533f",
   "@type": "Undo",
-  "object": {
-    "@id": "urn:uuid:0370c0fb-bb78-4a9b-87f5-bed307a509dd",
-    "@type": [
-      "Offer",
-      "nat:review-request"
-    ]
-  },
   "origin": {
     "@id": "https://repository.org",
     "@type": "Service",
@@ -25,5 +18,12 @@
     "@id": "https://reviewservice.org",
     "@type": "Service",
     "ldp:inbox": "https://reviewservice.org/requests/inbox"
+  },
+  "object": {
+    "@id": "urn:uuid:0370c0fb-bb78-4a9b-87f5-bed307a509dd",
+    "@type": [
+      "Offer",
+      "nat:review-request"
+    ]
   }
 }

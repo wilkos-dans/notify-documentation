@@ -12,6 +12,16 @@
     "Reject",
     "nat:reject-review-request"
   ],
+  "origin": {
+    "@id": "https://reviewservice.org/",
+    "@type": "Service",
+    "ldp:inbox": "https://reviewservice.org/requests/inbox"
+  },
+  "target": {
+    "@id": "https://repository.org",
+    "@type": "Service",
+    "ldp:inbox": "https://repository.org/inbox/"
+  },
   "inReplyTo": {
     "@id": "urn:uuid:0370c0fb-bb78-4a9b-87f5-bed307a509dd",
     "@type": [
@@ -22,15 +32,5 @@
       "@id": "https://repository.org/preprint/201203/421/",
       "ietf:cite-as": "https://doi.org/10.5555/12345680"
     }
-  },
-  "origin": {
-    "@id": "https://reviewservice.org/",
-    "@type": "Service",
-    "ldp:inbox": "https://reviewservice.org/requests/inbox"
-  },
-  "target": {
-    "@id": "https://repository.org",
-    "@type": "Service",
-    "ldp:inbox": "https://repository.org/inbox/"
   }
 }
