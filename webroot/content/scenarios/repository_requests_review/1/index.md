@@ -6,5 +6,6 @@ scope: actor_1
 position: 1
 sender: ""
 pattern: ""
+headless: false
 ---
 

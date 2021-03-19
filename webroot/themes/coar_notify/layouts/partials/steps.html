@@ -1,74 +1,95 @@
 {{ range (.Data.Pages.ByParam "position") }}
+{{ $stepPosition := .Params.position }}
 {{ if eq .Params.scope "notify" }}
+{{ $patternPage := .Site.GetPage (print "/patterns/" .Params.pattern) }}
 <div class="row">
-  <div class="col-3 column-left">
-  </div>
-  <div class="col-6 column-center">
-    <div class="card notify-card">
-      {{ if eq .Params.sender "actor_1" }}
-      <div class="card-header notify-card-header notify-card-header-right">
-        <span class="step-number">{{ .Params.position }}</span>&nbsp;<a href="{{ .Permalink }}">{{ .Title }}</a>
-      </div>
-      {{ else }}
-      <div class="card-header notify-card-header notify-card-header-left">
-        <span class="step-number">{{ .Params.position }}</span>&nbsp;<a href="{{ .Permalink }}">{{ .Title }}</a>
-      </div>
-      {{ end }}
-      <div class="card-body notify-card-body">
-        <p>{{ .Description }}</p>
-        {{ range .Page.Resources.Match "*.json" }}
-        <h3 id='example_{{ index (split .Name ".") 0 }}'>
-          Example {{ (index (split .Name ".") 0) }}: {{ .Params.caption | markdownify }}
-        </h3>
-        <pre><code class="language-json">{{ readFile .RelPermalink }}</code></pre>
-        <br/>
-
-        {{ end }}
-
-        {{ with .Site.GetPage (print "/patterns/" .Params.pattern) }}
-        <div class="notification-step-pattern">Using notification pattern '<a href="{{ .Permalink }}">{{ .Title }}</a>'</div>
-        {{ end }}
-      </div>
+    <div class="col-3 column-left">
     </div>
-  </div>
-  <div class="col-3 column-right">
-  </div>
+    <div class="col-6 column-center">
+        <div class="card notify-card">
+            {{ if eq .Params.sender "actor_1" }}
+            <div class="card-header notify-card-header notify-card-header-right">
+                <span class="step-number">{{ .Params.position }}</span>&nbsp;<a href="{{ .Permalink }}">{{ .Title }}</a>
+            </div>
+            {{ else }}
+            <div class="card-header notify-card-header notify-card-header-left">
+                <span class="step-number">{{ .Params.position }}</span>&nbsp;<a href="{{ .Permalink }}">{{ .Title }}</a>
+            </div>
+            {{ end }}
+            <div class="card-body notify-card-body">
+                <p>{{ .Description }}</p>
+
+
+                <div class="accordion" id="accordion_{{$stepPosition }}">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="accordionPropertiesHeading_{{$stepPosition }}">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#accordionPropertiesCollapse_{{$stepPosition }}" aria-expanded="true"
+                                    aria-controls="accordionPropertiesCollapse_{{$stepPosition }}">
+                                Properties
+                            </button>
+                        </h2>
+                        <div id="accordionPropertiesCollapse_{{$stepPosition }}" class="accordion-collapse collapse" aria-labelledby="accordionPropertiesHeading_{{$stepPosition }}" data-bs-parent="#accordion_{{$stepPosition }}">
+                            <div class="accordion-body">
+                                {{ (.Site.GetPage (print $patternPage.File.Dir "/1")).Content }}
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="accordionJsonHeading_{{$stepPosition }}">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#accordionJsonsCollapse_{{$stepPosition }}" aria-expanded="false"
+                                    aria-controls="accordionJsonsCollapse_{{$stepPosition }}">
+                                JSON-LD Payload
+                            </button>
+                        </h2>
+                        <div id="accordionJsonsCollapse_{{$stepPosition }}" class="accordion-collapse collapse" aria-labelledby="accordionJsonHeading_{{$stepPosition }}" data-bs-parent="#accordion_{{$stepPosition }}">
+                            <div class="accordion-body">
+                                <pre><code class="language-json">{{ readFile (print $patternPage.File.Dir "/1/index.json") }}</code></pre><br/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="col-3 column-right">
+    </div>
 </div>
 {{ end }}
 {{ if eq .Params.scope "actor_1" }}
 <div class="row">
-  <div class="col-3 column-left">
-    <div class="card">
-      <div class="card-header">
-        <span class="step-number">{{ .Params.position }}</span>&nbsp;<a href="{{ .Permalink }}">{{ .Title }}</a>
-      </div>
-      <div class="card-body">
-        {{ .Description }}
-      </div>
+    <div class="col-3 column-left">
+        <div class="card">
+            <div class="card-header">
+                <span class="step-number">{{ .Params.position }}</span>&nbsp;<a href="{{ .Permalink }}">{{ .Title }}</a>
+            </div>
+            <div class="card-body">
+                {{ .Description }}
+            </div>
+        </div>
     </div>
-  </div>
-  <div class="col-6 column-center">
-  </div>
-  <div class="col-3 column-right">
-  </div>
+    <div class="col-6 column-center">
+    </div>
+    <div class="col-3 column-right">
+    </div>
 </div>
 {{ end }}
 {{ if eq .Params.scope "actor_2" }}
 <div class="row">
-  <div class="col-3 column-left">
-  </div>
-  <div class="col-6 column-center">
-  </div>
-  <div class="col-3 column-right">
-    <div class="card">
-      <div class="card-header">
-        <span class="step-number">{{ .Params.position }}</span>&nbsp;<a href="{{ .Permalink }}">{{ .Title }}</a>
-      </div>
-      <div class="card-body">
-        {{ .Description }}
-      </div>
+    <div class="col-3 column-left">
     </div>
-  </div>
+    <div class="col-6 column-center">
+    </div>
+    <div class="col-3 column-right">
+        <div class="card">
+            <div class="card-header">
+                <span class="step-number">{{ .Params.position }}</span>&nbsp;<a href="{{ .Permalink }}">{{ .Title }}</a>
+            </div>
+            <div class="card-body">
+                {{ .Description }}
+            </div>
+        </div>
+    </div>
 </div>
 {{ end }}
 {{ end }}
