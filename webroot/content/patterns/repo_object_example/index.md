@@ -9,8 +9,9 @@ headless: true
 * Other contexts (namespaces) used:
     * [schema.org](https://schema.org)
     * [COAR Resource Types](http://purl.org/coar/resource_type)
+    * [IETF Link Relations](http://www.iana.org/assignments/relation/)
 * the repository resource is represented as an `object`
-    * the `@id` property of the `object` contains the HTTP URI to the "landing page" for the resource
+    * the `@id` property of the `object` contains the HTTP URI of the "landing page" for the resource
     * the `@type` property of the `object` contains the value _AboutPage_ from the [schema.org](https://schema.org/AboutPage) vocabulary
     * the `ietf:cite-as` property of the `object` contains the persistent HTTP URI (sometimes called the "PID") which is to be used to cite or link to the resource.
     * the `url` property contains the details of the actual content resource

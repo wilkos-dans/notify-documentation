@@ -15,7 +15,7 @@ headless: true
     * The `activity` has an `origin` representing its 'originator'
     * The `activity` has a `target` representing its 'destination'
     * `inReplyTo` is specified because this is an announcement in response to a previous notification
-        * `inReplyTo` has an `@id` which is an URN:UUID and which identifies the `activity` for which this is a response
+        * `inReplyTo` has an `@id` which is the URI (URN:UUID or HTTP URI) which identifies the `activity` for which this is a response
         * `inReplyTo` has a `@type` array which mirrors the `@type` of the `activity` for which this is a response
         * `inReplyTo` also contains an `object` which represents the original `object` of the `activity` for which this is a response
             * the `@id` property of the `object` contains the HTTP URI for the resource
