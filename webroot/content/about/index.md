@@ -9,7 +9,7 @@ This documentation has been developed by COAR as part of the [*Notify*](https://
 ## Notification Pattern Editors
 * Martin Klein, Los Alamos National Laboratory
 * Herbert Van de Sompel, Data Archiving &amp; Networked Services (DANS)
-* Paul Walk
+* Paul Walk, Antleaf and COAR
 
 
 ## Scenario Contributors
