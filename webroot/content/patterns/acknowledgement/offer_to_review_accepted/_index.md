@@ -1,5 +1,5 @@
 ---
-title: "Acceptance of offer for review"
+title: "Acceptance of offer for review of a repository resource"
 date: "2021-03-08"
 description: ""
 layout: pattern_example

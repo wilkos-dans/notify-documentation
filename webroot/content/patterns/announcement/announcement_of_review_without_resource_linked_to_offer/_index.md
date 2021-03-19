@@ -1,5 +1,5 @@
 ---
-title: "Announcement of result of activity, where **no** new resource has resulted, in response to a previously made offer"
+title: "Announcement of result of review process, where **no** review has resulted, in response to an offer"
 date: "2021-03-08"
 description: ""
 layout: pattern_example
