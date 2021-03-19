@@ -30,7 +30,9 @@
                         </h2>
                         <div id="accordionPropertiesCollapse_{{$stepPosition }}" class="accordion-collapse collapse" aria-labelledby="accordionPropertiesHeading_{{$stepPosition }}" data-bs-parent="#accordion_{{$stepPosition }}">
                             <div class="accordion-body">
-                                {{ (.Site.GetPage (print $patternPage.File.Dir "/1")).Content }}
+                                {{ with $patternPage }}
+                                    {{ (.Site.GetPage (print .File.Dir "/1")).Content }}
+                                {{ end }}
                             </div>
                         </div>
                     </div>
@@ -43,7 +45,9 @@
                         </h2>
                         <div id="accordionJsonsCollapse_{{$stepPosition }}" class="accordion-collapse collapse" aria-labelledby="accordionJsonHeading_{{$stepPosition }}" data-bs-parent="#accordion_{{$stepPosition }}">
                             <div class="accordion-body">
-                                <pre><code class="language-json">{{ readFile (print $patternPage.File.Dir "/1/index.json") }}</code></pre><br/>
+                                {{ with $patternPage }}
+                                    <pre><code class="language-json">{{ readFile (print .File.Dir "/1/index.json") }}</code></pre><br/>
+                                {{ end }}
                             </div>
                         </div>
                     </div>

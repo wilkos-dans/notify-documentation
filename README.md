@@ -25,6 +25,14 @@ Use the following example identifiers consistently, so that notification pattern
 * @id: https://reviewservice.org/review/geo/202103/0021
 * ietf:cite-as: https://doi.org/10.3214/987654
 
+### Overlay Journal
+* @id: https://journal.org
+* ldp:inbox: https://journal.org/requests/inbox/
+
+### Journal Object - review
+* @id: https://journal.org/reviews/000001/00001
+* ietf:cite-as: https://doi.org/10.3214/12345
+
 ### Offer
 * @id: urn:uuid:0370c0fb-bb78-4a9b-87f5-bed307a509dd
 

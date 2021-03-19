@@ -7,7 +7,8 @@
         <p>{{ .Description | markdownify }}</p>
             {{ (.Site.GetPage (print "/patterns/" .Params.pattern)).Content }}
         {{ else }}
-        (This is not a <i>Notify</i> notification, but is included as an indication of a logical step in the scenario. The details of this step are out-of-scope of <i>Notify</i> and should be considered opaque to the service undertaking the step.)
+        <p>(This is not a <i>Notify</i> notification, but is included as an indication of a logical step in the scenario. The details of this step are out-of-scope of <i>Notify</i> and should be considered opaque to the service undertaking the step.)</p>
+        <p>{{ .Description | markdownify }}</p>
         {{ end }}
     </div>
 </div>

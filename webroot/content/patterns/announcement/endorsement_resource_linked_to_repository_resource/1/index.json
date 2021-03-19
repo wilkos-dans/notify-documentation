@@ -1,0 +1,43 @@
+{
+  "@context": [
+    "https://www.w3.org/ns/activitystreams#",
+    {
+      "sorg": "http://schema.org/",
+      "ldp": "http://www.w3.org/ns/ldp#",
+      "ietf": "http://www.iana.org/assignments/relation/",
+      "nat": "http://purl.org/coar/notify_activity_type/",
+      "revt": "http://purl.org/coar/notify_review_type/",
+      "cito": "http://purl.org/spar/cito/"
+    }
+  ],
+  "@id": "urn:uuid:94ecae35-dcfd-4182-8550-22c7164fe23f",
+  "@type": [
+    "Announce",
+    "nat:endorsement-success"
+  ],
+  "origin": {
+    "@id": "https://journal.org",
+    "@type": "Service",
+    "ldp:inbox": "https://journal.org/requests/inbox"
+  },
+  "target": {
+    "@id": "https://repository.org",
+    "@type": "Service",
+    "ldp:inbox": "https://repository.org/inbox"
+  },
+  "object": {
+    "@id": "https://journal.org/reviews/000001/00001",
+    "@type": [
+      "Document",
+      "sorg:Review",
+      "revt:blind-peer-review"
+    ],
+    "ietf:cite-as": "https://doi.org/10.3214/12345",
+    "cito:reviews": {
+      "object": {
+        "@id": "https://repository.org/preprint/201203/421/",
+        "ietf:cite-as": "https://doi.org/10.5555/12345680"
+      }
+    }
+  }
+}
