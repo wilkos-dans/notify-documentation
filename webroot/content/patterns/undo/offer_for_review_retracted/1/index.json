@@ -12,7 +12,7 @@
   "origin": {
     "@id": "https://repository.org",
     "@type": "Service",
-    "ldp:inbox": "https://repository.org/inbox/"
+    "ldp:inbox": "https://repository.org/inbox"
   },
   "target": {
     "@id": "https://reviewservice.org",

@@ -21,9 +21,9 @@
     "ldp:inbox": "https://reviewservice.org/requests/inbox"
   },
   "target": {
-    "@id": "https://repository.org/",
+    "@id": "https://repository.org",
     "@type": "Service",
-    "ldp:inbox": "https://repository.org/inbox/"
+    "ldp:inbox": "https://repository.org/inbox"
   },
   "object": {
     "@id": "https://reviewservice.org/review/geo/202103/0021",
