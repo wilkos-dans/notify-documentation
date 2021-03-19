@@ -10,26 +10,26 @@
     </div>
 </div>
 <div class="row">
-    <div class="col">
-        <ul>
+<!--    <div class="col">-->
+<!--        <ul>-->
             {{ range .Sections }}
-            <li>
-                <a style="font-weight: bold" href="{{ .Permalink }}">{{ .Title }}</a><br/>
-                {{ .Description }}
-            </li>
-            <!--        <div class="col-12 col-sm-6 col-lg-4">-->
-            <!--          <div class="card">-->
-            <!--            <div class="card-header">-->
-            <!--              <a class="card-title-link" href="{{ .Permalink }}">{{ .Title }}</a>-->
-            <!--            </div>-->
-            <!--            <div class="card-body">-->
-            <!--              <p>{{ .Description }}</p>-->
-            <!--            </div>-->
-            <!--          </div>-->
-            <!--        </div>-->
+<!--            <li>-->
+<!--                <a style="font-weight: bold" href="{{ .Permalink }}">{{ .Title }}</a><br/>-->
+<!--                {{ .Description }}-->
+<!--            </li>-->
+            <div class="col-12 col-sm-6 col-lg-4">
+                <div class="card">
+                    <div class="card-header">
+                        <a class="card-title-link" href="{{ .Permalink }}">{{ .Title }}</a>
+                    </div>
+                    <div class="card-body">
+                        <p>{{ .Description }}</p>
+                    </div>
+                </div>
+            </div>
             {{ end }}
-        </ul>
-    </div>
+<!--        </ul>-->
+<!--    </div>-->
 </div>
 
 {{ end }}
