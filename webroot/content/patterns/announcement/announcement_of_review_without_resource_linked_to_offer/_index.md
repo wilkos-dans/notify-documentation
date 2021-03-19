@@ -1,5 +1,5 @@
 ---
-title: "Announcement of result of review process, where **no** review has resulted, in response to an offer"
+title: "Announcement of unsuccessful review process, in response to offer"
 date: "2021-03-08"
 description: ""
 layout: pattern_example

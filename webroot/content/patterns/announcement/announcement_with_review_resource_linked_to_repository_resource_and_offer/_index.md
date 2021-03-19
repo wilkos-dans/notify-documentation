@@ -1,5 +1,5 @@
 ---
-title: "Announcement of a review, linked to a repository resource, in response to an offer"
+title: "Announcement of review, linked to repository resource, in response to offer"
 date: "2021-03-08"
 description: ""
 layout: pattern_example
