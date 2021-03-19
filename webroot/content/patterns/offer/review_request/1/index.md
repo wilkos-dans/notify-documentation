@@ -1,7 +1,4 @@
 ---
-title: "Retraction of offer"
-date: "2021-03-08"
-description: ""
 headless: true
 ---
 
@@ -9,10 +6,12 @@ headless: true
 * Other contexts (namespaces) used:
     * [schema.org](https://schema.org)
     * [W3C Linked Data Platform (LDP) Vocabulary](https://www.w3.org/ns/ldp#)
+    * [IETF Link Relations](http://www.iana.org/assignments/relation/)
     * [Notify Activity Types](http://purl.org/coar/notify_activity_type/)
+    * [COAR Resource Types](http://purl.org/coar/resource_type)
 * _Notify_ notifications always describe an Activity Streams 2.0 `activity` as the base entity
     * The `activity` has an `@id` which is an URN:UUID
-    * The `activity` has a `@type` array with a value of _Undo_
+    * The `activity` has a `@type` array with values from Activity Streams 2.0 and Notify Activity Types
     * The `activity` has an `origin` representing its 'originator'
     * The `activity` has a `target` representing its 'destination'
     * the resource being offered is represented as an `object`

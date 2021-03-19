@@ -2,6 +2,7 @@
 title: "Notification Patterns"
 description:
 date: 2018-12-20
+layout: overview
 ---
 
 *Notify* notifications are designed to be sent and received using the [W3C Linked Data Notifications (LDN)](https://www.w3.org/TR/2017/REC-ldn-20170502/) standard. Payloads have a predictable structure, based primarily
