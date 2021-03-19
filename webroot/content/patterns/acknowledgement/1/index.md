@@ -15,9 +15,9 @@ headless: true
     * The `activity` has a `@type` array with the value *Accept* from Activity Streams 2.0, together with a more specific type from *Notify Activity Types*
     * The `activity` has an `origin` representing its 'originator'
     * The `activity` has a `target` representing its 'destination'
-    * `inReply` is specified because this is an acknowledgement of a previous notification
-      * `inReply` has an `@id` which is an URN:UUID and which identifies the `activity` for which this is a response
-      * `inReply` has a `@type` array which mirrors the `@type` of the `activity` for which this is a response
-      * `inReply` also contains an `object` which represents the original `object` of the `activity` for which this is a response
+    * `inReplyTo` is specified because this is an acknowledgement of a previous notification
+      * `inReplyTo` has an `@id` which is an URN:UUID and which identifies the `activity` for which this is a response
+      * `inReplyTo` has a `@type` array which mirrors the `@type` of the `activity` for which this is a response
+      * `inReplyTo` also contains an `object` which represents the original `object` of the `activity` for which this is a response
         * the `@id` property of the `object` contains the HTTP URI for the resource
         * the `ietf:cite-as` property of the `object` contains the persistent HTTP URI (sometimes called the "PID") which is to be used to cite or link to the resource.

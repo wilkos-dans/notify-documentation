@@ -26,9 +26,9 @@ headless: true
             * the `cito:` property contains an `object` representing the related resource.
                 * the `@id` property of the related `object` contains the HTTP URI for that resource
                 * the `ietf:cite-as` property of the `object` contains the persistent HTTP URI (sometimes called the "PID") which is to be used to cite or link to the resource.
-    * `inReply` is specified because this is an announcement in response to a previous notification
-        * `inReply` has an `@id` which is an URN:UUID and which identifies the `activity` for which this is a response
-        * `inReply` has a `@type` array which mirrors the `@type` of the `activity` for which this is a response
-        * `inReply` also contains an `object` which represents the original `object` of the `activity` for which this is a response
+    * `inReplyTo` is specified because this is an announcement in response to a previous notification
+        * `inReplyTo` has an `@id` which is an URN:UUID and which identifies the `activity` for which this is a response
+        * `inReplyTo` has a `@type` array which mirrors the `@type` of the `activity` for which this is a response
+        * `inReplyTo` also contains an `object` which represents the original `object` of the `activity` for which this is a response
             * the `@id` property of the `object` contains the HTTP URI for the resource
             * the `ietf:cite-as` property of the `object` contains the persistent HTTP URI (sometimes called the "PID") which is to be used to cite or link to the resource.
