@@ -16,6 +16,10 @@ body {
   font-size: 16px;
 }
 
+p {
+  /*margin: 0px;*/
+}
+
 pre,code {
   padding: 0px;
 }
@@ -90,6 +94,7 @@ td.field-name {
 div.rfc-2119 {
   text-align: center;
   border: 1px solid #cdcdcd;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
   background-color: #efefef;
+  font-size: 80%;
 }
