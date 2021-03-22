@@ -12,31 +12,14 @@ on [Activity Streams 2.0](https://www.w3.org/TR/activitystreams-core/), with som
 
 ## Core Payload
 
-All *Notify* payloads define an *activity*. As such, they MUST use Activity Streams 2.0 for the default context. They MAY add additional contexts. The following properties from Activity Streams 2.0 are used consistently in the various
+All *Notify* payloads define an `activity`. As such, they MUST use Activity Streams 2.0 for the default context. They MAY add additional contexts. The following properties from Activity Streams 2.0 are used consistently in all the
 notification patterns:
 
-* **activity:**
-    * **@id:** This MUST be a URI. The use of URN:UUID is RECOMMENDED. An HTTP URI MAY be used, but in such cases the URI SHOULD resolve to a useful resource.
-    * **@type:** This MUST be an array, which MUST include one of the Activity Stream 2.0 Activity Types, and which MUST also include a type from the [Notify Activity Types vocabulary](/vocabularies/activity_types/)
-    * **origin:** The originator of the activity, typically the service responsible for sending the notification.
-    * **target:** The intended destination of the activity, typically the service which *consumes* the notification.
-
-<!--
-## Representation of repository resources
-
-By default, repository resources SHOULD be represented as follows:
-
-<div class="row">
-    <div class="col">
-        <h5>Properties</h5>
-        {{< load_local_md "repo_object_example" >}}
-    </div>
-    <div class="col">
-        <h5>Example</h5>
-        {{< load_local_json "repo_object_example/index.json" >}}
-    </div>
-</div>
-<br/>
--->
+* **`activity`:**
+    * **`@id`:** This MUST be a URI. The use of URN:UUID is RECOMMENDED. An HTTP URI MAY be used, but in such cases the URI SHOULD resolve to a useful resource.
+    * **`@type`:** This MUST be an array, which MUST include one of the [Activity Stream 2.0 Activity Types](https://www.w3.org/TR/activitystreams-vocabulary/), and which MUST also include a type from the [Notify Activity Types vocabulary](/vocabularies/activity_types/)
+    * **`origin`:** The originator of the activity, typically the service responsible for sending the notification.
+    * **`target`:** The intended destination of the activity, typically the service which *consumes* the notification.
+    * **`object`:** This MUST be a Web *resource*, generally the focus of the activity. Other object properties MAY appear in notifications, as properties of other properties. The activity itself MUST have zero or one object properties.
 
 The following notification patterns are defined to be widely reusable. Their re-use is illustrated in the [example scenarios](/scenarios/).
