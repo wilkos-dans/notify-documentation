@@ -8,7 +8,7 @@ headless: true
 
 {{% property_fragment_id %}}
 
-{{% property_fragment_type "Reject" "reject-review-request" %}}
+{{% property_fragment_type "Reject" %}}
 
 {{% property_fragment_origin "review service" %}}
 
