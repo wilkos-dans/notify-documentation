@@ -33,6 +33,10 @@ Use the following example identifiers consistently, so that notification pattern
 * @id: https://journal.org/reviews/000001/00001
 * ietf:cite-as: https://doi.org/10.3214/12345
 
+### Journal Object - article
+* @id: https://journal.org/articles/00001/
+* ietf:cite-as: https://journal.org/articles/00001/
+
 ### Offer
 * @id: urn:uuid:0370c0fb-bb78-4a9b-87f5-bed307a509dd
 

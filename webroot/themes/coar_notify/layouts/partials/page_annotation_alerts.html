@@ -1,0 +1,9 @@
+
+{{ if (eq .Site.Params.showPageAnnotationAlerts true) }}
+{{ if in .Params.tags "review" }}
+<div class="alert alert-warning page-annotation-alert" role="alert"><a href="/tags/review/">This page is marked for review</a></div>
+{{ end }}
+{{ if in .Params.tags "revise" }}
+<div class="alert alert-danger page-annotation-alert" role="alert"><a href="/tags/revise/">This page is marked for revision</a></div>
+{{ end }}
+{{ end }}

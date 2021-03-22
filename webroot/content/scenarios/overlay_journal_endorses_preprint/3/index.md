@@ -1,6 +1,6 @@
 ---
-title: Recommendation Announcement (including reviews)
-description: The overlay journal notifies the repository of a recommendation of a preprint and links to review(s).
+title: Endorsement Announcement (with link)
+description: The overlay journal notifies the repository that a resource has been endorsed, and provides a link to evidence of that endorsement.
 date: "2021-03-08"
 scope: notify
 position: 3

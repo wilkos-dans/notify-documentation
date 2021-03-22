@@ -1,0 +1,8 @@
+#### `object`
+The `activity` MUST have an `object` representing the {{ .Get 0 }}. The `object` MUST have the following properties:
+* An `@id` which MUST contain the HTTP URI for the resource
+* A `@type` array which MUST include an appropriate type from AS 2.0, and which MAY include an appropriate type from another vocabulary such as schema.org.
+* An `ietf:cite-as` which MUST contain the persistent HTTP URI (sometimes called the "PID") which is to be used to cite or link to the resource.
+* an `nrr:{{ .Get 1 }}` relation property which MUST describe the object of this {{ .Get 0 }}. The `object` of `nrr:{{ .Get 1 }}` MUST contain:
+    * An `@id` which MUST contain the HTTP URI for the resource
+    * An `ietf:cite-as` which MUST contain the persistent HTTP URI (sometimes called the "PID") which is to be used to cite or link to the resource.

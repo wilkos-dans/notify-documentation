@@ -1,0 +1,4 @@
+#### `object`
+The `activity` MUST have an `object` representing the {{ .Get 0 }}. The `object` MUST have the following properties:
+* An `@id` which MUST contain the HTTP URI for the `activity` representing the offer which is being retracted.
+* A `@type` which MUST contain the value *{{ .Get 1 }}* from AS 2.0 {{ with .Get 2 }} and *{{ . }}* from Notify Activity Types. {{ end }}

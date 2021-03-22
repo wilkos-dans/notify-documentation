@@ -49,3 +49,11 @@ ol.breadcrumb-notify {
 li.breadcrumb-item {
     white-space: nowrap;
 }
+
+div.page-annotation-alert {
+    padding: 3px;
+    text-align: center;
+    color: #555555;
+    font-weight: bold;
+    font-style: italic;
+}

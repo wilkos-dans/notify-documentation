@@ -3,7 +3,8 @@ uglyURLs: false
 title: "COAR Notify Documentation"
 theme: "coar_notify"
 enableRobotsTXT: true
-disableKinds: ["RSS","taxonomy","taxonomyTerm"]
+#disableKinds: ["RSS","taxonomy","taxonomyTerm"]
+disableKinds: ["RSS"]
 metaDataFormat: "yaml"
 enableGitInfo: false
 blackfriday:
@@ -11,6 +12,8 @@ blackfriday:
   smartDashes: false
   extensionsmask: ["autolink"] #disables these extensions
 disablePathToLower: true
+taxonomies:
+  tag: "tags"
 markup:
 #  defaultMarkdownHandler: blackFriday
   defaultMarkdownHandler: goldmark

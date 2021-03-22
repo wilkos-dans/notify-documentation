@@ -6,8 +6,7 @@
       "ldp": "http://www.w3.org/ns/ldp#",
       "ietf": "http://www.iana.org/assignments/relation/",
       "nat": "http://purl.org/coar/notify_activity_type/",
-      "revt": "http://purl.org/coar/notify_review_type/",
-      "cito": "http://purl.org/spar/cito/"
+      "nrr": "http://purl.org/coar/notify_resource_relations/"
     }
   ],
   "@id": "urn:uuid:94ecae35-dcfd-4182-8550-22c7164fe23f",
@@ -29,11 +28,10 @@
     "@id": "https://reviewservice.org/review/geo/202103/0021",
     "@type": [
       "Document",
-      "sorg:Review",
-      "revt:blind-peer-review"
+      "sorg:Review"
     ],
     "ietf:cite-as": "https://doi.org/10.3214/987654",
-    "cito:reviews": {
+    "nrr:reviews": {
       "object": {
         "@id": "https://repository.org/preprint/201203/421/",
         "ietf:cite-as": "https://doi.org/10.5555/12345680"

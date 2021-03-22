@@ -2,11 +2,9 @@
   "@context": [
     "https://www.w3.org/ns/activitystreams#",
     {
-      "sorg": "http://schema.org/",
       "ldp": "http://www.w3.org/ns/ldp#",
       "ietf": "http://www.iana.org/assignments/relation/",
-      "nat": "http://purl.org/coar/notify_activity_type/",
-      "rt": "http://purl.org/coar/resource_type"
+      "nat": "http://purl.org/coar/notify_activity_type/"
     }
   ],
   "@id": "urn:uuid:94ecae35-dcfd-4182-8550-22c7164fe23f",

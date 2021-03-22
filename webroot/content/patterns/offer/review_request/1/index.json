@@ -5,8 +5,7 @@
       "sorg": "http://schema.org/",
       "ldp": "http://www.w3.org/ns/ldp#",
       "ietf": "http://www.iana.org/assignments/relation/",
-      "nat": "http://purl.org/coar/notify_activity_type/",
-      "rt": "http://purl.org/coar/resource_type"
+      "nat": "http://purl.org/coar/notify_activity_type/"
     }
   ],
   "@id": "urn:uuid:0370c0fb-bb78-4a9b-87f5-bed307a509dd",

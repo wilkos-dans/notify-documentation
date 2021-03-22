@@ -1,0 +1,32 @@
+{{ $namespaceScratch := newScratch }}
+
+{{ $namespaceScratch.SetInMap "sorg" "name" "schema.org" }}
+{{ $namespaceScratch.SetInMap "sorg" "uri" "http://schema.org/" }}
+
+{{ $namespaceScratch.SetInMap "ldp" "name" "W3C Linked Data Platform (LDP) Vocabulary" }}
+{{ $namespaceScratch.SetInMap "ldp" "uri" "http://www.w3.org/ns/ldp#" }}
+
+{{ $namespaceScratch.SetInMap "nat" "name" "Notify Activity Types" }}
+{{ $namespaceScratch.SetInMap "nat" "uri" "http://purl.org/coar/notify_activity_type/" }}
+
+{{ $namespaceScratch.SetInMap "rt" "name" "COAR Resource Types" }}
+{{ $namespaceScratch.SetInMap "rt" "uri" "http://purl.org/coar/resource_type" }}
+
+{{ $namespaceScratch.SetInMap "ietf" "name" "IETF Link Relations" }}
+{{ $namespaceScratch.SetInMap "ietf" "uri" "http://www.iana.org/assignments/relation/" }}
+
+{{ $namespaceScratch.SetInMap "cito" "name" "CiTO, the Citation Typing Ontology" }}
+{{ $namespaceScratch.SetInMap "cito" "uri" "http://purl.org/spar/cito/" }}
+
+{{ $namespaceScratch.SetInMap "nrr" "name" "Notify Resource Relations" }}
+{{ $namespaceScratch.SetInMap "nrr" "uri" "http://purl.org/coar/notify_resource_relations/" }}
+
+
+Other contexts (namespaces) MUST include:
+{{ with .Params }}
+<ul>
+{{ range . }}
+    <li><a href="{{ index ($namespaceScratch.Get .) "uri" }}">{{ index ($namespaceScratch.Get .) "name" }}</a></li>
+{{ end }}
+</ul>
+{{ end }}

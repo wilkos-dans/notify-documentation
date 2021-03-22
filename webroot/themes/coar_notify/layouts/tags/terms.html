@@ -1,0 +1,17 @@
+{{ define "main" }}
+  <div class="row">
+    <div class="col">
+      <h1 class="page-title">{{humanize .Data.Plural}}</h1>
+      {{ .Description }}
+      <br />
+      {{ .Content }}
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      {{ range .Data.Terms.ByCount }}
+      <li><a href="{{ .Term }}">{{ .Name}}</a> [{{ .Count }}]</li>
+      {{ end }}
+    </div>
+  </div>
+{{ end }}
