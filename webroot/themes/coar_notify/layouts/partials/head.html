@@ -13,13 +13,13 @@
     <link rel="stylesheet" href="{{ $style_bootstrap.Permalink }}">
     {{ $style_main := resources.Get "css/main.css" | resources.Minify | resources.Fingerprint }}
     <link rel="stylesheet" href="{{ $style_main.Permalink }}">
-    {{ $style_prism := resources.Get "css/prism.css" }}
+    {{ $style_prism := resources.Get "css/prism.css" | resources.Minify | resources.Fingerprint }}
     <link rel="stylesheet" href="{{ $style_prism.Permalink }}">
-    {{ $style_header := resources.Get "css/header.css" }}
+    {{ $style_header := resources.Get "css/header.css" | resources.Minify | resources.Fingerprint }}
     <link rel="stylesheet" href="{{ $style_header.Permalink }}">
-    {{ $style_footer := resources.Get "css/footer.css" }}
+    {{ $style_footer := resources.Get "css/footer.css" | resources.Minify | resources.Fingerprint }}
     <link rel="stylesheet" href="{{ $style_footer.Permalink }}">
-    {{ $style_swim_lanes := resources.Get "css/swim_lanes.css" }}
+    {{ $style_swim_lanes := resources.Get "css/swim_lanes.css" | resources.Minify | resources.Fingerprint }}
     <link rel="stylesheet" href="{{ $style_swim_lanes.Permalink }}">
 
 
