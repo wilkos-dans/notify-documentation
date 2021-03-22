@@ -31,8 +31,7 @@
       "@id": "https://repository.org/preprint/201203/421/content.pdf",
       "@type": [
         "Article",
-        "sorg:ScholarlyArticle",
-        "rt:c_816b"
+        "sorg:ScholarlyArticle"
       ],
       "mediaType": "application/pdf"
     }
