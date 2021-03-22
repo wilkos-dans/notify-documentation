@@ -5,29 +5,19 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
-            {{ if eq .Section ""}}
-            <li class="nav-item nav-item-selected">{{ else }}
-            <li class="nav-item">{{ end }}
+            <li class="nav-item">
                 <a class="nav-link" href="/">Home</a>
             </li>
-            {{ if eq .Section "patterns"}}
-            <li class="nav-item nav-item-selected">{{ else }}
-            <li class="nav-item">{{ end }}
+            <li class="nav-item">
                 <a class="nav-link" href="/patterns/">Notification Patterns</a>
             </li>
-            {{ if eq .Section "scenarios"}}
-            <li class="nav-item nav-item-selected">{{ else }}
-            <li class="nav-item">{{ end }}
+            <li class="nav-item">
                 <a class="nav-link" href="/scenarios/">Example Scenarios</a>
             </li>
-            {{ if eq .Section "vocabularies"}}
-            <li class="nav-item nav-item-selected">{{ else }}
-            <li class="nav-item">{{ end }}
+            <li class="nav-item">
                 <a class="nav-link" href="/vocabularies/">Vocabularies</a>
             </li>
-            {{ if eq .Section "about"}}
-            <li class="nav-item nav-item-selected">{{ else }}
-            <li class="nav-item">{{ end }}
+            <li class="nav-item">
                 <a class="nav-link" href="/about/">About</a>
             </li>
         </ul>
