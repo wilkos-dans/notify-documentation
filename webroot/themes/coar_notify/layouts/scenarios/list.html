@@ -10,26 +10,24 @@
     </div>
 </div>
 <div class="row">
-<!--    <div class="col">-->
-<!--        <ul>-->
+    <div class="col">
+        <table id="scenariosTable" class="table table-sm">
+            <thead>
+            <tr class="column-header-row">
+                <th>Scenario</th>
+                <th>Initiated by</th>
+            </tr>
+            </thead>
+            <tbody>
             {{ range .Sections }}
-<!--            <li>-->
-<!--                <a style="font-weight: bold" href="{{ .Permalink }}">{{ .Title }}</a><br/>-->
-<!--                {{ .Description }}-->
-<!--            </li>-->
-            <div class="col-12 col-sm-6 col-lg-4">
-                <div class="card">
-                    <div class="card-header">
-                        <a class="card-title-link" href="{{ .Permalink }}">{{ .Title }}</a>
-                    </div>
-                    <div class="card-body">
-                        <p>{{ .Description }}</p>
-                    </div>
-                </div>
-            </div>
+                <tr>
+                    <td><a href="{{ .Permalink }}">{{ .Title }}</a></td>
+                    <td>{{ .Params.actor_1 }}</td>
+                </tr>
             {{ end }}
-<!--        </ul>-->
-<!--    </div>-->
+            </tbody>
+        </table>
+    </div>
 </div>
 
 {{ end }}

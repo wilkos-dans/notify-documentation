@@ -11,13 +11,11 @@ This documentation has been developed by COAR as part of the [*Notify*](https://
 * Herbert Van de Sompel, Data Archiving &amp; Networked Services (DANS)
 * Paul Walk, Antleaf and COAR
 
-
 ## Scenario Contributors
 - Isabel Bernal, CSIC
 - Denis Bourguet, Peer Community In
 - José Carvalho, Minho University Library / RCAAP/Pub IN
 - Hannah Drury, eLife / Sciety
-- Nathalie Fargier, CCSD / HAL
 - Thomas Guillemaud, Peer Community In
 - Masaharu Hayashi, National Institute of Informatics, Japan
 - Katrina Murphy, PREreview
@@ -27,6 +25,5 @@ This documentation has been developed by COAR as part of the [*Notify*](https://
 - Paul Shannon, eLife / Sciety
 - Stu Snydman, Harvard University Library
 - Raphaël Tournoy, CCSD / HAL
-- Caspar Treijtel, University of Amsterdam / University Journals
 - Andrew Woods, Harvard University Library
 - Saskia Wouterson, University of Amsterdam / University Journals
