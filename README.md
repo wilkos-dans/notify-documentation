@@ -49,3 +49,12 @@ Use the following example identifiers consistently, so that notification pattern
 ### Announcement
 * @id: urn:uuid:94ecae35-dcfd-4182-8550-22c7164fe23f
 
+### Actor (author)
+* @id: https://orcid.org/0000-0002-1825-0097
+* name: Josiah Carberry
+* ldp:inbox: https://josiahcarberry.com/ldn/inbox
+
+### Actor (reviewer)
+* @id: https://isni.org/isni/0000000122832703
+* name: H G Wells
+* ldp:inbox: https://hgwells.com/ldn/inbox

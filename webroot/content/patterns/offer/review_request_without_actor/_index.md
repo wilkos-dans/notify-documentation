@@ -1,5 +1,5 @@
 ---
-title: "Offer of repository resource for review"
+title: "Request for review of repository resource"
 date: "2021-03-08"
 description: ""
 layout: pattern_example
@@ -15,3 +15,4 @@ layout: pattern_example
         {{< load_local_json "1/index.json" >}}
     </div>
 </div>
+
