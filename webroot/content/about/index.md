@@ -32,5 +32,5 @@ This documentation has been developed by COAR as part of the [*Notify*](https://
 * Paul Walk, Antleaf and COAR
 
 <div style="text-align: right;">
-<a href="https://www.antleaf.com"><img src="/images/antleaf_logo.png"/></a>
+<a href="https://www.antleaf.com"><img style="max-width: 100px;" src="/images/antleaf_logo.png"/></a>
 </div>
