@@ -1,8 +1,0 @@
----
-title: Repository requests review with possible endorsement (on behalf of corresponding author)
-description: Initiated by the corresponding author, a repository requests a review for one of its resources from a trusted review service
-actor_1: Repository
-actor_2: Overlay Journal
-layout: scenario
-date: "2021-03-08"
----
