@@ -42,3 +42,19 @@ div.page-annotation-alert {
     font-style: italic;
 }
 
+div.page-annotation-badges {
+    /*text-align: right;*/
+}
+
+span.page-annotation {
+    /*font-size: 100%;*/
+}
+
+a.page-annotation {
+    color: white;
+    text-decoration: none;
+}
+
+a.page-annotation:hover {
+    text-decoration: underline;
+}
