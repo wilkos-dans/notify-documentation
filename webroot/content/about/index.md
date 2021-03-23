@@ -27,3 +27,10 @@ This documentation has been developed by COAR as part of the [*Notify*](https://
 - Raphaël Tournoy, CCSD / HAL
 - Andrew Woods, Harvard University Library
 - Saskia Wouterson, University of Amsterdam / University Journals
+
+## Website Development
+* Paul Walk, Antleaf and COAR
+
+<div style="text-align: right;">
+<a href="https://www.antleaf.com"><img src="/images/antleaf_logo.png"/></a>
+</div>
