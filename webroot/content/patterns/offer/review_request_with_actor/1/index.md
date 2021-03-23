@@ -16,4 +16,4 @@ headless: true
 
 {{% property_fragment_object_repository_resource "preprint" "Article" "ScholarlyArticle" %}}
 
-{{% property_fragment_actor %}}
+{{% property_fragment_actor "corresponding author" "Person" %}}

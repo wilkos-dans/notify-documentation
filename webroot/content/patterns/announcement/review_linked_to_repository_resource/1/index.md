@@ -16,4 +16,5 @@ headless: true
 
 {{% property_fragment_object_resource_with_relation "review" "reviews" %}}
 
+{{% property_fragment_actor "reviewer" "Person" %}}
 

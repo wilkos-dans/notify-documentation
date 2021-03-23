@@ -37,5 +37,11 @@
         "ietf:cite-as": "https://doi.org/10.5555/12345680"
       }
     }
+  },
+  "actor": {
+    "@id": "https://isni.org/isni/0000000122832703",
+    "@type": "Person",
+    "name": "H G Wells",
+    "ldp:inbox": "https://hgwells.com/ldn/inbox"
   }
 }
