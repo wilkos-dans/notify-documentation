@@ -5,6 +5,6 @@ date: "2021-03-08"
 scope: notify
 position: 3
 sender: actor_1
-pattern: announcement/endorsement_resource_linked_to_repository_resource
+pattern: announcement/endorsement_successful_standalone
 ---
 

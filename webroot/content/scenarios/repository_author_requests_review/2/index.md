@@ -5,7 +5,7 @@ date: "2021-03-08"
 scope: notify
 position: 2
 sender: actor_1
-pattern: offer/review_request
+pattern: offer/review_request_by_author
 ---
 
 
