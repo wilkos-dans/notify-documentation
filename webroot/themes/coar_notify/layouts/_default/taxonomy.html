@@ -10,13 +10,22 @@
 <div class="row">
     <div class="col">
         <h4>Pages with {{ .Data.Singular}}: '{{ .Title | markdownify }}'</h4>
-        {{ with .Data.Pages }}
-        <ul>
-            {{ range . }}
-            <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+        <table id="scenariosTable" class="table table-sm table-striped">
+            <thead>
+            <tr class="column-header-row">
+                <th>Page</th>
+                <th>Category</th>
+            </tr>
+            </thead>
+            <tbody>
+            {{ range .Data.Pages }}
+                <tr>
+                    <td><a href="{{ .Permalink }}">{{ .Title }}</a></td>
+                    <td>{{ humanize .Section }}</td>
+                </tr>
             {{ end }}
-        </ul>
-        {{ end }}
+            </tbody>
+        </table>
     </div>
 </div>
 {{ end }}

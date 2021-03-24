@@ -1,0 +1,20 @@
+---
+headless: true
+---
+
+{{% property_fragment_context %}}
+
+{{< property_fragment_contexts_other sorg ldp ietf nat nrr>}}
+
+{{% property_fragment_id %}}
+
+{{% property_fragment_type "Announce" "ingest-success" %}}
+
+{{% property_fragment_origin "repository" %}}
+
+{{% property_fragment_target "overlay journal" %}}
+
+{{% property_fragment_object_resource %}}
+
+{{% property_fragment_inreplyto %}}
+

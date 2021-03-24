@@ -11,20 +11,20 @@
 </div>
 <div class="row">
     <div class="col">
-        <table id="scenariosTable" class="table table-sm">
+        <table id="scenariosTable" class="table table-sm table-striped">
             <thead>
             <tr class="column-header-row">
                 <th>ID</th>
                 <th>Scenario</th>
-                <th>Initiated by</th>
+                <th>Systems</th>
             </tr>
             </thead>
             <tbody>
             {{ range .Sections }}
                 <tr>
-                    <td><a href="{{ .Permalink }}">{{ replace (replace .File.Dir "scenarios/" "") "/" "" }}</a></td>
-                    <td>{{ .Title }}</td>
-                    <td>{{ .Params.actor_1 }}</td>
+                    <td>{{ replace (replace .File.Dir "scenarios/" "") "/" "" }}</td>
+                    <td><a href="{{ .Permalink }}">{{ .Title }}</a></td>
+                    <td>{{ .Params.actor_1 }} <-> {{ .Params.actor_2 }}</td>
                 </tr>
             {{ end }}
             </tbody>

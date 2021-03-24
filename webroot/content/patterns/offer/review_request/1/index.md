@@ -14,4 +14,4 @@ headless: true
 
 {{% property_fragment_target "review service" %}}
 
-{{% property_fragment_object_repository_resource "preprint" "Article" "ScholarlyArticle" %}}
+{{% property_fragment_object_scholarly_resource "preprint" "Article" "ScholarlyArticle" %}}

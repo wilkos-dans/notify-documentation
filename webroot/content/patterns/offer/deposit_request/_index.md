@@ -1,11 +1,10 @@
 ---
-title: "Announcement of journal endorsement"
+title: "Request to deposit a resource in a repository"
 date: "2021-03-08"
 description: ""
 layout: pattern_example
 status: [review,draft]
 ---
-
 
 <div class="row">
     <div class="col">
@@ -17,3 +16,4 @@ status: [review,draft]
         {{< load_local_json "1/index.json" >}}
     </div>
 </div>
+

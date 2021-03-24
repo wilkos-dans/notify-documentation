@@ -1,0 +1,38 @@
+{
+  "@context": [
+    "https://www.w3.org/ns/activitystreams#",
+    {
+      "sorg": "http://schema.org/",
+      "ldp": "http://www.w3.org/ns/ldp#",
+      "ietf": "http://www.iana.org/assignments/relation/",
+      "nat": "http://purl.org/coar/notify_activity_type/"
+    }
+  ],
+  "@id": "urn:uuid:0370c0fb-bb78-4a9b-87f5-bed307a509dd",
+  "@type": [
+    "Offer",
+    "nat:ingest-request"
+  ],
+  "origin": {
+    "@id": "https://journal.org",
+    "@type": "Service",
+    "ldp:inbox": "https://journal.org/requests/inbox/"
+  },
+  "target": {
+    "@id": "https://repository.org",
+    "@type": "Service",
+    "ldp:inbox": "https://repository.org/inbox/"
+  },
+  "object": {
+    "@id": "https://journal.org/submissions/00001/",
+    "@type": "sorg:AboutPage",
+    "url": {
+      "@id": "https://journal.org/submissions/00001/files/content.pdf",
+      "@type": [
+        "Article",
+        "sorg:ScholarlyArticle"
+      ],
+      "mediaType": "application/pdf"
+    }
+  }
+}

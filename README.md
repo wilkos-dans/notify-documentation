@@ -17,6 +17,10 @@ Use the following example identifiers consistently, so that notification pattern
 * ietf:cite-as: https://doi.org/10.5555/12345680
 * url @id: https://repository.org/preprint/201203/421/content.pdf
 
+### Repository Review Object
+* @id: https://repository.org/review/00001
+* ietf:cite-as: https://doi.org/10.3214/000001
+
 ### Review Service
 * @id: https://reviewservice.org
 * ldp:inbox: https://reviewservice.org/requests/inbox/
@@ -33,9 +37,13 @@ Use the following example identifiers consistently, so that notification pattern
 * @id: https://journal.org/reviews/000001/00001
 * ietf:cite-as: https://doi.org/10.3214/12345
 
-### Journal Object - article
+### Journal Object - published article
 * @id: https://journal.org/articles/00001/
 * ietf:cite-as: https://journal.org/articles/00001/
+
+### Journal Object - manuscript
+* @id: https://journal.org/submissions/00001/
+* url @id: https://journal.org/submissions/00001/files/content.pdf
 
 ### Offer
 * @id: urn:uuid:0370c0fb-bb78-4a9b-87f5-bed307a509dd

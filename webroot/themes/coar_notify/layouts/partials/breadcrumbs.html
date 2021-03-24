@@ -28,11 +28,11 @@
             {{ end }}
         {{ else if eq .Kind "taxonomy" }}
             <li class="breadcrumb-item"><a href="/">Home</a></li>
-{{/*            <li class="breadcrumb-item"><a href="/{{.Data.Plural}}">{{title .Data.Plural}}</a></li>*/}}
             <li class="breadcrumb-item">{{ .Title | markdownify }}</li>
         {{ else if eq .Kind "term" }}
             <li class="breadcrumb-item"><a href="/">Home</a></li>
-            <li class="breadcrumb-item">{{title .Data.Plural}}</li>
+            <li class="breadcrumb-item"><a href="/{{.Data.Plural}}">{{title .Data.Plural}}</a></li>
+            <li class="breadcrumb-item">{{.Title}}</li>
         {{ end }}
     </ol>
 </nav>

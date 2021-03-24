@@ -1,11 +1,10 @@
 ---
-title: "Announcement of journal endorsement"
+title: "Announcement of review from repository"
 date: "2021-03-08"
 description: ""
 layout: pattern_example
 status: [review,draft]
 ---
-
 
 <div class="row">
     <div class="col">

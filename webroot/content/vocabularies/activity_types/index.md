@@ -25,6 +25,8 @@ terms:
 - name: "endorsement-failure"
   definition: "Announcing an unsuccessful endorsement"
 - name: "ingest-request"
-  definition: "Offer to a repository to ingest a resource"
+  definition: "Offer of a resource for ingest"
+- name: "ingest-success"
+  definition: "Announcing that a resource has been ingested"
 ---
 

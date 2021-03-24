@@ -1,9 +1,9 @@
 ---
-title: Announce Endorsement
-description: 'The overlay journal notifies the repository of its endorsement'
+title: Repository Links to Endorsement
+description: The repository creates a link to the endorsement
 date: "2021-03-08"
-scope: notify
-sender: actor_1
-pattern: announcement/endorsement_successful_standalone
+scope: actor_2
+sender: ""
+pattern: ""
 ---
 
