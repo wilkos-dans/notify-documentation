@@ -3,7 +3,7 @@ title: "Announcement of journal endorsement"
 date: "2021-03-08"
 description: ""
 layout: pattern_example
-tags: 
+status: 
 ---
 
 

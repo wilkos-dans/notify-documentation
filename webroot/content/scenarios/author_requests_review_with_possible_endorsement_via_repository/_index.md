@@ -5,6 +5,6 @@ actor_1: Repository
 actor_2: Overlay Journal
 layout: scenario
 date: "2021-03-08"
-tags: [review,draft]
+status: [review,draft]
 ---
 

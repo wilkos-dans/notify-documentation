@@ -14,6 +14,7 @@ blackfriday:
 disablePathToLower: true
 taxonomies:
   tag: "tags"
+  status: "status"
 markup:
 #  defaultMarkdownHandler: blackFriday
   defaultMarkdownHandler: goldmark

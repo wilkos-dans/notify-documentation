@@ -5,6 +5,6 @@ actor_1: Overlay Journal
 actor_2: Aggregator
 layout: scenario
 date: "2021-03-08"
-tags: [review,draft]
+status: [review,draft]
 ---
 

@@ -5,5 +5,5 @@ actor_1: Repository
 actor_2: Review Service
 layout: scenario
 date: "2021-03-08"
-tags: [review,draft]
+status: [review,draft]
 ---
