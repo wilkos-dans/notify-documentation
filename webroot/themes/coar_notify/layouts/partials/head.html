@@ -30,7 +30,7 @@
     <script type="text/javascript" src="{{ $js_jquery.Permalink }}"></script>
     {{ $js_prism := resources.Get "js/prism.js" }}
     <script type="text/javascript" src="{{ $js_prism.Permalink }}"></script>
-    {{ $js_bootstrap := resources.Get "js/bootstrap.bundle.js" | resources.Minify | resources.Fingerprint }}
+    {{ $js_bootstrap := resources.Get "js/bootstrap.js" | resources.Minify | resources.Fingerprint }}
     <script type="text/javascript" src="{{ $js_bootstrap.Permalink }}"></script>
     {{ $js_datatables := resources.Get "js/datatables.min.js" | resources.Fingerprint }}
     <script type="text/javascript" src="{{ $js_datatables.Permalink }}"></script>
