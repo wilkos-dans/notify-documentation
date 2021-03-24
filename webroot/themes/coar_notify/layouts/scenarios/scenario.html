@@ -1,7 +1,7 @@
 {{ define "main" }}
   <div class="row">
     <div class="col">
-      <h1 class="page-title">Scenario: {{ .Title }}</h1>
+      <h1 class="page-title">Scenario {{ replace (replace .File.Dir "scenarios/" "") "/" "" }}: {{ .Title }}</h1>
         {{ .Scratch.Set "actor_1" .Params.actor_1 }}
         {{ .Scratch.Set "actor_2" .Params.actor_2 }}
         <p>{{ .Description }}</p>

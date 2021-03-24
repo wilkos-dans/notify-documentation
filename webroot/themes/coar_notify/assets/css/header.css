@@ -44,6 +44,7 @@ div.page-annotation-alert {
 
 div.page-annotation-badges {
     /*text-align: right;*/
+    margin-bottom: 10px;
 }
 
 span.page-annotation {
