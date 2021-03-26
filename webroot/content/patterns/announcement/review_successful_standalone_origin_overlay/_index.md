@@ -1,5 +1,5 @@
 ---
-title: "Announcement of review by review service"
+title: "Announcement of review by overlay journal"
 date: "2021-03-08"
 description: ""
 layout: pattern_example

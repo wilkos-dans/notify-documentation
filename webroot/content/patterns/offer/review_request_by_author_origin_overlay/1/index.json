@@ -5,28 +5,28 @@
       "sorg": "http://schema.org/",
       "ldp": "http://www.w3.org/ns/ldp#",
       "ietf": "http://www.iana.org/assignments/relation/",
-      "nat": "http://purl.org/coar/notify_activity_type/",
-      "nrr": "http://purl.org/coar/notify_resource_relations/"
+      "nat": "http://purl.org/coar/notify_activity_type/"
     }
   ],
-  "@id": "urn:uuid:94ecae35-dcfd-4182-8550-22c7164fe23f",
+  "@id": "urn:uuid:0370c0fb-bb78-4a9b-87f5-bed307a509dd",
   "@type": [
-    "Announce",
-    "nat:ingest-success"
+    "Offer",
+    "nat:review-request"
   ],
   "origin": {
     "@id": "https://repository.org",
     "@type": "Service",
     "ldp:inbox": "https://repository.org/inbox/"
   },
-  "target": {
-    "@id": "https://overlay-journal.org",
+  "origin": {
+    "@id": "https://overlay-journal.org/requests",
     "@type": "Service",
     "ldp:inbox": "https://overlay-journal.org/requests/inbox/"
   },
   "object": {
     "@id": "https://repository.org/preprint/201203/421/",
     "@type": "sorg:AboutPage",
+    "ietf:cite-as": "https://doi.org/10.5555/12345680",
     "url": {
       "@id": "https://repository.org/preprint/201203/421/content.pdf",
       "@type": [
@@ -36,11 +36,10 @@
       "mediaType": "application/pdf"
     }
   },
-  "inReplyTo": {
-    "@id": "urn:uuid:0370c0fb-bb78-4a9b-87f5-bed307a509dd",
-    "@type": [
-      "Offer",
-      "nat:ingest-request"
-    ]
+  "actor": {
+    "@id": "https://orcid.org/0000-0002-1825-0097",
+    "@type": "Person",
+    "name": "Josiah Carberry",
+    "ldp:inbox": "https://josiahcarberry.com/ldn/inbox"
   }
 }

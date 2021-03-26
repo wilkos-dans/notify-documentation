@@ -22,6 +22,11 @@ p {
 
 pre,code {
   padding: 0px;
+  font-family: 'Roboto Mono',monospace;
+}
+
+span.monospace {
+  font-family: 'Roboto Mono',monospace;
 }
 
 a,a:visited,a:hover {

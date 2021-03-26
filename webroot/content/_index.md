@@ -11,7 +11,7 @@ The documentation has the following structure:
 **Notification Pattern**
 These describe the payload for a re-usable notification - a kind of template.
 
-**Example Scenarios:**
+**Scenarios:**
 These describe an operation, typically involving a repository system and one other service. The operation is enabled by the exchange of *notifications*.
 
 **Notifications:**

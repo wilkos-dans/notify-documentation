@@ -12,41 +12,36 @@
   "@id": "urn:uuid:94ecae35-dcfd-4182-8550-22c7164fe23f",
   "@type": [
     "Announce",
-    "nat:endorsement-success"
+    "nat:review-success"
   ],
   "origin": {
-    "@id": "https://overlay-journal.org",
-    "@type": "Service",
-    "ldp:inbox": "https://overlay-journal.org/requests/inbox"
-  },
-  "target": {
     "@id": "https://repository.org",
     "@type": "Service",
     "ldp:inbox": "https://repository.org/inbox"
   },
+  "target": {
+    "@id": "https://overlay-journal.org",
+    "@type": "Service",
+    "ldp:inbox": "https://overlay-journal.org/requests/inbox"
+  },
   "object": {
-    "@id": "https://overlay-journal.org/articles/00001/",
+    "@id": "https://repository.org/review/00001",
     "@type": [
-      "Page",
-      "sorg:WebPage"
+      "Document",
+      "sorg:Review"
     ],
-    "ietf:cite-as": "https://overlay-journal.org/articles/00001/",
-    "nrr:endorses": {
+    "ietf:cite-as": "https://doi.org/10.3214/000001",
+    "nrr:reviews": {
       "object": {
         "@id": "https://repository.org/preprint/201203/421/",
         "ietf:cite-as": "https://doi.org/10.5555/12345680"
       }
     }
   },
-  "inReplyTo": {
-    "@id": "urn:uuid:0370c0fb-bb78-4a9b-87f5-bed307a509dd",
-    "@type": [
-      "Offer",
-      "nat:endorsement-request"
-    ],
-    "object": {
-      "@id": "https://repository.org/preprint/201203/421/",
-      "ietf:cite-as": "https://doi.org/10.5555/12345680"
-    }
+  "actor": {
+    "@id": "https://isni.org/isni/0000000122832703",
+    "@type": "Person",
+    "name": "H G Wells",
+    "ldp:inbox": "https://hgwells.com/ldn/inbox"
   }
 }

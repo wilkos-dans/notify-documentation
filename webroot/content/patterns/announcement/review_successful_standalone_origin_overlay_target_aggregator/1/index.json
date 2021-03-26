@@ -15,22 +15,22 @@
     "nat:review-success"
   ],
   "origin": {
-    "@id": "https://repository.org",
+    "@id": "https://overlay-journal.org/requests",
     "@type": "Service",
-    "ldp:inbox": "https://repository.org/inbox"
+    "ldp:inbox": "https://overlay-journal.org/requests/inbox/"
   },
   "target": {
-    "@id": "https://journal.org",
+    "@id": "https://aggregator-service.org",
     "@type": "Service",
-    "ldp:inbox": "https://journal.org/requests/inbox"
+    "ldp:inbox": "https://aggregator-service.org/requests/inbox/"
   },
   "object": {
-    "@id": "https://repository.org/review/00001",
+    "@id": "https://overlay-journal.org/reviews/000001/00001",
     "@type": [
       "Document",
       "sorg:Review"
     ],
-    "ietf:cite-as": "https://doi.org/10.3214/000001",
+    "ietf:cite-as": "https://doi.org/10.3214/12345",
     "nrr:reviews": {
       "object": {
         "@id": "https://repository.org/preprint/201203/421/",

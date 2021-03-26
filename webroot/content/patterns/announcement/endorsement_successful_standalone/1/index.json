@@ -15,9 +15,9 @@
     "nat:endorsement-success"
   ],
   "origin": {
-    "@id": "https://journal.org",
+    "@id": "https://overlay-journal.org",
     "@type": "Service",
-    "ldp:inbox": "https://journal.org/requests/inbox"
+    "ldp:inbox": "https://overlay-journal.org/requests/inbox"
   },
   "target": {
     "@id": "https://repository.org",
@@ -25,12 +25,12 @@
     "ldp:inbox": "https://repository.org/inbox"
   },
   "object": {
-    "@id": "https://journal.org/articles/00001/",
+    "@id": "https://overlay-journal.org/articles/00001/",
     "@type": [
       "Page",
       "sorg:WebPage"
     ],
-    "ietf:cite-as": "https://journal.org/articles/00001/",
+    "ietf:cite-as": "https://overlay-journal.org/articles/00001/",
     "nrr:endorses": {
       "object": {
         "@id": "https://repository.org/preprint/201203/421/",

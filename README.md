@@ -30,25 +30,30 @@ Use the following example identifiers consistently, so that notification pattern
 * ietf:cite-as: https://doi.org/10.3214/987654
 
 ### Overlay Journal
-* @id: https://journal.org
-* ldp:inbox: https://journal.org/requests/inbox/
+* @id: https://overlay-journal.org
+* ldp:inbox: https://overlay-journal.org/requests/inbox/
 
 ### Journal Object - review
-* @id: https://journal.org/reviews/000001/00001
+* @id: https://overlay-journal.org/reviews/000001/00001
 * ietf:cite-as: https://doi.org/10.3214/12345
 
 ### Journal Object - published article
-* @id: https://journal.org/articles/00001/
-* ietf:cite-as: https://journal.org/articles/00001/
+* @id: https://overlay-journal.org/articles/00001/
+* ietf:cite-as: https://overlay-journal.org/articles/00001/
 
 ### Journal Object - manuscript
-* @id: https://journal.org/submissions/00001/
-* url @id: https://journal.org/submissions/00001/files/content.pdf
+* @id: https://overlay-journal.org/submissions/00001/
+* url @id: https://overlay-journal.org/submissions/00001/files/content.pdf
+
+### Aggregator Service
+* @id: https://aggregator-service.org
+* ldp:inbox: https://aggregator-service.org/requests/inbox/
 
 ### Offer
 * @id: urn:uuid:0370c0fb-bb78-4a9b-87f5-bed307a509dd
 
-###Undo
+### Undo
+
 * @id: urn:uuid:6eafed1d-935c-41b1-a5bb-645be4b7533f
 
 ### Acknowledgement

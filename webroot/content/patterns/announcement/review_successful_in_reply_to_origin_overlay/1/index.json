@@ -12,12 +12,12 @@
   "@id": "urn:uuid:94ecae35-dcfd-4182-8550-22c7164fe23f",
   "@type": [
     "Announce",
-    "nat:endorsement-success"
+    "nat:review-success"
   ],
   "origin": {
-    "@id": "https://overlay-journal.org",
+    "@id": "https://overlay-journal.org/requests",
     "@type": "Service",
-    "ldp:inbox": "https://overlay-journal.org/requests/inbox"
+    "ldp:inbox": "https://overlay-journal.org/requests/inbox/"
   },
   "target": {
     "@id": "https://repository.org",
@@ -25,13 +25,13 @@
     "ldp:inbox": "https://repository.org/inbox"
   },
   "object": {
-    "@id": "https://overlay-journal.org/articles/00001/",
+    "@id": "https://overlay-journal.org/reviews/000001/00001",
     "@type": [
-      "Page",
-      "sorg:WebPage"
+      "Document",
+      "sorg:Review"
     ],
-    "ietf:cite-as": "https://overlay-journal.org/articles/00001/",
-    "nrr:endorses": {
+    "ietf:cite-as": "https://doi.org/10.3214/987654",
+    "nrr:reviews": {
       "object": {
         "@id": "https://repository.org/preprint/201203/421/",
         "ietf:cite-as": "https://doi.org/10.5555/12345680"
@@ -42,7 +42,7 @@
     "@id": "urn:uuid:0370c0fb-bb78-4a9b-87f5-bed307a509dd",
     "@type": [
       "Offer",
-      "nat:endorsement-request"
+      "nat:review-request"
     ],
     "object": {
       "@id": "https://repository.org/preprint/201203/421/",

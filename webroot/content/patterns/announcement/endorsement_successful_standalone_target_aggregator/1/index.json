@@ -20,9 +20,9 @@
     "ldp:inbox": "https://overlay-journal.org/requests/inbox"
   },
   "target": {
-    "@id": "https://repository.org",
+    "@id": "https://aggregator-service.org",
     "@type": "Service",
-    "ldp:inbox": "https://repository.org/inbox"
+    "ldp:inbox": "https://aggregator-service.org/requests/inbox/"
   },
   "object": {
     "@id": "https://overlay-journal.org/articles/00001/",
@@ -36,17 +36,6 @@
         "@id": "https://repository.org/preprint/201203/421/",
         "ietf:cite-as": "https://doi.org/10.5555/12345680"
       }
-    }
-  },
-  "inReplyTo": {
-    "@id": "urn:uuid:0370c0fb-bb78-4a9b-87f5-bed307a509dd",
-    "@type": [
-      "Offer",
-      "nat:endorsement-request"
-    ],
-    "object": {
-      "@id": "https://repository.org/preprint/201203/421/",
-      "ietf:cite-as": "https://doi.org/10.5555/12345680"
     }
   }
 }
