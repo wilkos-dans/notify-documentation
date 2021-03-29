@@ -1,5 +1,5 @@
 ---
-title: "Announcement of journal endorsement"
+title: "Announcement of journal endorsement to aggregator"
 date: "2021-03-08"
 description: ""
 layout: pattern_example
