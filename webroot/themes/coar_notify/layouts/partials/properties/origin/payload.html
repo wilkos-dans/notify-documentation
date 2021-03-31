@@ -1,0 +1,5 @@
+{{ if isSet .Params.payload.origin "lookup" }}
+    {{ return dict "origin" (index .Site.Params.systems .Params.payload.origin.lookup) }}
+{{ else }}
+    {{ return dict "origin" .Params.payload.origin.payload }}
+{{ end }}

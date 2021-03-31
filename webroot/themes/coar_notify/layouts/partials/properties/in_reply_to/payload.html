@@ -1,0 +1,13 @@
+{{ $inReplyTo := dict "@id" .Params.payload.in_reply_to.id}}
+{{ $inReplyTo = merge $inReplyTo (dict "@type" .Params.payload.in_reply_to.type) }}
+
+{{ if isSet .Params.payload.in_reply_to "object" }}
+    {{ if isSet .Params.payload.in_reply_to.object "lookup" }}
+        {{ $object := index .Site.Params.objects .Params.payload.in_reply_to.object.lookup }}
+        {{ $inReplyTo = merge $inReplyTo (dict "object" (dict "@id" (index $object "@id") "ietf:cite-as" (index $object "ietf:cite-as"))) }}
+    {{ else }}
+        {{ $inReplyTo = merge $inReplyTo (dict "object" .Params.payload.in_reply_to.object) }}
+    {{ end }}
+{{ end }}
+
+{{ return (dict "inReplyTo" $inReplyTo) }}

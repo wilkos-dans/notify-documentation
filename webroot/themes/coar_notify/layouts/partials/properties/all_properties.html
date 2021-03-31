@@ -1,0 +1,26 @@
+{{ $thisPage := . }}
+{{ partial "properties/context/doc" $thisPage }}
+
+{{ partial "properties/id/doc" $thisPage | markdownify }}
+
+{{ partial "properties/type/doc" $thisPage | markdownify }}
+
+{{ with .Params.payload.actor }}
+    {{ partial "properties/actor/doc" $thisPage | markdownify }}
+{{ end }}
+
+{{ with .Params.payload.in_reply_to }}
+    {{ partial "properties/in_reply_to/doc" $thisPage | markdownify }}
+{{ end }}
+
+{{ with .Params.payload.object }}
+    {{ partial "properties/object/doc" $thisPage | markdownify }}
+{{ end }}
+
+{{ with .Params.payload.origin }}
+    {{ partial "properties/origin/doc" $thisPage | markdownify }}
+{{ end }}
+
+{{ with .Params.payload.target }}
+    {{ partial "properties/target/doc" $thisPage | markdownify }}
+{{ end }}

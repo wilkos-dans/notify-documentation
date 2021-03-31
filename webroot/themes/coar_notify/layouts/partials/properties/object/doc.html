@@ -1,0 +1,33 @@
+{{ $objectTypeLabel := .Params.payload.object.lookup }}
+{{ $objectType := index .Site.Params.objects $objectTypeLabel }}
+#### `object`
+The `activity` MUST have an `object` representing the {{ $objectTypeLabel }}. The `object` MUST have the following properties:
+
+{{ if eq $objectTypeLabel "preprint" }}
+* An `@id` which MUST contain the HTTP URI to the "landing page" for the resource
+* A `@type` which MUST contain the value _AboutPage_ from schema.org.
+* An `ietf:cite-as` which MUST contain the persistent HTTP URI (sometimes called the "PID") which is to be used to cite or link to the resource.
+* A `url` which MUST contain the details of the actual content resource. The `url` MUST have the following properties:
+    * An `@id` which MUST contain the HTTP URI of the content file for the resource.
+    * A `@type` which MUST describe the content file.
+    * A `mediaType` which contains the MIME Type of the content file.
+{{ else if or (eq $objectTypeLabel "review") (eq $objectTypeLabel "journal-review") }}
+* An `@id` which MUST contain the HTTP URI to the "landing page" for the resource
+* A `@type` which MUST contain *Document* from AS 2.0 and MAY contain other values
+* An `ietf:cite-as` which MUST contain the persistent HTTP URI (sometimes called the "PID") which is to be used to cite or link to the resource.
+* An `nrr:reviews` which MUST contain the details of the resource which has been reviewed. The `nrr:reviews` property MUST have the following properties:
+    * An `@id` which MUST contain the HTTP URI of the content file for the resource.
+    * An `ietf:cite-as` which MUST contain the persistent HTTP URI (sometimes called the "PID") which is to be used to cite or link to the resource.
+{{ else if eq $objectTypeLabel "submission" }}
+* An `@id` which MUST contain the HTTP URI to the "landing page" for the resource
+* A `@type` which MUST contain the value _AboutPage_ from schema.org.
+* A `url` which MUST contain the details of the actual content resource. The `url` MUST have the following properties:
+    * An `@id` which MUST contain the HTTP URI of the content file for the resource.
+    * A `@type` which MUST describe the content file.
+    * A `mediaType` which contains the MIME Type of the content file.
+{{ else if eq $objectTypeLabel "activity to be revoked" }}
+* An `@id` which MUST contain the URI for the {{ $objectTypeLabel }}
+* A `@type` which MUST describe the type of the {{ $objectTypeLabel }}
+{{ end }}
+
+

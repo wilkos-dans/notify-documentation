@@ -1,19 +1,36 @@
 {{ define "main" }}
-<div class="row">
-    <div class="col">
-        <h1 class="page-title">{{ .Title }}</h1>
-        {{ if eq .Params.scope "notify" }}
-        {{ $patternPath := print "/patterns/" .Params.pattern}}
-        {{ $patternTitle := (.Site.GetPage $patternPath).Title }}
-        <p>
-            (This is a <i>Notify</i> notification from the <i><a href="{{ .Page.CurrentSection.Permalink }}">{{ .Page.CurrentSection.Title }}</a></i> scenario, using the <i><a href="{{ $patternPath }}">{{ $patternTitle }}</a></i> notification pattern).
-        </p>
-        <p>{{ .Description | markdownify }}</p>
-            {{ (.Site.GetPage (print "/patterns/" .Params.pattern)).Content }}
-        {{ else }}
-        <p>(This is not a <i>Notify</i> notification, but is included as an indication of a logical step in the scenario. The details of this step are out-of-scope of <i>Notify</i> and should be considered opaque to the service undertaking the step.)</p>
-        <p>{{ .Description | markdownify }}</p>
-        {{ end }}
+    <div class="row">
+        <div class="col">
+            <h1 class="page-title">{{ .Title }}</h1>
+            {{ if eq .Params.scope "notify" }}
+                {{ $patternPath := print "/patterns/" .Params.pattern}}
+                {{ $patternTitle := (.Site.GetPage $patternPath).Title }}
+                <p>
+                    (This is a <i>Notify</i> notification from the <i><a href="{{ .Page.CurrentSection.Permalink }}">{{ .Page.CurrentSection.Title }}</a></i> scenario, using the <i><a href="{{ $patternPath }}">{{ $patternTitle }}</a></i>
+                    notification pattern).
+                </p>
+                <p>{{ .Description | markdownify }}</p>
+                {{ $thisPage := . }}
+                <div class="row">
+                    <div class="col">
+                        {{ partial "rfc_2119" }}
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <h4>Properties</h4>
+                        {{ partial "properties/all_properties" (.GetPage $patternPath) }}
+                    </div>
+                    <div class="col">
+                        <h4>JSON-LD Payload</h4>
+                        {{ partial "properties/json_payload" (.GetPage $patternPath) }}
+                    </div>
+                </div>
+            {{ else }}
+                <p>(This is not a <i>Notify</i> notification, but is included as an indication of a logical step in the scenario. The details of this step are out-of-scope of <i>Notify</i> and should be considered opaque to the service
+                    undertaking the step.)</p>
+                <p>{{ .Description | markdownify }}</p>
+            {{ end }}
+        </div>
     </div>
-</div>
 {{ end }}

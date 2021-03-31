@@ -1,9 +1,0 @@
-{{ $pageLink := .Page.Permalink }}
-{{ with .Page.Resources.Match "*.json" }}
-<ul>
-{{ range . }}
-    <li><a href="{{ $pageLink }}#example_{{ index (split .Name ".") 0 }}">{{ .Params.caption | markdownify }}</a></li>
-{{ end }}
-</ul>
-{{ end }}
-

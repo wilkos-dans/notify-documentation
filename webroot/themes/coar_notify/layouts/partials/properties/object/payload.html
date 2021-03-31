@@ -1,0 +1,13 @@
+{{ $objectTypeLabel := .Params.payload.object.lookup }}
+{{ $object := dict "" ""}}
+{{ if eq $objectTypeLabel "activity to be revoked" }}
+    {{ $object = .Params.payload.object.payload}}
+{{ else }}
+    {{ if isSet .Params.payload.object "lookup" }}
+        {{ $object = (index .Site.Params.objects .Params.payload.object.lookup)}}
+    {{ else }}
+        {{ $object = .Params.payload.object.payload}}
+    {{ end }}
+{{ end }}
+
+{{ return (dict "object" $object) }}

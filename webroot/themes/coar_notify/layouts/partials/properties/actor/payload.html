@@ -1,0 +1,5 @@
+{{ if isSet .Params.payload.actor "lookup" }}
+    {{ return dict "actor" (index .Site.Params.actors .Params.payload.actor.lookup) }}
+{{ else }}
+    {{ return dict "actor" .Params.payload.actor.payload }}
+{{ end }}

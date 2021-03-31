@@ -1,0 +1,6 @@
+#### `@type`
+{{ if gt (len .Params.payload.type) 1 }}
+The `activity` MUST have a `@type` array which MUST include *{{ index .Params.payload.type 0 }}* from AS 2.0 and *{{ index .Params.payload.type 1 }}* from Notify Activity Types.
+{{ else }}
+The `activity` MUST have a `@type` with the value *{{ index .Params.payload.type 0 }}* from AS 2.0
+{{ end }}

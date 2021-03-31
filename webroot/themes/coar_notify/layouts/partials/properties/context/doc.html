@@ -1,0 +1,16 @@
+<h4><code>@context</code></h4>
+<p>The default <code>context</code> MUST be Activity Streams 2.0 (AS 2.0).</p>
+
+{{ $namespaces := .Site.Params.namespaces }}
+
+{{ with .Params.payload.contexts }}
+    <p>
+        Other contexts (namespaces) MUST include:
+    <ul>
+        {{ range . }}
+            <li><a href="{{ (index $namespaces .).uri }}">{{ (index $namespaces .).name }}</a></li>
+        {{ end }}
+    </ul>
+
+    </p>
+{{ end }}

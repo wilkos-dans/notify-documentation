@@ -1,13 +1,22 @@
 {{ define "main" }}
-  <div class="row">
-    <div class="col">
-      <h1 class="page-title">{{ .Title | markdownify }}</h1>
+    {{ $thisPage := . }}
+    <div class="row">
+        <div class="col">
+            <h1 class="page-title">{{ .Title | markdownify }}</h1>
+            {{ with .Description }}
+                <p>{{ . | markdownify }}</p>
+            {{ end }}
+            {{ partial "rfc_2119" }}
+        </div>
     </div>
-  </div>
-  <div class="row">
-    <div class="col">
-      <p>{{ .Description | markdownify }}</p>
-      {{ .Content }}
+    <div class="row">
+        <div class="col">
+            <h4>Properties</h4>
+            {{ partial "properties/all_properties" . }}
+        </div>
+        <div class="col">
+            <h4>JSON-LD Payload</h4>
+            {{ partial "properties/json_payload" . }}
+        </div>
     </div>
-  </div>
 {{ end }}

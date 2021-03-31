@@ -1,0 +1,29 @@
+{{ $thisPage := . }}
+
+{{ $payload := partial "properties/context/payload" $thisPage }}
+
+{{ $payload = merge $payload (partial "properties/id/payload" $thisPage) }}
+
+{{ $payload = merge $payload (partial "properties/type/payload" $thisPage) }}
+
+{{ with .Params.payload.actor }}
+    {{ $payload = merge  (partial "properties/actor/payload" $thisPage ) $payload }}
+{{ end }}
+
+{{ with .Params.payload.in_reply_to }}
+    {{ $payload = merge  (partial "properties/in_reply_to/payload" $thisPage ) $payload }}
+{{ end }}
+
+{{ with .Params.payload.object }}
+    {{ $payload = merge  (partial "properties/object/payload" $thisPage ) $payload }}
+{{ end }}
+
+{{ with .Params.payload.origin }}
+    {{ $payload = merge $payload (partial "properties/origin/payload" $thisPage )}}
+{{ end }}
+
+{{ with .Params.payload.target }}
+    {{ $payload = merge $payload (partial "properties/target/payload" $thisPage )}}
+{{ end }}
+
+<pre><code class="language-json">{{ $payload | jsonify (dict "indent" "  ") }}</code></pre>

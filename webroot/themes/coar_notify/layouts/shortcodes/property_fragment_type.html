@@ -1,6 +1,0 @@
-#### `@type`
-{{ if gt (len .Params) 1 }}
-The `activity` MUST have a `@type` array which MUST include *{{ .Get 0 }}* from AS 2.0 {{ with .Get 1 }} and *{{ . }}* from Notify Activity Types. {{ end }}
-{{ else }}
-The `activity` MUST have a `@type` with the value *{{ .Get 0 }}* from AS 2.0
-{{ end }}

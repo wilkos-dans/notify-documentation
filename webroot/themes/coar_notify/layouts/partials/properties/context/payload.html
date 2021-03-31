@@ -1,0 +1,10 @@
+{{ $namespaces := .Site.Params.namespaces }}
+{{ $otherContextsScratch := newScratch }}
+
+{{ $defaultContext := "https://www.w3.org/ns/activitystreams#"}}
+
+{{ range .Params.payload.contexts }}
+    {{ $otherContextsScratch.SetInMap "otherContexts" . (index $namespaces .).uri }}
+{{ end }}
+
+{{ return dict "@context" (slice $defaultContext ($otherContextsScratch.Get "otherContexts")) }}
