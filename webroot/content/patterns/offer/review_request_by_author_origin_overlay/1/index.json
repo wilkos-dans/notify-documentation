@@ -14,14 +14,14 @@
     "nat:review-request"
   ],
   "origin": {
-    "@id": "https://repository.org",
-    "@type": "Service",
-    "ldp:inbox": "https://repository.org/inbox/"
-  },
-  "origin": {
     "@id": "https://overlay-journal.org/requests",
     "@type": "Service",
     "ldp:inbox": "https://overlay-journal.org/requests/inbox/"
+  },
+  "target": {
+    "@id": "https://repository.org",
+    "@type": "Service",
+    "ldp:inbox": "https://repository.org/inbox/"
   },
   "object": {
     "@id": "https://repository.org/preprint/201203/421/",

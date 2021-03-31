@@ -10,9 +10,9 @@ headless: true
 
 {{% property_fragment_type "Offer" "review-request" %}}
 
-{{% property_fragment_origin "repository" %}}
+{{% property_fragment_origin "overlay journal" %}}
 
-{{% property_fragment_target "overlay journal" %}}
+{{% property_fragment_target "repository" %}}
 
 {{% property_fragment_object_scholarly_resource "preprint" "Article" "ScholarlyArticle" %}}
 
