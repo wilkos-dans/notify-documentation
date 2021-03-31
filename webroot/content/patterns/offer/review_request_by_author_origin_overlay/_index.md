@@ -1,5 +1,5 @@
 ---
-title: "Request (by author) for review of repository resource"
+title: "Request (by author) for review of repository resource (via overlay journal)"
 date: "2021-03-08"
 description: ""
 layout: pattern_example
