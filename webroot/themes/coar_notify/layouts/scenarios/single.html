@@ -4,7 +4,8 @@
             <h1 class="page-title">{{ .Title }}</h1>
             {{ if eq .Params.scope "notify" }}
                 {{ $patternPath := print "/patterns/" .Params.pattern}}
-                {{ $patternTitle := (.Site.GetPage $patternPath).Title }}
+                {{ $patternPage := .Site.GetPage $patternPath }}
+                {{ $patternTitle := $patternPage.Title }}
                 <p>
                     (This is a <i>Notify</i> notification from the <i><a href="{{ .Page.CurrentSection.Permalink }}">{{ .Page.CurrentSection.Title }}</a></i> scenario, using the <i><a href="{{ $patternPath }}">{{ $patternTitle }}</a></i>
                     notification pattern).
@@ -19,11 +20,11 @@
                 <div class="row">
                     <div class="col">
                         <h4>Properties</h4>
-                        {{ partial "properties/all_properties" (.GetPage $patternPath) }}
+                        {{ partial "properties/all_properties" (dict "payload" $patternPage.Params.payload "siteParams" $.Site.Params) }}
                     </div>
                     <div class="col">
                         <h4>JSON-LD Payload</h4>
-                        {{ $patternPage := .Site.GetPage $patternPath }}
+
                         {{ $payload := partial "properties/json_payload" (dict "payload" $patternPage.Params.payload "siteParams" $.Site.Params) }}
                         <pre><code class="language-json">{{ $payload | jsonify (dict "indent" "  ") }}</code></pre>
                     </div>

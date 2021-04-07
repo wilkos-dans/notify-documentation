@@ -1,26 +1,28 @@
-{{ $thisPage := . }}
-{{ partial "properties/context/doc" $thisPage }}
+{{ $inComingPayload := .payload }}
+{{ $siteParams := .siteParams}}
 
-{{ partial "properties/id/doc" $thisPage | markdownify }}
+{{ partial "properties/context/doc" (dict "payload" $inComingPayload "siteParams" $siteParams) }}
 
-{{ partial "properties/type/doc" $thisPage | markdownify }}
+{{ partial "properties/id/doc" $inComingPayload | markdownify }}
 
-{{ with .Params.payload.actor }}
-    {{ partial "properties/actor/doc" $thisPage | markdownify }}
+{{ partial "properties/type/doc" $inComingPayload | markdownify }}
+
+{{ with $inComingPayload.actor }}
+    {{ partial "properties/actor/doc" (dict "payload" $inComingPayload "siteParams" $siteParams) | markdownify }}
 {{ end }}
 
-{{ with .Params.payload.in_reply_to }}
-    {{ partial "properties/in_reply_to/doc" $thisPage | markdownify }}
+{{ with $inComingPayload.in_reply_to }}
+    {{ partial "properties/in_reply_to/doc" (dict "payload" $inComingPayload "siteParams" $siteParams) | markdownify }}
 {{ end }}
 
-{{ with .Params.payload.object }}
-    {{ partial "properties/object/doc" $thisPage | markdownify }}
+{{ with $inComingPayload.object }}
+    {{ partial "properties/object/doc" (dict "payload" $inComingPayload "siteParams" $siteParams) | markdownify }}
 {{ end }}
 
-{{ with .Params.payload.origin }}
-    {{ partial "properties/origin/doc" $thisPage | markdownify }}
+{{ with $inComingPayload.origin }}
+    {{ partial "properties/origin/doc" (dict "payload" $inComingPayload "siteParams" $siteParams) | markdownify }}
 {{ end }}
 
-{{ with .Params.payload.target }}
-    {{ partial "properties/target/doc" $thisPage | markdownify }}
+{{ with $inComingPayload.target }}
+    {{ partial "properties/target/doc" (dict "payload" $inComingPayload "siteParams" $siteParams) | markdownify }}
 {{ end }}

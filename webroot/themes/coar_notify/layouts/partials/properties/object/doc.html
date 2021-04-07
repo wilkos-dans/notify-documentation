@@ -1,5 +1,8 @@
-{{ $objectTypeLabel := .Params.payload.object.lookup }}
-{{ $objectType := index .Site.Params.objects $objectTypeLabel }}
+{{ $thisPayload := .payload }}
+{{ $siteParams := .siteParams}}
+
+{{ $objectTypeLabel := $thisPayload.object.lookup }}
+{{ $objectType := index $siteParams.objects $objectTypeLabel }}
 #### `object`
 The `activity` MUST have an `object` representing the {{ $objectTypeLabel }}. The `object` MUST have the following properties:
 

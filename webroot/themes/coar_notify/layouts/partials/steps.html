@@ -31,7 +31,7 @@
                                 <div id="accordionPropertiesCollapse_{{$stepPosition }}" class="accordion-collapse collapse" aria-labelledby="accordionPropertiesHeading_{{$stepPosition }}" data-bs-parent="#accordion_{{$stepPosition }}">
                                     <div class="accordion-body">
                                         {{ with $patternPage }}
-                                            {{ partial "properties/all_properties" . }}
+                                            {{ partial "properties/all_properties" (dict "payload" $patternPage.Params.payload "siteParams" $.Site.Params) }}
                                         {{ end }}
                                     </div>
                                 </div>

@@ -1,9 +1,11 @@
+{{ $thisPayload := .payload }}
+{{ $siteParams := .siteParams}}
 <h4><code>@context</code></h4>
 <p>The default <code>context</code> MUST be Activity Streams 2.0 (AS 2.0).</p>
 
-{{ $namespaces := .Site.Params.namespaces }}
+{{ $namespaces := $siteParams.namespaces }}
 
-{{ with .Params.payload.contexts }}
+{{ with $thisPayload.contexts }}
     <p>
         Other contexts (namespaces) MUST include:
     <ul>

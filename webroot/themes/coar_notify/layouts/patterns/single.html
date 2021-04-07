@@ -12,7 +12,7 @@
     <div class="row">
         <div class="col">
             <h4>Properties</h4>
-            {{ partial "properties/all_properties" . }}
+            {{ partial "properties/all_properties" (dict "payload" .Params.payload "siteParams" $.Site.Params) }}
         </div>
         <div class="col">
             <h4>JSON-LD Payload</h4>
