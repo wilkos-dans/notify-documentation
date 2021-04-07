@@ -1,10 +1,18 @@
 {{ $thisPayload := .payload }}
 {{ $siteParams := .siteParams}}
-{{ $systemType := index $siteParams.actors $thisPayload.actor.lookup }}
+{{ $actorType := index $siteParams.actors $thisPayload.actor.lookup }}
 
 #### `actor`
+{{ if ne $thisPayload.actor.lookup "generic_actor" }}
 The `activity` {{ $thisPayload.actor.obligation | default "MAY" }}  have an `actor` describing the {{ $thisPayload.actor.lookup }}. The `actor`:
 * MUST have an `@id` which MUST be an HTTP URI identifying the {{ $thisPayload.actor.lookup }}.
-* MUST have a `@type` which MUST include {{ $systemType.type }} from AS 2.0.
+* MUST have a `@type` which MUST include {{ $actorType.type }} from AS 2.0.
 * MAY have an `ldp:inbox` which MUST be an HTTP URI
 * MAY have a name
+{{ else }}
+The `activity` {{ $thisPayload.actor.obligation | default "MAY" }}  have an `actor` describing the party responsible for initiating this `activity`. The `actor`:
+* MUST have an `@id` which MUST be an HTTP URI.
+* MUST have a `@type` which MUST include a value from AS 2.0.
+* MAY have an `ldp:inbox` which MUST be an HTTP URI
+* MAY have a name
+{{ end }}

@@ -2,6 +2,10 @@
     {{ $stepPosition := .File.ContentBaseName }}
     {{ if eq .Params.scope "notify" }}
         {{ $patternPage := .Site.GetPage (print "/patterns/" .Params.pattern) }}
+        {{ $mergedPayload := $patternPage.Params.payload }}
+        {{ with .Params.payload }}
+            {{ $mergedPayload = merge $mergedPayload . }}
+        {{ end }}
         <div class="row">
             <div class="col-3 column-left">
             </div>
@@ -31,7 +35,7 @@
                                 <div id="accordionPropertiesCollapse_{{$stepPosition }}" class="accordion-collapse collapse" aria-labelledby="accordionPropertiesHeading_{{$stepPosition }}" data-bs-parent="#accordion_{{$stepPosition }}">
                                     <div class="accordion-body">
                                         {{ with $patternPage }}
-                                            {{ partial "properties/all_properties" (dict "payload" $patternPage.Params.payload "siteParams" $.Site.Params) }}
+                                            {{ partial "properties/all_properties" (dict "payload" $mergedPayload "siteParams" $.Site.Params) }}
                                         {{ end }}
                                     </div>
                                 </div>
@@ -46,7 +50,7 @@
                                 <div id="accordionJsonsCollapse_{{$stepPosition }}" class="accordion-collapse collapse" aria-labelledby="accordionJsonHeading_{{$stepPosition }}" data-bs-parent="#accordion_{{$stepPosition }}">
                                     <div class="accordion-body">
                                         {{ with $patternPage }}
-                                            {{ $payload := partial "properties/json_payload" (dict "payload" $patternPage.Params.payload "siteParams" $.Site.Params) }}
+                                            {{ $payload := partial "properties/json_payload" (dict "payload" $mergedPayload "siteParams" $.Site.Params) }}
                                             <pre><code class="language-json">{{ $payload | jsonify (dict "indent" "  ") }}</code></pre>
                                         {{ end }}
                                     </div>

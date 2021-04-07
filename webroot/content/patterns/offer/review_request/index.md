@@ -13,6 +13,8 @@ payload:
         lookup: "review-service"
     object:
         lookup: preprint
-
+    actor:
+        lookup: generic_actor
+        obligation: MAY
 ---
 

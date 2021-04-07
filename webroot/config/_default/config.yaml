@@ -43,6 +43,11 @@ params:
   #      id: "urn:uuid:0370c0fb-bb78-4a9b-87f5-bed307a509dd"
   #      type: "Offer"
   actors:
+    generic_actor:
+      "@id": "https://orcid.org/0000-0002-1825-0097"
+      name: "Josiah Carberry"
+      "@type": "Person"
+      "ldp:inbox": "https://josiahcarberry.com/ldn/inbox"
     author:
       "@id": "https://orcid.org/0000-0002-1825-0097"
       name: "Josiah Carberry"
@@ -71,6 +76,10 @@ params:
       "@type": "System"
       "ldp:inbox": "https://aggregator-service.org/requests/inbox/"
   objects:
+    generic_object:
+      "@id": "https://reviewservice.org/review/geo/202103/0021"
+      "@type": [ "Document","sorg:Review" ]
+      "ietf:cite-as": "https://doi.org/10.3214/987654"
     preprint:
       "@id": "https://repository.org/preprint/201203/421/"
       "@type": "sorg:AboutPage"

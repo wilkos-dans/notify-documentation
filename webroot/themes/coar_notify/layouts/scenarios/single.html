@@ -5,6 +5,10 @@
             {{ if eq .Params.scope "notify" }}
                 {{ $patternPath := print "/patterns/" .Params.pattern}}
                 {{ $patternPage := .Site.GetPage $patternPath }}
+                {{ $mergedPayload := $patternPage.Params.payload }}
+                {{ with .Params.payload }}
+                    {{ $mergedPayload = merge $mergedPayload . }}
+                {{ end }}
                 {{ $patternTitle := $patternPage.Title }}
                 <p>
                     (This is a <i>Notify</i> notification from the <i><a href="{{ .Page.CurrentSection.Permalink }}">{{ .Page.CurrentSection.Title }}</a></i> scenario, using the <i><a href="{{ $patternPath }}">{{ $patternTitle }}</a></i>
@@ -20,12 +24,12 @@
                 <div class="row">
                     <div class="col">
                         <h4>Properties</h4>
-                        {{ partial "properties/all_properties" (dict "payload" $patternPage.Params.payload "siteParams" $.Site.Params) }}
+                        {{ partial "properties/all_properties" (dict "payload" $mergedPayload "siteParams" $.Site.Params) }}
                     </div>
                     <div class="col">
                         <h4>JSON-LD Payload</h4>
 
-                        {{ $payload := partial "properties/json_payload" (dict "payload" $patternPage.Params.payload "siteParams" $.Site.Params) }}
+                        {{ $payload := partial "properties/json_payload" (dict "payload" $mergedPayload "siteParams" $.Site.Params) }}
                         <pre><code class="language-json">{{ $payload | jsonify (dict "indent" "  ") }}</code></pre>
                     </div>
                 </div>

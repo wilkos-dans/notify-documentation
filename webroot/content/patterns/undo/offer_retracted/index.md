@@ -1,5 +1,5 @@
 ---
-title: "Retraction of offer for review"
+title: "Retraction of offer"
 date: "2021-03-08"
 description: ""
 status: [review,draft]

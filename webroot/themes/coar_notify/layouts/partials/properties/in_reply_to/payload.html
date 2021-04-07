@@ -3,7 +3,7 @@
 {{ $inReplyTo := dict "@id" $thisPayload.in_reply_to.id}}
 {{ $inReplyTo = merge $inReplyTo (dict "@type" $thisPayload.in_reply_to.type) }}
 
-{{ if isSet $thisPayload.in_reply_to "object" }}
+{{ if and (isSet $thisPayload.in_reply_to "object") (ne $thisPayload.in_reply_to.object nil) }}
     {{ if isSet $thisPayload.in_reply_to.object "lookup" }}
         {{ $object := index $siteParams.objects $thisPayload.in_reply_to.object.lookup }}
         {{ $inReplyTo = merge $inReplyTo (dict "object" (dict "@id" (index $object "@id") "ietf:cite-as" (index $object "ietf:cite-as"))) }}

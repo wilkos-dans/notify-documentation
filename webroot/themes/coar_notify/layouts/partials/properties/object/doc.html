@@ -4,9 +4,14 @@
 {{ $objectTypeLabel := $thisPayload.object.lookup }}
 {{ $objectType := index $siteParams.objects $objectTypeLabel }}
 #### `object`
-The `activity` MUST have an `object` representing the {{ $objectTypeLabel }}. The `object` MUST have the following properties:
 
-{{ if eq $objectTypeLabel "preprint" }}
+{{ if eq $objectTypeLabel "generic_object" }}
+The `activity` MUST have an `object`. The `object` MUST have the following properties:
+* An `@id` which MUST contain the HTTP URI to the "landing page" for the resource
+* A `@type` which MUST contain a value from AS 2.0 and MAY contain other values
+* An `ietf:cite-as` which MUST contain the persistent HTTP URI (sometimes called the "PID") which is to be used to cite or link to the resource.
+{{ else if eq $objectTypeLabel "preprint" }}
+The `activity` MUST have an `object` representing the {{ $objectTypeLabel }}. The `object` MUST have the following properties:
 * An `@id` which MUST contain the HTTP URI to the "landing page" for the resource
 * A `@type` which MUST contain the value _AboutPage_ from schema.org.
 * An `ietf:cite-as` which MUST contain the persistent HTTP URI (sometimes called the "PID") which is to be used to cite or link to the resource.
@@ -15,6 +20,7 @@ The `activity` MUST have an `object` representing the {{ $objectTypeLabel }}. Th
     * A `@type` which MUST describe the content file.
     * A `mediaType` which contains the MIME Type of the content file.
 {{ else if or (eq $objectTypeLabel "review") (eq $objectTypeLabel "journal-review") }}
+The `activity` MUST have an `object` representing the {{ $objectTypeLabel }}. The `object` MUST have the following properties:
 * An `@id` which MUST contain the HTTP URI to the "landing page" for the resource
 * A `@type` which MUST contain *Document* from AS 2.0 and MAY contain other values
 * An `ietf:cite-as` which MUST contain the persistent HTTP URI (sometimes called the "PID") which is to be used to cite or link to the resource.
@@ -22,6 +28,7 @@ The `activity` MUST have an `object` representing the {{ $objectTypeLabel }}. Th
     * An `@id` which MUST contain the HTTP URI of the content file for the resource.
     * An `ietf:cite-as` which MUST contain the persistent HTTP URI (sometimes called the "PID") which is to be used to cite or link to the resource.
 {{ else if eq $objectTypeLabel "submission" }}
+The `activity` MUST have an `object` representing the {{ $objectTypeLabel }}. The `object` MUST have the following properties:
 * An `@id` which MUST contain the HTTP URI to the "landing page" for the resource
 * A `@type` which MUST contain the value _AboutPage_ from schema.org.
 * A `url` which MUST contain the details of the actual content resource. The `url` MUST have the following properties:
@@ -29,6 +36,7 @@ The `activity` MUST have an `object` representing the {{ $objectTypeLabel }}. Th
     * A `@type` which MUST describe the content file.
     * A `mediaType` which contains the MIME Type of the content file.
 {{ else if eq $objectTypeLabel "activity to be revoked" }}
+The `activity` MUST have an `object` representing the {{ $objectTypeLabel }}. The `object` MUST have the following properties:
 * An `@id` which MUST contain the URI for the {{ $objectTypeLabel }}
 * A `@type` which MUST describe the type of the {{ $objectTypeLabel }}
 {{ end }}
