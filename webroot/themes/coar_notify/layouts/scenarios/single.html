@@ -23,7 +23,9 @@
                     </div>
                     <div class="col">
                         <h4>JSON-LD Payload</h4>
-                        {{ partial "properties/json_payload" (.GetPage $patternPath) }}
+                        {{ $patternPage := .Site.GetPage $patternPath }}
+                        {{ $payload := partial "properties/json_payload" (dict "payload" $patternPage.Params.payload "siteParams" $.Site.Params) }}
+                        <pre><code class="language-json">{{ $payload | jsonify (dict "indent" "  ") }}</code></pre>
                     </div>
                 </div>
             {{ else }}

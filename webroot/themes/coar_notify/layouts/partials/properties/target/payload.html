@@ -1,5 +1,7 @@
-{{ if isSet .Params.payload.target "lookup" }}
-    {{ return dict "target" (index .Site.Params.systems .Params.payload.target.lookup) }}
+{{ $thisPayload := .payload }}
+{{ $siteParams := .siteParams}}
+{{ if isSet $thisPayload.target "lookup" }}
+    {{ return dict "target" (index $siteParams.systems $thisPayload.target.lookup) }}
 {{ else }}
-    {{ return dict "target" .Params.payload.target.payload }}
+    {{ return dict "target" $thisPayload.target.payload }}
 {{ end }}

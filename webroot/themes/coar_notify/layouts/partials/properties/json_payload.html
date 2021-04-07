@@ -1,29 +1,30 @@
-{{ $thisPage := . }}
+{{ $inComingPayload := .payload }}
+{{ $siteParams := .siteParams}}
 
-{{ $payload := partial "properties/context/payload" $thisPage }}
+{{ $payload := partial "properties/context/payload" (dict "payload" $inComingPayload "siteParams" $siteParams) }}
 
-{{ $payload = merge $payload (partial "properties/id/payload" $thisPage) }}
+{{ $payload = merge $payload (partial "properties/id/payload" $inComingPayload) }}
 
-{{ $payload = merge $payload (partial "properties/type/payload" $thisPage) }}
+{{ $payload = merge $payload (partial "properties/type/payload" $inComingPayload) }}
 
-{{ with .Params.payload.actor }}
-    {{ $payload = merge  (partial "properties/actor/payload" $thisPage ) $payload }}
+{{ with $inComingPayload.actor }}
+    {{ $payload = merge  (partial "properties/actor/payload" (dict "payload" $inComingPayload "siteParams" $siteParams)) $payload }}
 {{ end }}
 
-{{ with .Params.payload.in_reply_to }}
-    {{ $payload = merge  (partial "properties/in_reply_to/payload" $thisPage ) $payload }}
+{{ with $inComingPayload.in_reply_to }}
+    {{ $payload = merge  (partial "properties/in_reply_to/payload" (dict "payload" $inComingPayload "siteParams" $siteParams)) $payload }}
 {{ end }}
 
-{{ with .Params.payload.object }}
-    {{ $payload = merge  (partial "properties/object/payload" $thisPage ) $payload }}
+{{ with $inComingPayload.object }}
+    {{ $payload = merge  (partial "properties/object/payload" (dict "payload" $inComingPayload "siteParams" $siteParams) ) $payload }}
 {{ end }}
 
-{{ with .Params.payload.origin }}
-    {{ $payload = merge $payload (partial "properties/origin/payload" $thisPage )}}
+{{ with $inComingPayload.origin }}
+    {{ $payload = merge $payload (partial "properties/origin/payload" (dict "payload" $inComingPayload "siteParams" $siteParams) )}}
 {{ end }}
 
-{{ with .Params.payload.target }}
-    {{ $payload = merge $payload (partial "properties/target/payload" $thisPage )}}
+{{ with $inComingPayload.target }}
+    {{ $payload = merge $payload (partial "properties/target/payload" (dict "payload" $inComingPayload "siteParams" $siteParams) )}}
 {{ end }}
 
-<pre><code class="language-json">{{ $payload | jsonify (dict "indent" "  ") }}</code></pre>
+{{ return $payload }}

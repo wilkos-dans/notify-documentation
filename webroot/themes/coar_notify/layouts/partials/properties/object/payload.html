@@ -1,12 +1,14 @@
-{{ $objectTypeLabel := .Params.payload.object.lookup }}
+{{ $thisPayload := .payload }}
+{{ $siteParams := .siteParams}}
+{{ $objectTypeLabel := $thisPayload.object.lookup }}
 {{ $object := dict "" ""}}
 {{ if eq $objectTypeLabel "activity to be revoked" }}
-    {{ $object = .Params.payload.object.payload}}
+    {{ $object = $thisPayload.object.payload}}
 {{ else }}
-    {{ if isSet .Params.payload.object "lookup" }}
-        {{ $object = (index .Site.Params.objects .Params.payload.object.lookup)}}
+    {{ if isSet $thisPayload.object "lookup" }}
+        {{ $object = (index $siteParams.objects $thisPayload.object.lookup)}}
     {{ else }}
-        {{ $object = .Params.payload.object.payload}}
+        {{ $object = $thisPayload.object.payload}}
     {{ end }}
 {{ end }}
 

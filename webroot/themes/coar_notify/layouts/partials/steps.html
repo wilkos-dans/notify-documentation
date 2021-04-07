@@ -46,7 +46,8 @@
                                 <div id="accordionJsonsCollapse_{{$stepPosition }}" class="accordion-collapse collapse" aria-labelledby="accordionJsonHeading_{{$stepPosition }}" data-bs-parent="#accordion_{{$stepPosition }}">
                                     <div class="accordion-body">
                                         {{ with $patternPage }}
-                                            {{ partial "properties/json_payload" . }}
+                                            {{ $payload := partial "properties/json_payload" (dict "payload" $patternPage.Params.payload "siteParams" $.Site.Params) }}
+                                            <pre><code class="language-json">{{ $payload | jsonify (dict "indent" "  ") }}</code></pre>
                                         {{ end }}
                                     </div>
                                 </div>
