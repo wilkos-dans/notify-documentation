@@ -43,7 +43,7 @@ params:
   #      id: "urn:uuid:0370c0fb-bb78-4a9b-87f5-bed307a509dd"
   #      type: "Offer"
   actors:
-    generic_actor:
+    generic-actor:
       "@id": "https://orcid.org/0000-0002-1825-0097"
       name: "Josiah Carberry"
       "@type": "Person"
@@ -59,6 +59,14 @@ params:
       "@type": "Person"
       "ldp:inbox": "https://hgwells.com/ldn/inbox"
   systems:
+    generic-origin-system:
+      "@id": "https://origin-system.org"
+      "@type": "System"
+      "ldp:inbox": "https://origin-system.org/inbox/"
+    generic-target-system:
+      "@id": "https://target-system.org"
+      "@type": "System"
+      "ldp:inbox": "https://target-system.org/inbox/"
     repository:
       "@id": "https://repository.org"
       "@type": "System"
@@ -76,10 +84,14 @@ params:
       "@type": "System"
       "ldp:inbox": "https://aggregator-service.org/requests/inbox/"
   objects:
-    generic_object:
-      "@id": "https://reviewservice.org/review/geo/202103/0021"
-      "@type": [ "Document","sorg:Review" ]
-      "ietf:cite-as": "https://doi.org/10.3214/987654"
+    generic-object:
+      "@id": "https://origin-system.org/resources/0021"
+      "@type": ["Document"]
+      "ietf:cite-as": "https://doi.org/10.4598/12123487"
+    generic-object-in-reply-to:
+      "@id": "https://target-system.org/resources/0044"
+      "@type": [ "Document" ]
+      "ietf:cite-as": "https://doi.org/10.1224/0983657"
     preprint:
       "@id": "https://repository.org/preprint/201203/421/"
       "@type": "sorg:AboutPage"

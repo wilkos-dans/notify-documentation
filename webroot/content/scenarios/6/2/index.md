@@ -2,8 +2,18 @@
 title: Request for Ingest
 description: "The overlay journal requests that a repository ingest an author's submitted manuscript"
 date: "2021-03-08"
-scope: notify
+scope: "notify"
 sender: "actor_1"
-pattern: "offer/deposit_request"
+pattern: "offer/offer"
+payload:
+    contexts: ["sorg","ldp","ietf","nat"]
+    id: "urn:uuid:0370c0fb-bb78-4a9b-87f5-bed307a509dd"
+    type: ["Offer","nat:ingest-request"]
+    origin:
+        lookup: "overlay-journal"
+    target:
+        lookup: "repository"
+    object:
+        lookup: submission
 ---
 

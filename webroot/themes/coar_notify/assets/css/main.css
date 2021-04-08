@@ -96,10 +96,23 @@ td.field-name {
   background-color: #d0e1f2;
 }
 
+div.card-body {
+  /*background-color: #efefef;*/
+}
+
 div.rfc-2119 {
   text-align: center;
   border: 1px solid #cdcdcd;
   margin-bottom: 20px;
   background-color: #efefef;
   font-size: 80%;
+}
+
+div.more-details-link {
+  text-align: right;
+  /*font-style: italic;*/
+}
+
+span.smaller-text {
+  font-size: 90%;
 }

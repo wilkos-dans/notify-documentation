@@ -1,33 +1,37 @@
 {{ define "main" }}
-  <div class="row">
-    <div class="col">
-      <h1 class="page-title">{{ .Title }}</h1>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col">
-        {{ .Content }}
-    </div>
-  </div>
-  <div class="row">
-      {{ range .Data.Pages }}
-        <div class="col-12 col-lg-6">
-          <div class="card">
-            <div class="card-header">
-              <a class="card-title-link" href="{{ .Permalink }}">{{ .Title }}</a>
-            </div>
-            <div class="card-body">
-              <p>{{ .Description | markdownify }}</p>
-              <h4>Examples</h4>
-              <ul>
-              {{ range .Data.Pages }}
-                <li><a href="{{ .Permalink }}">{{ .Title | markdownify }}</a></li>
-              {{ end }}
-              </ul>
-            </div>
-          </div>
+    <div class="row">
+        <div class="col">
+            <h1 class="page-title">{{ .Title }}</h1>
         </div>
-      {{ end }}
-  </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            {{ .Content }}
+        </div>
+    </div>
+    <div class="row">
+        {{ range .Data.Pages }}
+            <div class="col-12 col-lg-6">
+                <div class="card">
+                    <div class="card-header">
+                        <a class="card-title-link" href="{{ .Permalink }}">{{ .Title }}</a>
+                    </div>
+                    <div class="card-body">
+                        <p>{{ .Description | markdownify }}</p>
+                        <h4>Patterns</h4>
+                        <ul>
+                            {{ range .Data.Pages }}
+                                <li>
+                                    {{ .Title }}<br/>
+{{/*                                    <span class="detail-description">{{ .Description }}</span>*/}}
+                                </li>
+                            {{ end }}
+                        </ul>
+                        <div class="more-details-link"><span class="smaller-text"><a href="{{ .Permalink }}">more details</a></span></div>
+                    </div>
+                </div>
+            </div>
+        {{ end }}
+    </div>
 
 {{ end }}

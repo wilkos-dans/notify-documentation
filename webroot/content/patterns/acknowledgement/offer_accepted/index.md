@@ -1,7 +1,7 @@
 ---
-title: "Acceptance of offer"
+title: "Acceptance of an offer"
 date: "2021-03-08"
-description: ""
+description: "This acknowledgement pattern is used to accept an offer made in a previous notification."
 layout: pattern_example
 status: [review,draft]
 payload:

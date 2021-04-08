@@ -1,20 +1,43 @@
 {{ define "main" }}
-<div class="row">
-    <div class="col">
-        <h1 class="page-title">Notification Pattern: {{ .Title | markdownify }}</h1>
+    <div class="row">
+        <div class="col">
+            <h1 class="page-title">Notification Pattern: {{ .Title | markdownify }}</h1>
+            <p>{{ .Description | markdownify }}</p>
+        </div>
     </div>
-</div>
-<div class="row">
-    <div class="col">
-        <h2>Description</h2>
-        {{ .Description | markdownify }}
-        {{ .Content }}
-        <h2>Examples</h2>
-        <ul>
+    <div class="row">
         {{ range .Data.Pages }}
-            <li><a href="{{ .Permalink }}">{{ .Title | markdownify }}</a>
+            <div class="col-12 col-lg-6">
+                <div class="card">
+                    <div class="card-header">
+                        <a class="card-title-link" href="{{ .Permalink }}">{{ .Title }}</a>
+                    </div>
+                    <div class="card-body">
+                        {{ .Description | markdownify }}
+                        <div class="more-details-link">
+                            <span class="smaller-text">View the specification of <a href="{{ .Permalink }}">properties and example JSON-LD</a></span>
+                        </div>
+                        <br />
+                        {{ $patternName := substr .File.Dir 9 -1 }}
+                        {{ $scenarioList := where .Site.Pages "Params.pattern" $patternName}}
+                        {{ if gt (len $scenarioList) 0 }}
+                            This pattern is used in the following scenarios:
+                            <ul>
+                                {{ range $scenarioList  }}
+                                    <li>
+                                        {{ .CurrentSection.Title | markdownify }}
+                                        <br/>
+                                        <span class="smaller-text">
+                                        <a href="{{ .CurrentSection.Permalink }}">scenario overview</a>&nbsp;&nbsp;|&nbsp;
+                                        <a href="{{ .Permalink }}">notification (step {{ .File.ContentBaseName }})</a>
+                                        </span>
+                                    </li>
+                                {{ end }}
+                            </ul>
+                        {{ end }}
+                    </div>
+                </div>
+            </div>
         {{ end }}
-        </ul>
     </div>
-</div>
 {{ end }}
