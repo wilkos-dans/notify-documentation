@@ -5,7 +5,7 @@ description: "This pattern is used to make an offer, where one system offers one
 layout: pattern_example
 status: [review,draft]
 payload:
-    contexts: ["sorg","ldp","ietf","nat"]
+    contexts: ["ietf","ldp"]
     id: "urn:uuid:0370c0fb-bb78-4a9b-87f5-bed307a509dd"
     type: ["Offer"]
     origin:
@@ -14,4 +14,7 @@ payload:
         lookup: "generic-target-system"
     object:
         lookup: "generic-object"
+    actor:
+        lookup: "generic-actor"
+        obligation: MAY
 ---

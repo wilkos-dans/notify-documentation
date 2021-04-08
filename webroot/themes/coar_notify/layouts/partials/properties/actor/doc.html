@@ -3,7 +3,7 @@
 {{ $actorType := index $siteParams.actors $thisPayload.actor.lookup }}
 
 #### `actor`
-{{ if ne $thisPayload.actor.lookup "generic_actor" }}
+{{ if ne $thisPayload.actor.lookup "generic-actor" }}
 The `activity` {{ $thisPayload.actor.obligation | default "MAY" }}  have an `actor` describing the {{ $thisPayload.actor.lookup }}. The `actor`:
 * MUST have an `@id` which MUST be an HTTP URI identifying the {{ $thisPayload.actor.lookup }}.
 * MUST have a `@type` which MUST include {{ $actorType.type }} from AS 2.0.
