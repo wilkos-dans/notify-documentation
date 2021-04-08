@@ -6,7 +6,7 @@ layout: pattern_example
 status: [review,draft]
 weight: 2
 payload:
-    contexts: ["sorg","ldp","ietf","nat","nrr"]
+    contexts: ["ldp","ietf"]
     id: "urn:uuid:94ecae35-dcfd-4182-8550-22c7164fe23f"
     type: ["Announce"]
     origin:
