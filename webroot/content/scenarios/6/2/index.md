@@ -15,5 +15,6 @@ payload:
         lookup: "repository"
     object:
         lookup: submission
+    actor: ""
 ---
 

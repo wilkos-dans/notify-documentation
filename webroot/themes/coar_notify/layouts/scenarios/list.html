@@ -1,35 +1,23 @@
 {{ define "main" }}
-<div class="row">
+  <div class="row">
     <div class="col">
-        <h1 class="page-title">{{ .Title }}</h1>
-    </div>
-</div>
-<div class="row">
-    <div class="col">
-        {{ .Content }}
-    </div>
-</div>
-<div class="row">
-    <div class="col">
-        <table id="scenariosTable" class="table table-sm table-striped">
-            <thead>
-            <tr class="column-header-row">
-                <th>ID</th>
-                <th>Scenario</th>
-                <th>Systems</th>
-            </tr>
-            </thead>
-            <tbody>
-            {{ range .Sections }}
-                <tr>
-                    <td>{{ replace (replace .File.Dir "scenarios/" "") "/" "" }}</td>
-                    <td><a href="{{ .Permalink }}">{{ .Title }}</a></td>
-                    <td>{{ .Params.actor_1 }} <-> {{ .Params.actor_2 }}</td>
-                </tr>
-            {{ end }}
-            </tbody>
-        </table>
-    </div>
-</div>
+      <h1 class="page-title">Scenario {{ replace (replace .File.Dir "scenarios/" "") "/" "" }}: {{ .Title }}</h1>
+        {{ .Scratch.Set "actor_1" .Params.actor_1 }}
+        {{ .Scratch.Set "actor_2" .Params.actor_2 }}
+        <p>{{ .Description }}</p>
 
+      <div class="row">
+        <div class="col-3 column-left">
+          <h3 class="swim-lane-title">{{ .Scratch.Get "actor_1" }}</h3>
+        </div>
+        <div class="col-6 column-center">
+          <h3 class="swim-lane-title">Notifications</h3>
+        </div>
+        <div class="col-3 column-right">
+          <h3 class="swim-lane-title">{{ .Scratch.Get "actor_2" }}</h3>
+        </div>
+      </div>
+        {{ partial "steps" . }}
+    </div>
+  </div>
 {{ end }}

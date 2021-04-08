@@ -1,0 +1,35 @@
+{{ define "main" }}
+<div class="row">
+    <div class="col">
+        <h1 class="page-title">{{ .Title }}</h1>
+    </div>
+</div>
+<div class="row">
+    <div class="col">
+        {{ .Content }}
+    </div>
+</div>
+<div class="row">
+    <div class="col">
+        <table id="scenariosTable" class="table table-sm table-striped">
+            <thead>
+            <tr class="column-header-row">
+                <th>ID</th>
+                <th>Scenario</th>
+                <th>Participating Systems</th>
+            </tr>
+            </thead>
+            <tbody>
+            {{ range .Sections }}
+                <tr>
+                    <td>{{ replace (replace .File.Dir "scenarios/" "") "/" "" }}</td>
+                    <td><a href="{{ .Permalink }}">{{ .Title }}</a></td>
+                    <td>{{ .Params.actor_1 }} <-> {{ .Params.actor_2 }}</td>
+                </tr>
+            {{ end }}
+            </tbody>
+        </table>
+    </div>
+</div>
+
+{{ end }}

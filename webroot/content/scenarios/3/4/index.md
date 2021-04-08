@@ -15,5 +15,6 @@ payload:
         lookup: "aggregation-service"
     object:
         lookup: endorsement
+    actor: ""
 ---
 
