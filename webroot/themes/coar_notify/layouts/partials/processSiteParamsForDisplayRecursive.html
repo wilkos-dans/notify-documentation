@@ -1,0 +1,14 @@
+{{ if reflect.IsMap .v }}
+    <li>{{ .k }}:
+        <ul>
+            {{ range $k2,$v2 := .v }}
+                {{ partial "processSiteParamsForDisplayRecursive" (dict "k" $k2 "v" $v2 ) }}
+            {{ end }}
+        </ul>
+    </li>
+{{ else if reflect.IsSlice .v }}
+    <li>{{ .k }}: {{ delimit .v ", " }}</li>
+{{ else }}
+    <li>{{ .k }}: {{ .v }}</li>
+{{ end }}
+

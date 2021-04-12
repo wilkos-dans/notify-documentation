@@ -1,0 +1,8 @@
+{{ range $key,$value := . }}
+    <h4>{{ $key | humanize }}</h4>
+    <ul>
+        {{ range $innerKey,$innerValue := $value }}
+            {{ partial "processSiteParamsForDisplayRecursive" (dict "k" $innerKey "v" $innerValue ) }}
+        {{ end }}
+    </ul>
+{{ end }}

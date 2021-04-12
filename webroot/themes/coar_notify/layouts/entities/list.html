@@ -1,0 +1,20 @@
+{{ define "main" }}
+    <div class="row">
+        <div class="col">
+            <h1 class="page-title">{{ .Title }}</h1>
+            <p>{{ .Description | markdownify }}</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <h2><code>origin</code> &amp; <code>target</code></h2>
+            {{ partial "processSiteParamsForDisplay" .Site.Params.systems }}
+            <h2><code>actor</code></h2>
+            {{ partial "processSiteParamsForDisplay" .Site.Params.actors }}
+        </div>
+        <div class="col-md-6">
+            <h2><code>object</code></h2>
+            {{ partial "processSiteParamsForDisplay" .Site.Params.objects }}
+        </div>
+    </div>
+{{ end }}
