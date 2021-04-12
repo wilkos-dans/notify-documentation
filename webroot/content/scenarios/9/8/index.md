@@ -1,8 +1,8 @@
 ---
-title: Repository Links to Review
-description: The repository creates a links to the review
+title: Review
+description: ' The review service conducts a review'
 date: "2021-03-08"
-scope: actor_1
+scope: actor_2
 sender: ""
 pattern: ""
 ---
