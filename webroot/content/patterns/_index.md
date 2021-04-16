@@ -15,8 +15,8 @@ All *Notify* payloads define an `activity`. As such, they MUST use Activity Stre
 notification patterns:
 
 * **The `activity`** property MUST contain the following properties:
-    * **`@id`:** This MUST be a URI. The use of URN:UUID is RECOMMENDED. An HTTP URI MAY be used, but in such cases the URI SHOULD resolve to a useful resource.
-    * **`@type`:** This MUST include one of the [Activity Stream 2.0 Activity Types](https://www.w3.org/TR/activitystreams-vocabulary/) and MAY (depending on the activity) also include a type from the [Notify Activity Types vocabulary](/vocabularies/activity_types/)
+    * **`id`:** This MUST be a URI. The use of URN:UUID is RECOMMENDED. An HTTP URI MAY be used, but in such cases the URI SHOULD resolve to a useful resource.
+    * **`type`:** This MUST include one of the [Activity Stream 2.0 Activity Types](https://www.w3.org/TR/activitystreams-vocabulary/) and MAY (depending on the activity) also include a type from the [Notify Activity Types vocabulary](/vocabularies/activity_types/)
     * **`origin`:** The originator of the activity, typically the service responsible for *sending* the notification.
     * **`target`:** The intended destination of the activity, typically the service which *consumes* the notification.
 * **The `activity`** property MAY (and often will) contain the following properties:

@@ -3,11 +3,11 @@
 
 #### `inReplyTo`
 `inReplyTo` is specified because this is a response to a previous notification. `inReplyTo` MUST have:
-* an `@id` which MUST be the URI (URN:UUID or HTTP URI) which identifies the `activity` for which this is a response.
-* a `@type` array which mirrors the `@type` of the `activity` for which this is a response.
+* an `id` which MUST be the URI (URN:UUID or HTTP URI) which identifies the `activity` for which this is a response.
+* a `type` array which mirrors the `type` of the `activity` for which this is a response.
 
 {{ if and (isSet $thisPayload.in_reply_to "object") (ne $thisPayload.in_reply_to.object nil) }}
 In this case `inReplyTo` also contains an `object` which represents the original `object` of the `activity` for which this is a response. This `object` MUST have:
-* an `@id` property which MUST be the HTTP URI for the resource
+* an `id` property which MUST be the HTTP URI for the resource
 * an `ietf:cite-as` property which MUST contain the persistent HTTP URI (sometimes called the "PID") which is to be used to cite or link to the resource.
 {{ end }}

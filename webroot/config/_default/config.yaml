@@ -44,100 +44,100 @@ params:
   #      type: "Offer"
   actors:
     generic-actor:
-      "@id": "https://orcid.org/0000-0002-1825-0097"
+      "id": "https://orcid.org/0000-0002-1825-0097"
       name: "Josiah Carberry"
-      "@type": "Person"
+      "type": "Person"
       "ldp:inbox": "https://josiahcarberry.com/ldn/inbox"
     author:
-      "@id": "https://orcid.org/0000-0002-1825-0097"
+      "id": "https://orcid.org/0000-0002-1825-0097"
       name: "Josiah Carberry"
-      "@type": "Person"
+      "type": "Person"
       "ldp:inbox": "https://josiahcarberry.com/ldn/inbox"
     reviewer:
-      "@id": "https://isni.org/isni/0000000122832703"
+      "id": "https://isni.org/isni/0000000122832703"
       name: "H G Wells"
-      "@type": "Person"
+      "type": "Person"
       "ldp:inbox": "https://hgwells.com/ldn/inbox"
   systems:
     generic-origin-system:
-      "@id": "https://origin-system.org"
-      "@type": "System"
+      "id": "https://origin-system.org"
+      "type": "System"
       "ldp:inbox": "https://origin-system.org/inbox/"
     generic-target-system:
-      "@id": "https://target-system.org"
-      "@type": "System"
+      "id": "https://target-system.org"
+      "type": "System"
       "ldp:inbox": "https://target-system.org/inbox/"
     repository:
-      "@id": "https://repository.org"
-      "@type": "System"
+      "id": "https://repository.org"
+      "type": "System"
       "ldp:inbox": "https://repository.org/inbox/"
     review-service:
-      "@id": "https://reviewservice.org"
-      "@type": "System"
+      "id": "https://reviewservice.org"
+      "type": "System"
       "ldp:inbox": "https://reviewservice.org/requests/inbox/"
     overlay-journal:
-      "@id": "https://overlay-journal.org"
-      "@type": "System"
+      "id": "https://overlay-journal.org"
+      "type": "System"
       "ldp:inbox": "https://overlay-journal.org/requests/inbox/"
     aggregation-service:
-      "@id": "https://aggregator-service.org"
-      "@type": "System"
+      "id": "https://aggregator-service.org"
+      "type": "System"
       "ldp:inbox": "https://aggregator-service.org/requests/inbox/"
   objects:
     generic-object:
-      "@id": "https://origin-system.org/resources/0021"
-      "@type": ["Document"]
+      "id": "https://origin-system.org/resources/0021"
+      "type": ["Document"]
       "ietf:cite-as": "https://doi.org/10.4598/12123487"
     generic-object-in-reply-to:
-      "@id": "https://target-system.org/resources/0044"
-      "@type": [ "Document" ]
+      "id": "https://target-system.org/resources/0044"
+      "type": [ "Document" ]
       "ietf:cite-as": "https://doi.org/10.1224/0983657"
     preprint:
-      "@id": "https://repository.org/preprint/201203/421/"
-      "@type": "sorg:AboutPage"
+      "id": "https://repository.org/preprint/201203/421/"
+      "type": "sorg:AboutPage"
       "ietf:cite-as": "https://doi.org/10.5555/12345680"
       url:
-        "@id": "https://repository.org/preprint/201203/421/content.pdf"
-        "@type": [ "Article","sorg:ScholarlyArticle" ]
+        "id": "https://repository.org/preprint/201203/421/content.pdf"
+        "type": [ "Article","sorg:ScholarlyArticle" ]
         "media-type": "application/pdf"
     submission:
-      "@id": "https://overlay-journal.org/submissions/00001/"
-      "@type": "sorg:AboutPage"
+      "id": "https://overlay-journal.org/submissions/00001/"
+      "type": "sorg:AboutPage"
       url:
-        "@id": "https://overlay-journal.org/submissions/00001/files/content.pdf"
-        "@type": [ "Article","sorg:ScholarlyArticle" ]
+        "id": "https://overlay-journal.org/submissions/00001/files/content.pdf"
+        "type": [ "Article","sorg:ScholarlyArticle" ]
         "media-type": "application/pdf"
     review:
-      "@id": "https://reviewservice.org/review/geo/202103/0021"
-      "@type": [ "Document","sorg:Review"]
+      "id": "https://reviewservice.org/review/geo/202103/0021"
+      "type": [ "Document","sorg:Review"]
       "ietf:cite-as": "https://doi.org/10.3214/987654"
       "nrr:reviews":
         object:
-          "@id": "https://repository.org/preprint/201203/421/"
+          "id": "https://repository.org/preprint/201203/421/"
           "ietf:cite-as": "https://doi.org/10.5555/12345680"
     "journal-review":
-      "@id": "https://overlay-journal.org/reviews/000001/00001"
-      "@type": [ "Document","sorg:Review" ]
+      "id": "https://overlay-journal.org/reviews/000001/00001"
+      "type": [ "Document","sorg:Review" ]
       "ietf:cite-as": "https://doi.org/10.3214/987654"
       "nrr:reviews":
         object:
-          "@id": "https://repository.org/preprint/201203/421/"
+          "id": "https://repository.org/preprint/201203/421/"
           "ietf:cite-as": "https://doi.org/10.5555/12345680"
     "repository-review":
-      "@id": "https://repository.org/review/00001"
-      "@type": [ "Document","sorg:Review" ]
+      "id": "https://repository.org/review/00001"
+      "type": [ "Document","sorg:Review" ]
       "ietf:cite-as": "https://doi.org/10.3214/000001"
       "nrr:reviews":
         object:
-          "@id": "https://repository.org/preprint/201203/421/"
+          "id": "https://repository.org/preprint/201203/421/"
           "ietf:cite-as": "https://doi.org/10.5555/12345680"
     endorsement:
-      "@id": "https://overlay-journal.org/articles/00001/"
-      "@type": [ "Page","sorg:WebPage" ]
+      "id": "https://overlay-journal.org/articles/00001/"
+      "type": [ "Page","sorg:WebPage" ]
       "ietf:cite-as": "https://overlay-journal.org/articles/00001/"
       "nrr:endorses":
         object:
-          "@id": "https://repository.org/preprint/201203/421/"
+          "id": "https://repository.org/preprint/201203/421/"
           "ietf:cite-as": "https://doi.org/10.5555/12345680"
 markup:
   #  defaultMarkdownHandler: blackFriday
