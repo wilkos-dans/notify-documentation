@@ -30,7 +30,7 @@
                         <h4>Example JSON-LD Payload</h4>
 
                         {{ $payload := partial "properties/json_payload" (dict "payload" $mergedPayload "siteParams" $.Site.Params) }}
-                        <pre><code class="language-json">{{ $payload | jsonify (dict "indent" "  ") }}</code></pre>
+                        {{ (partial "render_json" $payload) | markdownify }}
                     </div>
                 </div>
             {{ else }}

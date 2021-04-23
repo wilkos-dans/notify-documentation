@@ -140,7 +140,6 @@ params:
           "id": "https://repository.org/preprint/201203/421/"
           "ietf:cite-as": "https://doi.org/10.5555/12345680"
 markup:
-  #  defaultMarkdownHandler: blackFriday
   defaultMarkdownHandler: goldmark
   goldmark:
     extensions:
@@ -158,20 +157,15 @@ markup:
       hardWraps: false
       unsafe: true
       xHTML: false
-#  blackFriday:
-#    angledQuotes: false
-#    extensions: null
-#    extensionsMask: null
-#    footnoteAnchorPrefix: ""
-#    footnoteReturnLinkContents: ""
-#    fractions: true
-#    hrefTargetBlank: false
-#    latexDashes: true
-#    nofollowLinks: false
-#    noreferrerLinks: false
-#    plainIDAnchors: true
-#    skipHTML: false
-#    smartDashes: true
-#    smartypants: true
-#    smartypantsQuotesNBSP: false
-#    taskLists: true
+  highlight:
+    anchorLineNos: false
+    codeFences: true
+    guessSyntax: false
+    hl_Lines: ""
+    lineAnchors: ""
+    lineNoStart: 1
+    lineNos: false
+    lineNumbersInTable: true
+    noClasses: true
+    style: pygments
+    tabWidth: 4

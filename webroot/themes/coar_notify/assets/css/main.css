@@ -20,8 +20,18 @@ p {
   /*margin: 0px;*/
 }
 
-pre,code {
-  padding: 0px;
+/*pre,code {*/
+/*  padding: 0px;*/
+/*  font-family: 'Roboto Mono',monospace;*/
+/*}*/
+
+pre {
+  padding: 15px;
+  background-color: #efefef;
+  font-size: 80%;
+}
+
+code {
   font-family: 'Roboto Mono',monospace;
 }
 
