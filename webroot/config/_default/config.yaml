@@ -46,42 +46,42 @@ params:
     generic-actor:
       "id": "https://orcid.org/0000-0002-1825-0097"
       name: "Josiah Carberry"
-      "type": "Person"
+      "type": ["Person"]
       "ldp:inbox": "https://josiahcarberry.com/ldn/inbox"
     author:
       "id": "https://orcid.org/0000-0002-1825-0097"
       name: "Josiah Carberry"
-      "type": "Person"
+      "type": ["Person"]
       "ldp:inbox": "https://josiahcarberry.com/ldn/inbox"
     reviewer:
       "id": "https://isni.org/isni/0000000122832703"
       name: "H G Wells"
-      "type": "Person"
+      "type": ["Person"]
       "ldp:inbox": "https://hgwells.com/ldn/inbox"
   systems:
     generic-origin-system:
       "id": "https://origin-system.org"
-      "type": "System"
+      "type": ["System"]
       "ldp:inbox": "https://origin-system.org/inbox/"
     generic-target-system:
       "id": "https://target-system.org"
-      "type": "System"
+      "type": ["System"]
       "ldp:inbox": "https://target-system.org/inbox/"
     repository:
       "id": "https://repository.org"
-      "type": "System"
+      "type": ["System"]
       "ldp:inbox": "https://repository.org/inbox/"
     review-service:
       "id": "https://reviewservice.org"
-      "type": "System"
+      "type": ["System"]
       "ldp:inbox": "https://reviewservice.org/requests/inbox/"
     overlay-journal:
       "id": "https://overlay-journal.org"
-      "type": "System"
+      "type": ["System"]
       "ldp:inbox": "https://overlay-journal.org/requests/inbox/"
     aggregation-service:
       "id": "https://aggregator-service.org"
-      "type": "System"
+      "type": ["System"]
       "ldp:inbox": "https://aggregator-service.org/requests/inbox/"
   objects:
     generic-object:
@@ -94,7 +94,7 @@ params:
       "ietf:cite-as": "https://doi.org/10.1224/0983657"
     preprint:
       "id": "https://repository.org/preprint/201203/421/"
-      "type": "sorg:AboutPage"
+      "type": ["sorg:AboutPage"]
       "ietf:cite-as": "https://doi.org/10.5555/12345680"
       url:
         "id": "https://repository.org/preprint/201203/421/content.pdf"
@@ -102,7 +102,7 @@ params:
         "media-type": "application/pdf"
     submission:
       "id": "https://overlay-journal.org/submissions/00001/"
-      "type": "sorg:AboutPage"
+      "type": ["sorg:AboutPage"]
       url:
         "id": "https://overlay-journal.org/submissions/00001/files/content.pdf"
         "type": [ "Article","sorg:ScholarlyArticle" ]

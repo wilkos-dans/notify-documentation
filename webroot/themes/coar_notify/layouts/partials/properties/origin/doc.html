@@ -6,5 +6,5 @@
 #### `origin`
 The `activity` MUST have an `origin` describing the {{ $thisPayload.origin.lookup | default "**[UNDEFINED]**" }} which has initiated the `activity`. The `origin` MUST have:
 *   An `id` which MUST be an HTTP URI identifying the {{ $thisPayload.origin.lookup | default "**[UNDEFINED]**"}}.
-*   A `type` which MUST have the value *{{ index $systemType "type" }}* from AS 2.0.
+*   A `type` which SHOULD be an array and, in any case, MUST include the value *{{ index $systemType "type" }}* from AS 2.0.
 *   An `ldp:inbox` which MUST be an HTTP URI for the LDN inbox for the {{ $thisPayload.origin.lookup | default "**[UNDEFINED]**"}}

@@ -1,0 +1,10 @@
+---
+title: Change Log
+description:
+date: 2021-05-07
+---
+
+#### 2021-05-07
+* Changed docs to indicate that an array SHOULD be used for the `type` property.
+* Updated all examples to use array values for the `type` property.
+
