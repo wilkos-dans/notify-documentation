@@ -4,7 +4,7 @@
 {{ $namespaces := $siteParams.namespaces }}
 {{ $otherContextsScratch := newScratch }}
 
-{{ $defaultContext := "https://www.w3.org/ns/activitystreams#"}}
+{{ $defaultContext := "https://www.w3.org/ns/activitystreams"}}
 
 {{ range $thisPayload.contexts }}
     {{ $otherContextsScratch.SetInMap "otherContexts" . (index $namespaces .).uri }}
