@@ -61,27 +61,27 @@ params:
   systems:
     generic-origin-system:
       "id": "https://origin-system.org"
-      "type": ["System"]
+      "type": ["Service"]
       "ldp:inbox": "https://origin-system.org/inbox/"
     generic-target-system:
       "id": "https://target-system.org"
-      "type": ["System"]
+      "type": ["Service"]
       "ldp:inbox": "https://target-system.org/inbox/"
     repository:
       "id": "https://repository.org"
-      "type": ["System"]
+      "type": ["Service"]
       "ldp:inbox": "https://repository.org/inbox/"
     review-service:
       "id": "https://reviewservice.org"
-      "type": ["System"]
+      "type": ["Service"]
       "ldp:inbox": "https://reviewservice.org/requests/inbox/"
     overlay-journal:
       "id": "https://overlay-journal.org"
-      "type": ["System"]
+      "type": ["Service"]
       "ldp:inbox": "https://overlay-journal.org/requests/inbox/"
     aggregation-service:
       "id": "https://aggregator-service.org"
-      "type": ["System"]
+      "type": ["Service"]
       "ldp:inbox": "https://aggregator-service.org/requests/inbox/"
   objects:
     generic-object:
