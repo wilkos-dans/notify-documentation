@@ -2,7 +2,6 @@
 title: "Offer of a resource to a service"
 date: "2021-03-08"
 description: "This pattern is used to make an offer, where one system offers one of its resources for some activity to be conducted by a second system."
-outputs: [html,json]
 layout: pattern_example
 status: [review,draft]
 payload:

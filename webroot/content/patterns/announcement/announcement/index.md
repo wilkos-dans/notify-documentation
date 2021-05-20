@@ -2,7 +2,6 @@
 title: "Announcement (standalone)"
 date: "2021-03-08"
 description: "This pattern is used to announce the outcome of an activity, sometimes (but not always) linking an original resource to a new, related resource."
-outputs: [html,json]
 layout: pattern_example
 status: [review,draft]
 weight: 1
