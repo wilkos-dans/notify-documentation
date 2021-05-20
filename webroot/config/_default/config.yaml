@@ -15,6 +15,15 @@ disablePathToLower: true
 taxonomies:
   tag: "tags"
   status: "status"
+
+#outputFormats:
+#  JsonLdFormat:
+#    baseName: index
+#    isPlainText: false
+#    mediaType: application/ld+json
+
+
+
 params:
   namespaces:
     sorg:

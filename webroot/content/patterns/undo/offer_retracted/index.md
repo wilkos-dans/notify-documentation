@@ -2,6 +2,7 @@
 title: "Retraction of an offer"
 date: "2021-03-08"
 description: "This pattern is used to retract an offer made in a previous notification."
+outputs: [html,json]
 status: [review,draft]
 payload:
     contexts: ["ldp"]

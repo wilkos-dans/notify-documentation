@@ -1,0 +1,2 @@
+{{ $payload := partial "properties/json_payload" (dict "payload" .Params.payload "siteParams" $.Site.Params) }}
+{{ $payload | jsonify (dict "indent" "  ") }}
