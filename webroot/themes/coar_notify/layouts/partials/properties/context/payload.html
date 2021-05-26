@@ -1,13 +1,8 @@
 {{ $thisPayload := .payload }}
-{{ $siteParams := .siteParams}}
+{{ $contextUris := newScratch }}
 
-{{ $namespaces := $siteParams.namespaces }}
-{{ $otherContextsScratch := newScratch }}
-
-{{ $defaultContext := "https://www.w3.org/ns/activitystreams"}}
-
-{{ range $thisPayload.contexts }}
-    {{ $otherContextsScratch.SetInMap "otherContexts" . (index $namespaces .).uri }}
+{{ range .siteParams.contexts }}
+    {{ $contextUris.Add "contexts" (slice .uri) }}
 {{ end }}
 
-{{ return dict "@context" (slice $defaultContext ($otherContextsScratch.Get "otherContexts")) }}
+{{ return dict "@context" ($contextUris.Get "contexts") }}

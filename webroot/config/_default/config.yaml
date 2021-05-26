@@ -16,7 +16,7 @@ taxonomies:
   tag: "tags"
   status: "status"
 outputs:
-  page: [html,json]
+  page: [ html,json ]
 
 #outputFormats:
 #  JsonLdFormat:
@@ -27,77 +27,58 @@ outputs:
 
 
 params:
-  namespaces:
-    sorg:
-      name: "schema.org"
-      uri: "http://schema.org/"
-    ldp:
-      name: "W3C Linked Data Platform (LDP) Vocabulary"
-      uri: "http://www.w3.org/ns/ldp#"
-    nat:
-      name: "Notify Activity Types"
-      uri: "http://purl.org/coar/notify_activity_type/"
-    ietf:
-      name: "IETF Link Relations"
-      uri: "http://www.iana.org/assignments/relation/"
-    cito:
-      name: "CiTO, the Citation Typing Ontology"
-      uri: "http://purl.org/spar/cito/"
-    nrr:
-      name: "Notify Resource Relations"
-      uri: "http://purl.org/coar/notify_resource_relations/"
-    rt:
-      name: "COAR Resource Types"
-      uri: "http://purl.org/coar/resource_type"
-  #  patterns:
-  #    offer:
-  #      id: "urn:uuid:0370c0fb-bb78-4a9b-87f5-bed307a509dd"
-  #      type: "Offer"
+  contexts:
+    notify:
+      name: "Notify"
+      uri: "http://purl.org/coar/notify"
+    as2:
+      name: "Activity Streams 2.0"
+      uri: "https://www.w3.org/ns/activitystreams"
   actors:
     generic-actor:
       "id": "https://orcid.org/0000-0002-1825-0097"
       name: "Josiah Carberry"
-      "type": ["Person"]
+      "type": [ "Person" ]
       "ldp:inbox": "https://josiahcarberry.com/ldn/inbox"
     author:
       "id": "https://orcid.org/0000-0002-1825-0097"
       name: "Josiah Carberry"
-      "type": ["Person"]
+      "type": [ "Person" ]
       "ldp:inbox": "https://josiahcarberry.com/ldn/inbox"
     reviewer:
       "id": "https://isni.org/isni/0000000122832703"
       name: "H G Wells"
-      "type": ["Person"]
+      "type": [ "Person" ]
       "ldp:inbox": "https://hgwells.com/ldn/inbox"
   systems:
     generic-origin-system:
       "id": "https://origin-system.org"
-      "type": ["Service"]
+      "type": [ "Service" ]
       "ldp:inbox": "https://origin-system.org/inbox/"
     generic-target-system:
       "id": "https://target-system.org"
-      "type": ["Service"]
+      "type": [ "Service" ]
       "ldp:inbox": "https://target-system.org/inbox/"
     repository:
       "id": "https://repository.org"
-      "type": ["Service"]
+      "type": [ "Service" ]
       "ldp:inbox": "https://repository.org/inbox/"
     review-service:
       "id": "https://reviewservice.org"
-      "type": ["Service"]
+      "type": [ "Service" ]
       "ldp:inbox": "https://reviewservice.org/requests/inbox/"
     overlay-journal:
       "id": "https://overlay-journal.org"
-      "type": ["Service"]
+      "type": [ "Service" ]
       "ldp:inbox": "https://overlay-journal.org/requests/inbox/"
     aggregation-service:
       "id": "https://aggregator-service.org"
-      "type": ["Service"]
+      "type": [ "Service" ]
       "ldp:inbox": "https://aggregator-service.org/requests/inbox/"
   objects:
     generic-object:
       "id": "https://origin-system.org/resources/0021"
-      "type": ["Document"]
+      "type": [ "Document" ]
       "ietf:cite-as": "https://doi.org/10.4598/12123487"
     generic-object-in-reply-to:
       "id": "https://target-system.org/resources/0044"
@@ -105,7 +86,7 @@ params:
       "ietf:cite-as": "https://doi.org/10.1224/0983657"
     preprint:
       "id": "https://repository.org/preprint/201203/421/"
-      "type": ["sorg:AboutPage"]
+      "type": [ "sorg:AboutPage" ]
       "ietf:cite-as": "https://doi.org/10.5555/12345680"
       url:
         "id": "https://repository.org/preprint/201203/421/content.pdf"
@@ -113,14 +94,14 @@ params:
         "media-type": "application/pdf"
     submission:
       "id": "https://overlay-journal.org/submissions/00001/"
-      "type": ["sorg:AboutPage"]
+      "type": [ "sorg:AboutPage" ]
       url:
         "id": "https://overlay-journal.org/submissions/00001/files/content.pdf"
         "type": [ "Article","sorg:ScholarlyArticle" ]
         "media-type": "application/pdf"
     review:
       "id": "https://reviewservice.org/review/geo/202103/0021"
-      "type": [ "Document","sorg:Review"]
+      "type": [ "Document","sorg:Review" ]
       "ietf:cite-as": "https://doi.org/10.3214/987654"
       "nrr:reviews":
         object:

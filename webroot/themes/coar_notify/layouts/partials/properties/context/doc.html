@@ -1,18 +1,9 @@
 {{ $thisPayload := .payload }}
-{{ $siteParams := .siteParams}}
-<h4><code>@context</code></h4>
-<p>The default <code>context</code> MUST be Activity Streams 2.0 (AS 2.0).</p>
-
-{{ $namespaces := $siteParams.namespaces }}
-
-{{ with $thisPayload.contexts }}
-    <p>
-        Other contexts (namespaces) MUST include:
-    <ul>
-        {{ range . }}
-            <li><a href="{{ (index $namespaces .).uri }}">{{ (index $namespaces .).name }}</a></li>
-        {{ end }}
-    </ul>
-
-    </p>
-{{ end }}
+<p>
+    The <code>@context</code> must include:
+<ul>
+    {{ range .siteParams.contexts }}
+        <li><a href="{{ .uri }}">{{ .name }}</a></li>
+    {{ end }}
+</ul>
+</p>
