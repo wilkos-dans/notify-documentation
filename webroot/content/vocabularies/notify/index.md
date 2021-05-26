@@ -1,9 +1,8 @@
 ---
-title: Activity Types
-description: Vocabulary of activity types to be used in *Notify* notification payloads.
+title: Notify Vocabulary
+description: Vocabulary of activity types and resource relations to be used in *Notify* notification payloads.
 date: 2018-12-20
-namespace: http://purl.org/coar/notify_activity_type/
-draft: true
+namespace: http://purl.org/coar/notify_vocabulary/
 terms:
 - name: "review-request"
   definition: "An offer of a repository resource for review"
@@ -29,5 +28,9 @@ terms:
   definition: "Offer of a resource for ingest"
 - name: "ingest-success"
   definition: "Announcing that a resource has been ingested"
+- name: "reviews"
+  definition: "A relation between a resource which represents a review of another resource"
+- name: "endorses"
+  definition: "A relation between a resource which represents an endorsement of another resource"
 ---
 
