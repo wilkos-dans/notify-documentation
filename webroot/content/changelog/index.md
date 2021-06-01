@@ -7,6 +7,7 @@ date: 2021-05-07
 #### 2021-06-01
 * First draft of Notify context created - [http://purl.org/coar/notify](http://purl.org/coar/notify)
 * `@context` property in all examples updated to include the *Notify* context (in addition to AS 2.0).
+* Removed the constraining RFC-2119 language from the patern descriptions.
 
 #### 2021-05-14
 Changed incorrect value 'System' to 'Service' in all examples of `origin` and `target` properties used in patterns and scenarios.
