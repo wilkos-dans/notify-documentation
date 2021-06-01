@@ -15,5 +15,5 @@ payload:
         lookup: "generic-object"
     actor:
         lookup: "generic-actor"
-        obligation: MAY
+        obligation: may
 ---

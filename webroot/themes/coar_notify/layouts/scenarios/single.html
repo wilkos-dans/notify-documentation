@@ -18,11 +18,6 @@
                 {{ $thisPage := . }}
                 <div class="row">
                     <div class="col">
-                        {{ partial "rfc_2119" }}
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col">
                         <h4>Properties</h4>
                         {{ partial "properties/all_properties" (dict "payload" $mergedPayload "siteParams" $.Site.Params) }}
                     </div>

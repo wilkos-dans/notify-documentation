@@ -1,7 +1,7 @@
 {{ $thisPayload := . }}
 #### `type`
 {{ if gt (len $thisPayload.type) 1 }}
-The `activity` MUST have a `type` array which MUST include *{{ index $thisPayload.type 0 }}* from AS 2.0 and *{{ index $thisPayload.type 1 }}* from Notify Activity Types.
+The `activity` has a `type` array which should be an array including *{{ index $thisPayload.type 0 }}* from AS 2.0 and *{{ index $thisPayload.type 1 }}* from Notify.
 {{ else }}
-The `activity` MUST have a `type` which SHOULD be an array and, in any case, MUST contain the value *{{ index $thisPayload.type 0 }}* from AS 2.0
+The `activity` has a `type` which should be an array containing the value *{{ index $thisPayload.type 0 }}* from AS 2.0.
 {{ end }}
