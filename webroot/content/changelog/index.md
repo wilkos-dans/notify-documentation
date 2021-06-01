@@ -11,10 +11,12 @@ We have made some changes to the Notify documentation. The changes are to improv
 The structure of the notification payloads is essentially unchanged, except that we have created a first draft Notify JSON-LD context ([http://purl.org/coar/notify](http://purl.org/coar/notify)), and changed the example JSON-LD in the patterns and scenarios to reflect this. All patterns now have this as the context property:
 
 ```json
-"@context": [
-"https://www.w3.org/ns/activitystreams",
-"http://purl.org/coar/notify"
-],
+{
+  "@context": [
+    "https://www.w3.org/ns/activitystreams",
+    "http://purl.org/coar/notify"
+  ]
+}
 ```
 
 ###### 2. Strictness of the descriptions
