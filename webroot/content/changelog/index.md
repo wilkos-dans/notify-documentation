@@ -4,6 +4,9 @@ description:
 date: 2021-05-07
 ---
 
+#### 2021-06-23
+Fixed typo in scenarios, replacing incorrect `nrr:` namespace with `coar-notify:`.
+
 #### 2021-06-01
 We have made some changes to the Notify documentation. The changes are to improve the notification payloads in terms of linked data (ensuring that they can be expressed as RDF) and so the changes should **not** have any breaking impact on current software development.
 

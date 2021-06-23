@@ -103,7 +103,7 @@ params:
       "id": "https://reviewservice.org/review/geo/202103/0021"
       "type": [ "Document","sorg:Review" ]
       "ietf:cite-as": "https://doi.org/10.3214/987654"
-      "nrr:reviews":
+      "coar-notify:reviews":
         object:
           "id": "https://repository.org/preprint/201203/421/"
           "ietf:cite-as": "https://doi.org/10.5555/12345680"
@@ -111,7 +111,7 @@ params:
       "id": "https://overlay-journal.org/reviews/000001/00001"
       "type": [ "Document","sorg:Review" ]
       "ietf:cite-as": "https://doi.org/10.3214/987654"
-      "nrr:reviews":
+      "coar-notify:reviews":
         object:
           "id": "https://repository.org/preprint/201203/421/"
           "ietf:cite-as": "https://doi.org/10.5555/12345680"
@@ -119,7 +119,7 @@ params:
       "id": "https://repository.org/review/00001"
       "type": [ "Document","sorg:Review" ]
       "ietf:cite-as": "https://doi.org/10.3214/000001"
-      "nrr:reviews":
+      "coar-notify:reviews":
         object:
           "id": "https://repository.org/preprint/201203/421/"
           "ietf:cite-as": "https://doi.org/10.5555/12345680"
@@ -127,7 +127,7 @@ params:
       "id": "https://overlay-journal.org/articles/00001/"
       "type": [ "Page","sorg:WebPage" ]
       "ietf:cite-as": "https://overlay-journal.org/articles/00001/"
-      "nrr:endorses":
+      "coar-notify:endorses":
         object:
           "id": "https://repository.org/preprint/201203/421/"
           "ietf:cite-as": "https://doi.org/10.5555/12345680"

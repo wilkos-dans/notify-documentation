@@ -1,9 +1,8 @@
 {
   "@context" : {
     "@vocab": "http://purl.org//coar/notify_vocabulary/" ,
-
     "ietf": "http://www.iana.org/assignments/relation/",
-    "coar-notify": "http://purl.org//coar/notify_vocabulary/",
+    "coar-notify": "http://purl.org/coar/notify_vocabulary/",
     "sorg": "http://schema.org/",
 
     "EndorsementSuccess": "coar-notify:EndorsementSuccess",
