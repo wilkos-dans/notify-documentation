@@ -4,6 +4,16 @@ description:
 date: 2021-05-07
 ---
 
+#### 2021-07-01
+Fixed typo in scenarios, replacing incorrect `nat:` namespace with `coar-notify:`.
+
+Renamed the terms in the `coar-notify` vocabulary to use camelCase. So, for example:
+
+`endorsement-success` has become `EndorsementSuccess`.
+
+Removed some unused terms from the vocabulary.
+
+
 #### 2021-06-23
 Fixed typo in scenarios, replacing incorrect `nrr:` namespace with `coar-notify:`.
 

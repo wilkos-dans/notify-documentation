@@ -8,7 +8,7 @@ pattern: "offer/offer"
 payload:
     contexts: ["sorg","ldp","ietf","nat"]
     id: "urn:uuid:0370c0fb-bb78-4a9b-87f5-bed307a509dd"
-    type: ["Offer","nat:ingest-request"]
+    type: ["Offer","coar-notify:IngestRequest"]
     origin:
         lookup: "overlay-journal"
     target:
