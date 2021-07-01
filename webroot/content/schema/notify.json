@@ -7,13 +7,13 @@
 
     "EndorsementRequest": "coar-notify:EndorsementRequest",
     "EndorsementSuccess": "coar-notify:EndorsementSuccess",
-    "IngestFailure": "coar-notify:IngestFailure",
+    "EndorsementFailure": "coar-notify:EndorsementFailure",
     "IngestRequest": "coar-notify:IngestRequest",
     "IngestSuccess": "coar-notify:IngestSuccess",
-    "ReviewFailure": "coar-notify:ReviewFailure",
-    "ReviewRequest": "coar-notify:ReviewRequest",
+    "IngestFailure": "coar-notify:IngestFailure",
     "ReviewRequest": "coar-notify:ReviewRequest",
     "ReviewSuccess": "coar-notify:ReviewSuccess",
+    "ReviewFailure": "coar-notify:ReviewFailure",
 
     "ietf:cite-as": {
         "@type" : "@id"
