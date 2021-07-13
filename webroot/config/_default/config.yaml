@@ -39,42 +39,42 @@ params:
       "id": "https://orcid.org/0000-0002-1825-0097"
       name: "Josiah Carberry"
       "type": [ "Person" ]
-      "ldp:inbox": "https://josiahcarberry.com/ldn/inbox"
+      "inbox": "https://josiahcarberry.com/ldn/inbox"
     author:
       "id": "https://orcid.org/0000-0002-1825-0097"
       name: "Josiah Carberry"
       "type": [ "Person" ]
-      "ldp:inbox": "https://josiahcarberry.com/ldn/inbox"
+      "inbox": "https://josiahcarberry.com/ldn/inbox"
     reviewer:
       "id": "https://isni.org/isni/0000000122832703"
       name: "H G Wells"
       "type": [ "Person" ]
-      "ldp:inbox": "https://hgwells.com/ldn/inbox"
+      "inbox": "https://hgwells.com/ldn/inbox"
   systems:
     generic-origin-system:
       "id": "https://origin-system.org"
       "type": [ "Service" ]
-      "ldp:inbox": "https://origin-system.org/inbox/"
+      "inbox": "https://origin-system.org/inbox/"
     generic-target-system:
       "id": "https://target-system.org"
       "type": [ "Service" ]
-      "ldp:inbox": "https://target-system.org/inbox/"
+      "inbox": "https://target-system.org/inbox/"
     repository:
       "id": "https://repository.org"
       "type": [ "Service" ]
-      "ldp:inbox": "https://repository.org/inbox/"
+      "inbox": "https://repository.org/inbox/"
     review-service:
       "id": "https://reviewservice.org"
       "type": [ "Service" ]
-      "ldp:inbox": "https://reviewservice.org/requests/inbox/"
+      "inbox": "https://reviewservice.org/requests/inbox/"
     overlay-journal:
       "id": "https://overlay-journal.org"
       "type": [ "Service" ]
-      "ldp:inbox": "https://overlay-journal.org/requests/inbox/"
+      "inbox": "https://overlay-journal.org/requests/inbox/"
     aggregation-service:
       "id": "https://aggregator-service.org"
       "type": [ "Service" ]
-      "ldp:inbox": "https://aggregator-service.org/requests/inbox/"
+      "inbox": "https://aggregator-service.org/requests/inbox/"
   objects:
     generic-object:
       "id": "https://origin-system.org/resources/0021"
