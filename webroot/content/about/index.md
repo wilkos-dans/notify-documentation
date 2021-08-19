@@ -28,7 +28,7 @@ This documentation has been developed by COAR as part of the [*Notify*](https://
 - Stu Snydman, Harvard University Library
 - Raphaël Tournoy, CCSD / HAL
 - Andrew Woods, Harvard University Library
-- Saskia Wouterson, University of Amsterdam / University Journals
+- Saskia Woutersen, University of Amsterdam / University Journals
 
 ## Website Development
 * Paul Walk, Antleaf and COAR
