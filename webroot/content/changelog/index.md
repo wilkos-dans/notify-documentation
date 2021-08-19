@@ -4,6 +4,9 @@ description:
 date: 2021-05-07
 ---
 
+#### 2021-07-13
+Removed the `ldp:` prefix from the `inbox` property as it is already defined in Activity Streams 2
+
 #### 2021-07-07
 Removed the nested `object` (causing an unnecessary 'blank node') from the `coar-notify:reviews` and `coar-notify:endorses` patterns.
 
