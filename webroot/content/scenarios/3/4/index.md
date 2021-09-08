@@ -6,7 +6,7 @@ scope: notify
 sender: actor_1
 pattern: announcement/announcement
 payload:
-    contexts: ["sorg","ldp","ietf","nat","nrr"]
+    "@context": ["sorg","ldp","ietf","nat","nrr"]
     id: "urn:uuid:94ecae35-dcfd-4182-8550-22c7164fe23f"
     type: ["Announce","coar-notify:EndorsementSuccess"]
     origin:

@@ -1,7 +1,7 @@
 {{ $thisPayload := .payload }}
 {{ $contextUris := newScratch }}
 
-{{ range .siteParams.contexts }}
+{{ range (index .siteParams "@context") }}
     {{ $contextUris.Add "contexts" (slice .uri) }}
 {{ end }}
 

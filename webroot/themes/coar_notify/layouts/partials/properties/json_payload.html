@@ -1,7 +1,7 @@
 {{ $inComingPayload := .payload }}
 {{ $siteParams := .siteParams}}
 
-{{ $payload := partial "properties/context/payload" (dict "payload" $inComingPayload "siteParams" $siteParams) }}
+{{ $payload := partial "properties/@context/payload" (dict "payload" $inComingPayload "siteParams" $siteParams) }}
 
 {{ $payload = merge $payload (partial "properties/id/payload" $inComingPayload) }}
 

@@ -5,7 +5,6 @@ description: "This acknowledgement pattern is used to accept an offer made in a 
 layout: pattern_example
 status: [review,draft]
 payload:
-    contexts: ["ldp","ietf"]
     id: "urn:uuid:4fb3af44-d4f8-4226-9475-2d09c2d8d9e0"
     type: ["Accept"]
     origin:

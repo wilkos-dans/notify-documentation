@@ -1,7 +1,7 @@
 {{ $inComingPayload := .payload }}
 {{ $siteParams := .siteParams}}
 
-{{ partial "properties/context/doc" (dict "payload" $inComingPayload "siteParams" $siteParams) }}
+{{ partial "properties/@context/doc" (dict "payload" $inComingPayload "siteParams" $siteParams) }}
 
 {{ partial "properties/id/doc" $inComingPayload | markdownify }}
 

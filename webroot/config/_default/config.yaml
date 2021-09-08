@@ -27,7 +27,7 @@ outputs:
 
 
 params:
-  contexts:
+  "@context":
     notify:
       name: "Notify"
       uri: "http://purl.org/coar/notify"

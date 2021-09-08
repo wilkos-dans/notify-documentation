@@ -2,7 +2,7 @@
 <p>
     The <code>@context</code> must include:
 <ul>
-    {{ range .siteParams.contexts }}
+    {{ range (index .siteParams "@context") }}
         <li><a href="{{ .uri }}">{{ .name }}</a></li>
     {{ end }}
 </ul>
