@@ -11,6 +11,9 @@ payload:
         lookup: "generic-origin-system"
     target:
         lookup: "generic-target-system"
+    object:
+        payload:
+            id: urn:uuid:0370c0fb-bb78-4a9b-87f5-bed307a509dd
     in_reply_to:
         id: urn:uuid:0370c0fb-bb78-4a9b-87f5-bed307a509dd
         # type: ["Offer"]
