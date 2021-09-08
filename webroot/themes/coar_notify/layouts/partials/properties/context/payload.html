@@ -1,0 +1,15 @@
+{{ $thisPayload := .payload }}
+{{ $siteParams := .siteParams}}
+{{ $objectTypeLabel := $thisPayload.context.lookup }}
+{{ $object := dict "" ""}}
+{{ if eq $objectTypeLabel "activity to be revoked" }}
+    {{ $object = $thisPayload.context.payload}}
+{{ else }}
+    {{ if isSet $thisPayload.context "lookup" }}
+        {{ $object = (index $siteParams.objects $thisPayload.context.lookup)}}
+    {{ else }}
+        {{ $object = $thisPayload.context.payload}}
+    {{ end }}
+{{ end }}
+
+{{ return (dict "context" $object) }}

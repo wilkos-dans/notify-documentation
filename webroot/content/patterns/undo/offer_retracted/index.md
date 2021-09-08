@@ -11,10 +11,6 @@ payload:
     target:
         lookup: "generic-target-system"
     object:
-        lookup: "activity to be revoked"
-        payload:
-            "id": "urn:uuid:0370c0fb-bb78-4a9b-87f5-bed307a509dd"
-            "type": ["Offer"]
-
+        lookup: "generic-object"
 ---
 

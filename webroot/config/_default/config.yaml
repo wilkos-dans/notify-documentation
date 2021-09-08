@@ -75,11 +75,15 @@ params:
       "id": "https://aggregator-service.org"
       "type": [ "Service" ]
       "inbox": "https://aggregator-service.org/requests/inbox/"
-  objects:
+  objects: # also used for 'context' since the context is always something that may have been used as an object in these docs.
     generic-object:
       "id": "https://origin-system.org/resources/0021"
       "type": [ "Document" ]
       "ietf:cite-as": "https://doi.org/10.4598/12123487"
+    generic-object-context:
+      "id": "https://target-system.org/resources/78631"
+      "type": [ "Document" ]
+      "ietf:cite-as": "https://doi.org/10.4556/9837567"
     preprint:
       "id": "https://repository.org/preprint/201203/421/"
       "type": [ "sorg:AboutPage" ]

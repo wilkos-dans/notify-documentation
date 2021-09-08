@@ -11,6 +11,10 @@
     {{ partial "properties/actor/doc" (dict "payload" $inComingPayload "siteParams" $siteParams) | markdownify }}
 {{ end }}
 
+{{ with $inComingPayload.context }}
+    {{ partial "properties/context/doc" (dict "payload" $inComingPayload "siteParams" $siteParams) | markdownify }}
+{{ end }}
+
 {{ with $inComingPayload.in_reply_to }}
     {{ partial "properties/in_reply_to/doc" (dict "payload" $inComingPayload "siteParams" $siteParams) | markdownify }}
 {{ end }}

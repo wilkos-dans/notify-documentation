@@ -14,10 +14,9 @@ payload:
         lookup: "generic-target-system"
     object:
         lookup: generic-object
+    context:
+        lookup: generic-object-context
     in_reply_to:
         id: urn:uuid:0370c0fb-bb78-4a9b-87f5-bed307a509dd
-        type: ["Offer"]
-        object:
-            lookup: generic-object-in-reply-to
-
+        # type: ["Offer"]
 ---

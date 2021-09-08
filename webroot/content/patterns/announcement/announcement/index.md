@@ -16,4 +16,6 @@ payload:
         lookup: generic-object
     actor:
         lookup: generic-actor
+    context:
+        lookup: generic-object-context
 ---

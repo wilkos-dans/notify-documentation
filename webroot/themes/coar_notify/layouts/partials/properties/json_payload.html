@@ -11,6 +11,10 @@
     {{ $payload = merge  (partial "properties/actor/payload" (dict "payload" $inComingPayload "siteParams" $siteParams)) $payload }}
 {{ end }}
 
+{{ with $inComingPayload.context }}
+    {{ $payload = merge  (partial "properties/context/payload" (dict "payload" $inComingPayload "siteParams" $siteParams) ) $payload }}
+{{ end }}
+
 {{ with $inComingPayload.in_reply_to }}
     {{ $payload = merge  (partial "properties/in_reply_to/payload" (dict "payload" $inComingPayload "siteParams" $siteParams)) $payload }}
 {{ end }}
