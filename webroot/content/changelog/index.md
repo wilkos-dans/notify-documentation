@@ -5,18 +5,7 @@ date: 2021-05-07
 ---
 
 #### 2021-09-08
-This is a significant revision.
 
-##### General changes:
-1. All notifications now contain an `object` (as required by Activity Streams 2.0). If the notification is for an activity which has caused a resource to be created or updated, then that resource will normally be referenced (with an HTTP URI) in the `object`. If the notification has not caused a resource to be created or updated, then the object will normally contain just a local ID (e.g. a UUID URI) and possibly some simple metadata.
-2. `inReplyTo`, when used, no longer contains any references to resources - it just references the `id` of the `activity` which it is "replying" to.
-3. Notifications of activities which pertain to a existing resource may reference that existing resource in a `context` property. For example, a notification of a new review of a preprint would reference the review in the `object` property and the preprint in a `context` property.
-
-
-##### Unchanged:
-* *Offer* pattern
-* *Retraction* pattern
-* 
 
 #### 2021-07-13
 Removed the `ldp:` prefix from the `inbox` property as it is already defined in Activity Streams 2
