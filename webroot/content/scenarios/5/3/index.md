@@ -12,7 +12,5 @@ Payload:
         lookup: "repository"
     in_reply_to:
         id: urn:uuid:0370c0fb-bb78-4a9b-87f5-bed307a509dd
-        type: ["Offer","coar-notify:ReviewRequest"]
-        object:
-            lookup: preprint
+        # type: ["Offer","coar-notify:ReviewRequest"]
 ---

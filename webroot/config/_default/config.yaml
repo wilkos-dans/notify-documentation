@@ -80,10 +80,6 @@ params:
       "id": "https://origin-system.org/resources/0021"
       "type": [ "Document" ]
       "ietf:cite-as": "https://doi.org/10.4598/12123487"
-    generic-object-in-reply-to:
-      "id": "https://target-system.org/resources/0044"
-      "type": [ "Document" ]
-      "ietf:cite-as": "https://doi.org/10.1224/0983657"
     preprint:
       "id": "https://repository.org/preprint/201203/421/"
       "type": [ "sorg:AboutPage" ]
