@@ -12,7 +12,7 @@ payload:
     target:
         lookup: "generic-target-system"
     object:
-        lookup: "generic-object"
+        lookup: "generic-object-repository"
     actor:
         lookup: "generic-actor"
         obligation: may
