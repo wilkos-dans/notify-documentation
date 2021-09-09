@@ -5,6 +5,6 @@
 
 #### `origin`
 The `activity` has an `origin` describing the system which has initiated the `activity`. The `origin` has:
-*   An `id` which is an HTTP URI identifying the {{ $thisPayload.origin.lookup | default "**[UNDEFINED]**"}}.
-*   A `type` which should be an array including the value *{{ index (index $systemType "type") 0 }}* from AS 2.0.
-*   An `inbox` which is the HTTP URI of the LDN inbox for the {{ $thisPayload.origin.lookup | default "**[UNDEFINED]**"}}
+* An `id` which is an HTTP URI identifying the {{ $thisPayload.origin.lookup | default "**[UNDEFINED]**"}}.
+* A `type` which should be an array including the value *{{ index (index $systemType "type") 0 }}* from AS 2.0.
+* An `inbox` which is the HTTP URI of the LDN inbox for the {{ $thisPayload.origin.lookup | default "**[UNDEFINED]**"}}
