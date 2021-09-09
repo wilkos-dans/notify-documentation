@@ -84,10 +84,6 @@ params:
       "id": "https://service.org/resource/1234"
       "type": [ "Document" ]
       "ietf:cite-as": "https://doi.org/10.9357/123003"
-#    generic-object-context:
-#      "id": "https://repository.org/resource/1278646/"
-#      "type": [ "Document" ]
-#      "ietf:cite-as": "https://doi.org/10.1234/9873456"
     preprint:
       "id": "https://repository.org/preprint/201203/421/"
       "type": [ "sorg:AboutPage" ]
