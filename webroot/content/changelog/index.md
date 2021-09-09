@@ -4,7 +4,76 @@ description:
 date: 2021-05-07
 ---
 
-#### 2021-09-08
+#### 2021-09-09
+This is a significant revision.
+
+##### General changes:
+1. All notifications now contain an `object` (as required by Activity Streams 2.0). If the notification is for an activity which has caused a resource to be created or updated, then that resource will normally be referenced (with an HTTP URI) in the `object`. If the notification has not caused a resource to be created or updated, then the object will normally contain just a local ID (e.g. a UUID URI) and possibly some simple metadata.
+2. `inReplyTo`, when used, no longer contains any references to resources - it just references the `id` of the `activity` which it is "replying" to.
+3. Notifications of activities which pertain to a existing resource may reference that existing resource in a `context` property. For example, a notification of a new review of a preprint would reference the review in the `object` property and the preprint in a `context` property.
+
+##### Changes to patterns
+
+###### Acknowledgement patterns
+* `inReplyTo` changed to just contain URI to `offer` activity
+* `context` added
+
+###### Retraction pattern
+* `context` added
+
+###### Announcement  pattern
+* `context` added
+*
+###### Announcement in reply to pattern
+* `inReplyTo` changed to just contain URI to `offer` activity
+* `context` added
+
+##### Changes to scenarios
+
+###### Scenario 1
+* `object` in steps 3 and 5 no longer references the resource that was reviewed
+* `context` added in steps 3 and 5
+
+###### Scenario 2
+* `inReplyTo` changed to just contain URI to `offer` activity in steps 4 and 6
+* `object` in steps 4 and 6 no longer references the resource that was reviewed
+* `context` added in steps 4 and 6
+
+###### Scenario 3
+* `object` in steps 2 and 4 no longer references the resource that was reviewed
+* `context` added in steps 2 and 4
+
+###### Scenario 4
+* `object` in step 3 no longer references the resource that was reviewed
+* `context` added in step 3
+
+###### Scenario 5
+* `inReplyTo` changed to just contain URI to `offer` activity in steps 3 and 5
+* `object` added in step 3
+* `object` in step 5 no longer references the resource that was reviewed
+* `context` added in steps 3 and 5
+
+###### Scenario 6
+* `inReplyTo` changed to just contain URI to `offer` activity in step 4
+* `object` in steps 7 and 9 no longer references the resource that was reviewed
+* `context` added in steps 4, 7 and 9
+
+###### Scenario 7
+* `object` in step 2 no longer references the resource that was reviewed
+* `context` added in step 2
+
+###### Scenario 8
+* `object` in step 2 no longer references the resource that was reviewed
+* `context` added in step 2
+
+###### Scenario 9
+* `inReplyTo` changed to just contain URI to `offer` activity in steps 5 and 9
+* `object` in steps 5 and 9 no longer references the resource that was reviewed
+* `context` added in steps 5 and 9
+
+##### Unchanged:
+* *Offer* pattern
+
 
 
 #### 2021-07-13
