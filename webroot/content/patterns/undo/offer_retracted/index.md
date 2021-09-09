@@ -11,6 +11,9 @@ payload:
     target:
         lookup: "generic-target-system"
     object:
+        payload:
+            id: urn:uuid:0370c0fb-bb78-4a9b-87f5-bed307a509dd
+    context:
         lookup: "generic-object"
 ---
 

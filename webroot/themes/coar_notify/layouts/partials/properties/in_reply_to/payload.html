@@ -1,6 +1,5 @@
 {{ $thisPayload := .payload }}
 {{ $siteParams := .siteParams}}
 {{ $inReplyTo := dict "id" $thisPayload.in_reply_to.id}}
-{{/*{{ $inReplyTo = merge $inReplyTo (dict "type" $thisPayload.in_reply_to.type) }}*/}}
 
 {{ return (dict "inReplyTo" $inReplyTo) }}

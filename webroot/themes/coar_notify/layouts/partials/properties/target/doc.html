@@ -6,5 +6,5 @@
 #### `target`
 The `activity` has a `target` describing the system which has initiated the `activity`. The `target` has:
 *   An `id` which is an HTTP URI identifying the {{ $thisPayload.target.lookup | default "**[UNDEFINED]**"}}.
-*   A `type` which should be an array including the value *{{ index $systemType "type" }}* from AS 2.0.
+*   A `type` which should be an array including the value *{{ index (index $systemType "type") 0 }}* from AS 2.0.
 *   An `inbox` which is the HTTP URI of the LDN inbox for the {{ $thisPayload.target.lookup | default "**[UNDEFINED]**"}}
