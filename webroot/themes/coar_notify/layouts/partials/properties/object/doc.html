@@ -6,47 +6,49 @@
 #### `object`
 
 {{ if eq $objectTypeLabel "generic-object" }}
-This offer `activity` has an `object`. The `object` has:
-* An `id` which is the HTTP URI of the "landing page" for the resource.
-* A `type` which should be an array.
-* An `ietf:cite-as` which contains the persistent HTTP URI (sometimes called the "PID") which is to be used to cite or link to the resource.
+    This `activity` has an `object`. The `object` has:
+    * An `id` which is the HTTP URI of the "landing page" for the resource.
+    * A `type` which should be an array.
+    * An `ietf:cite-as` which contains the persistent HTTP URI (sometimes called the "PID") which is to be used to cite or link to the resource.
 {{ else if eq $objectTypeLabel "preprint" }}
-This `activity` has an `object` representing the {{ $objectTypeLabel }}. The `object` has:
-* An `id` which is the HTTP URI of the "landing page" for the resource.
-* A `type` which should be an array containing the value _AboutPage_ from schema.org.
-* An `ietf:cite-as` which contains the persistent HTTP URI (sometimes called the "PID") which is to be used to cite or link to the resource.
-* A `url` containing the details of the actual content resource. The `url` has:
+    This `activity` has an `object` representing the {{ $objectTypeLabel }}. The `object` has:
+    * An `id` which is the HTTP URI of the "landing page" for the resource.
+    * A `type` which should be an array containing the value _AboutPage_ from schema.org.
+    * An `ietf:cite-as` which contains the persistent HTTP URI (sometimes called the "PID") which is to be used to cite or link to the resource.
+    * A `url` containing the details of the actual content resource. The `url` has:
     * An `id` containing the HTTP URI of the content file for the resource.
     * A `type` describing the content file.
     * A `mediaType` which contains the MIME Type of the content file.
 {{ else if or (eq $objectTypeLabel "review") (eq $objectTypeLabel "journal-review") (eq $objectTypeLabel "repository-review") }}
-The `activity` has an `object` representing the {{ $objectTypeLabel }}. The `object`has:
-* An `id` which is the HTTP URI of the "landing page" for the resource.
-* A `type` which should be an array containing *Document* from AS 2.0.
-* An `ietf:cite-as` which contains the persistent HTTP URI (sometimes called the "PID") which is to be used to cite or link to the resource.
-* An `coar-notify:reviews` which contains the details of the resource which has been reviewed. The `coar-notify:reviews` property has:
+    The `activity` has an `object` representing the {{ $objectTypeLabel }}. The `object`has:
+    * An `id` which is the HTTP URI of the "landing page" for the resource.
+    * A `type` which should be an array containing *Document* from AS 2.0.
+    * An `ietf:cite-as` which contains the persistent HTTP URI (sometimes called the "PID") which is to be used to cite or link to the resource.
+    * An `coar-notify:reviews` which contains the details of the resource which has been reviewed. The `coar-notify:reviews` property has:
     * An `id` containing the HTTP URI of the content file for the resource.
     * An `ietf:cite-as` which contains the persistent HTTP URI (sometimes called the "PID") which is to be used to cite or link to the resource.
 {{ else if eq $objectTypeLabel "endorsement" }}
-The `activity` has an `object` representing the {{ $objectTypeLabel }}. The `object`has:
-* An `id` which is the HTTP URI of the "landing page" for the resource.
-* A `type` which should be an array containing *Page* from AS 2.0.
-* An `ietf:cite-as` which contains the persistent HTTP URI (sometimes called the "PID") which is to be used to cite or link to the resource.
-* An `coar-notify:endorses` which contains the details of the resource which has been reviewed. The `coar-notify:endorses` property has:
+    The `activity` has an `object` representing the {{ $objectTypeLabel }}. The `object`has:
+    * An `id` which is the HTTP URI of the "landing page" for the resource.
+    * A `type` which should be an array containing *Page* from AS 2.0.
+    * An `ietf:cite-as` which contains the persistent HTTP URI (sometimes called the "PID") which is to be used to cite or link to the resource.
+    * An `coar-notify:endorses` which contains the details of the resource which has been reviewed. The `coar-notify:endorses` property has:
     * An `id` containing the HTTP URI of the content file for the resource.
     * An `ietf:cite-as` which contains the persistent HTTP URI (sometimes called the "PID") which is to be used to cite or link to the resource.
 {{ else if eq $objectTypeLabel "submission" }}
-The `activity` has an `object` representing the {{ $objectTypeLabel }}. The `object`has:
-* An `id` which is the HTTP URI of the "landing page" for the resource.
-* A `type` which should be an array containing _AboutPage_ from schema.org.
-* A `url` containing the details of the actual content resource. The `url` has:
+    The `activity` has an `object` representing the {{ $objectTypeLabel }}. The `object`has:
+    * An `id` which is the HTTP URI of the "landing page" for the resource.
+    * A `type` which should be an array containing _AboutPage_ from schema.org.
+    * A `url` containing the details of the actual content resource. The `url` has:
     * An `id` containing the HTTP URI of the content file for the resource.
     * A `type` describing the content file.
     * A `mediaType` which contains the MIME Type of the content file.
 {{ else if eq $objectTypeLabel "activity to be revoked" }}
-The `activity` has an `object` representing the {{ $objectTypeLabel }}. The `object`has:
-* An `id` which MUST contain the URI for the {{ $objectTypeLabel }}
-* A `type` which SHOULD be an array and, in any case, MUST describe the type of the {{ $objectTypeLabel }}
+    The `activity` has an `object` representing the {{ $objectTypeLabel }}. The `object`has:
+    * An `id` which MUST contain the URI for the {{ $objectTypeLabel }}
+    * A `type` which SHOULD be an array and, in any case, MUST describe the type of the {{ $objectTypeLabel }}
+{{ else }}This `activity` has an `object`. The `object` has:
+    * An `id` which is an URI identifying the object of this activity.
 {{ end }}
 
 
