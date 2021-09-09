@@ -5,7 +5,7 @@
 {{ $objectType := index $siteParams.objects $objectTypeLabel }}
 #### `context`
 
-{{ if or (eq $objectTypeLabel "generic-object") (eq $objectTypeLabel "generic-object-context") }}
+{{ if or (eq $objectTypeLabel "generic-object-repository") (eq $objectTypeLabel "generic-object-service") }}
 This `activity` has a `context`. The `context` has:
 * An `id` which is the HTTP URI of the "landing page" for the resource.
 * A `type` which should be an array.
