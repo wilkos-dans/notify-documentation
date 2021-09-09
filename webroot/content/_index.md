@@ -4,7 +4,7 @@ description:
 date: 2018-12-20
 ---
 
-This website documents community conventions in the use of W3C [Linked Data Notifications](https://www.w3.org/TR/2017/REC-ldn-20170502/) (LDN) to integrate repository systems with relevant services in a distributed, resilient and web-native architecture...
+This website documents community conventions in the use of W3C [Linked Data Notifications](https://www.w3.org/TR/2017/REC-ldn-20170502/) (LDN) to integrate repository systems with relevant services in a distributed, resilient and web-native architecture.
 
 The documentation specifies:
 
