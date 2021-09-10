@@ -11,6 +11,7 @@ This is a significant revision.
 1. All notifications now contain an `object` (as required by Activity Streams 2.0). If the notification is for an activity which has caused a resource to be created or updated, then that resource will normally be referenced (with an HTTP URI) in the `object`. If the notification has not caused a resource to be created or updated, then the object will normally contain just a local ID (e.g. a UUID URI) and possibly some simple metadata.
 2. `inReplyTo`, when used, no longer contains any references to resources - it just references the `id` of the `activity` which it is "replying" to.
 3. Notifications of activities which pertain to a existing resource may reference that existing resource in a `context` property. For example, a notification of a new review of a preprint would reference the review in the `object` property and the preprint in a `context` property.
+4. The vocabulary and related COAR @context for Notify has been significantly simplified.
 
 ##### Changes to patterns
 
@@ -29,6 +30,11 @@ This is a significant revision.
 * `context` added
 
 ##### Changes to scenarios
+
+Terms from the COAR Notify vocabulary have changed in the scenarios:
+* `coar-notify:ReviewSuccess` has become `coar-notify:ReviewAction`
+* `coar-notify:EndorsementSuccess` has become `coar-notify:EndorsementAction`
+* `coar-notify:IngestSuccess` has become `coar-notify:IngestAction`
 
 ###### Scenario 1
 * `object` in steps 3 and 5 no longer references the resource that was reviewed
