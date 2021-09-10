@@ -15,6 +15,7 @@ payload:
         payload:
             id: urn:uuid:0370c0fb-bb78-4a9b-87f5-bed307a509dd
             type: ['Offer']
+            object: "https://repository.org/resource/0021"
     context:
         lookup: "generic-object-repository"
     in_reply_to:
