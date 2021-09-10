@@ -23,7 +23,7 @@ This is a significant revision.
 
 ###### Announcement  pattern
 * `context` added
-*
+
 ###### Announcement in reply to pattern
 * `inReplyTo` changed to just contain URI to `offer` activity
 * `context` added
