@@ -26,6 +26,7 @@ These general changes have been made across all patterns and scenarios.
 
 ###### Announcement  pattern
 * `context` added
+* `actor` removed
 
 ###### Announcement in reply to pattern
 * `inReplyTo` changed to just contain URI to `offer` activity
@@ -41,15 +42,18 @@ Terms from the COAR Notify vocabulary have changed in the scenarios:
 ###### Scenario 1
 * `object` in steps 3 and 5 no longer references the resource that was reviewed
 * `context` added in steps 3 and 5
+* `actor` removed from step 3
 
 ###### Scenario 2
 * `inReplyTo` changed to just contain URI to `offer` activity in steps 4 and 6
 * `object` in steps 4 and 6 no longer references the resource that was reviewed
 * `context` added in steps 4 and 6
+* `actor` removed from step 4
 
 ###### Scenario 3
 * `object` in steps 2 and 4 no longer references the resource that was reviewed
 * `context` added in steps 2 and 4
+* `actor` removed from step 2
 
 ###### Scenario 4
 * `object` in step 3 no longer references the resource that was reviewed
@@ -60,24 +64,29 @@ Terms from the COAR Notify vocabulary have changed in the scenarios:
 * `object` added in step 3
 * `object` in step 5 no longer references the resource that was reviewed
 * `context` added in steps 3 and 5
+* `actor` removed from step 5
 
 ###### Scenario 6
 * `inReplyTo` changed to just contain URI to `offer` activity in step 4
 * `object` in steps 7 and 9 no longer references the resource that was reviewed
 * `context` added in steps 4, 7 and 9
+* `actor` removed from step 7
 
 ###### Scenario 7
 * `object` in step 2 no longer references the resource that was reviewed
 * `context` added in step 2
+* `actor` removed from step 2
 
 ###### Scenario 8
 * `object` in step 2 no longer references the resource that was reviewed
 * `context` added in step 2
+* `actor` removed from step 2
 
 ###### Scenario 9
 * `inReplyTo` changed to just contain URI to `offer` activity in steps 5 and 9
 * `object` in steps 5 and 9 no longer references the resource that was reviewed
 * `context` added in steps 5 and 9
+* `actor` removed from step 5
 
 ##### Unchanged:
 * *Offer* pattern

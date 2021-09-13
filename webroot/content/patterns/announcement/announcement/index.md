@@ -14,8 +14,6 @@ payload:
         lookup: "generic-target-system"
     object:
         lookup: generic-object-service
-    actor:
-        lookup: generic-actor
     context:
         lookup: generic-object-repository
 ---

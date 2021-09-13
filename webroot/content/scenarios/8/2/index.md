@@ -15,7 +15,5 @@ payload:
         lookup: "repository"
     object:
         lookup: review
-    actor:
-        lookup: reviewer
 ---
 

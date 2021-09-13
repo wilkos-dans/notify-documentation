@@ -15,7 +15,5 @@ payload:
         lookup: "overlay-journal"
     object:
         lookup: "repository-review"
-    actor:
-        lookup: reviewer
 ---
 

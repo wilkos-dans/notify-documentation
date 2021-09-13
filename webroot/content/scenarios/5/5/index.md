@@ -20,7 +20,5 @@ payload:
         type: ["Offer","coar-notify:ReviewRequest"]
         object:
             lookup: preprint
-    actor:
-        lookup: reviewer
 ---
 

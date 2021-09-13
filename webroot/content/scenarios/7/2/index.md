@@ -15,7 +15,5 @@ payload:
         lookup: "aggregation-service"
     object:
         lookup: review
-    actor:
-        lookup: reviewer
 ---
 

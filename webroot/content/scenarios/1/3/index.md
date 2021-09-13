@@ -17,7 +17,5 @@ payload:
         lookup: "journal-review"
     context:
         lookup: generic-object-repository
-    actor:
-        lookup: reviewer
 ---
 
