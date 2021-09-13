@@ -7,7 +7,7 @@ status: [review,draft]
 weight: 2
 payload:
     id: "urn:uuid:94ecae35-dcfd-4182-8550-22c7164fe23f"
-    type: ["Announce"]
+    type: "Announce"
     origin:
         lookup: "generic-origin-system"
     target:

@@ -6,7 +6,7 @@ layout: pattern_example
 status: [review,draft]
 payload:
     id: "urn:uuid:0370c0fb-bb78-4a9b-87f5-bed307a509dd"
-    type: ["Offer"]
+    type: "Offer"
     origin:
         lookup: "generic-origin-system"
     target:

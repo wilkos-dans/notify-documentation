@@ -1,7 +1,8 @@
 {{ $thisPayload := . }}
 #### `type`
-{{ if gt (len $thisPayload.type) 1 }}
-The `activity` has a `type` array which should be an array including *{{ index $thisPayload.type 0 }}* from AS 2.0 and *{{ index $thisPayload.type 1 }}* from Notify.
+
+{{ if reflect.IsSlice $thisPayload.type }}
+The `activity` has a `type` which should include at least *{{ index $thisPayload.type 0 }}* from AS 2.0 and *{{ index $thisPayload.type 1 }}* from Notify.
 {{ else }}
-The `activity` has a `type` which should be an array containing the value *{{ index $thisPayload.type 0 }}* from AS 2.0.
+The `activity` has a `type` which should include at least the value *{{ $thisPayload.type }}* from AS 2.0.
 {{ end }}

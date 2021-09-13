@@ -8,10 +8,12 @@ date: 2021-05-07
 This is a significant revision.
 
 ##### General changes:
+These general changes have been made across all patterns and scenarios.
 1. All notifications now contain an `object` (as required by Activity Streams 2.0). If the notification is for an activity which has caused a resource to be created or updated, then that resource will normally be referenced (with an HTTP URI) in the `object`. If the notification has not caused a resource to be created or updated, then the object will normally contain just a local ID (e.g. a UUID URI) and possibly some simple metadata.
 2. `inReplyTo`, when used, no longer contains any references to resources - it just references the `id` of the `activity` which it is "replying" to.
 3. Notifications of activities which pertain to a existing resource may reference that existing resource in a `context` property. For example, a notification of a new review of a preprint would reference the review in the `object` property and the preprint in a `context` property.
 4. The vocabulary and related COAR @context for Notify has been significantly simplified.
+5. Syntax has generally been simplified. Previously we were suggesting using arrays anytime there might be more than one value for a property. Now we use the simpler scalar form of property values where there is a single value in the example. This applies to the activity's `type`, `inReplyTo`, and the `type` in `origin`, `object`, `target` and `actor`.
 
 ##### Changes to patterns
 
