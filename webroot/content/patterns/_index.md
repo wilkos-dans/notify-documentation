@@ -13,12 +13,12 @@ All *Notify* payloads define an *Activity Streams 2.0* `activity`, and include o
 notification patterns:
 
 * **The `activity`** property must contain the following properties:
-    * **`id`:** This must be a URI, and the use of URN:UUID is recommended. An HTTP URI may be used, but in such cases the URI should resolve to a useful resource.
-    * **`type`:** This should be an array, and in any case must include one of the [Activity Stream 2.0 Activity Types](https://www.w3.org/TR/activitystreams-vocabulary/). It may (depending on the activity) also include a type from the [Notify Activity Types vocabulary](/vocabularies/activity_types/)
+    * **`id`:** This must be a URI, and the use of URN:UUID is recommended. An HTTP URI may be used, but in such cases the URI should resolve to a resource which represents the activity.
+    * **`type`:** This should include one of the [Activity Stream 2.0 Activity Types](https://www.w3.org/TR/activitystreams-vocabulary/). It may (depending on the activity) also include a type from the [Notify Activity Types vocabulary](/vocabularies/activity_types/)
     * **`origin`:** The originator of the activity, typically the service responsible for *sending* the notification.
     * **`target`:** The intended destination of the activity, typically the service which *consumes* the notification.
 * **The `activity`** property may (and often will) contain the following properties:
-    * **`object`:** This should be a Web *resource*, generally the focus of the activity. Other object properties may appear in notifications, as properties of other properties. The activity itself should have zero or one object properties.
+    * **`object`:** This should be the focus of the activity. Other object properties may appear in notifications, as properties of other properties. The activity itself should have exactly one object property.
     * **`actor`:** Sometimes it is useful to identify the party or process that initiated the activity, in which case this initiator should be expressed as an `actor`.
 
 The following notification patterns are defined to be widely reusable. Their re-use is illustrated in the [example scenarios](/scenarios/).
