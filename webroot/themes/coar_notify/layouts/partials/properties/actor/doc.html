@@ -3,16 +3,22 @@
 {{ $actorType := index $siteParams.actors $thisPayload.actor.lookup }}
 
 #### `actor`
-{{ if ne $thisPayload.actor.lookup "generic-actor" }}
-The `activity` {{ $thisPayload.actor.obligation | default "may" }}  have an `actor` describing the {{ $thisPayload.actor.lookup }}. The `actor`:
+The `activity` {{ $thisPayload.actor.obligation | default "may" }}  have an `actor` describing the party responsible for initiating this `activity`. The `actor`:
 * has an `id` which must be an HTTP URI identifying the {{ $thisPayload.actor.lookup }}.
 * has a `type` which should include *{{ $actorType.type }}* from AS 2.0.
 * may have an `inbox` which must be an HTTP URI
 * may have a name
-{{ else }}
-The `activity` {{ $thisPayload.actor.obligation | default "MAY" }}  have an `actor` describing the party responsible for initiating this `activity`. The `actor`:
-* has an `id` which must be an HTTP URI.
-* has a `type` which should include a value from from AS 2.0.
-* may have an `inbox` which must be an HTTP URI
-* may have a name
-{{ end }}
+
+{{/*{{ if ne $thisPayload.actor.lookup "generic-actor" }}*/}}
+{{/*The `activity` {{ $thisPayload.actor.obligation | default "may" }}  have an `actor` describing the {{ $thisPayload.actor.lookup }}. The `actor`:*/}}
+{{/** has an `id` which must be an HTTP URI identifying the {{ $thisPayload.actor.lookup }}.*/}}
+{{/** has a `type` which should include *{{ $actorType.type }}* from AS 2.0.*/}}
+{{/** may have an `inbox` which must be an HTTP URI*/}}
+{{/** may have a name*/}}
+{{/*{{ else }}*/}}
+{{/*The `activity` {{ $thisPayload.actor.obligation | default "MAY" }}  have an `actor` describing the party responsible for initiating this `activity`. The `actor`:*/}}
+{{/** has an `id` which must be an HTTP URI.*/}}
+{{/** has a `type` which should include a value from from AS 2.0.*/}}
+{{/** may have an `inbox` which must be an HTTP URI*/}}
+{{/** may have a name*/}}
+{{/*{{ end }}*/}}

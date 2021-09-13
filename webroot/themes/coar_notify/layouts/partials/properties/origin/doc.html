@@ -4,7 +4,7 @@
 {{ $systemType := index $siteParams.systems $thisPayload.origin.lookup }}
 
 #### `origin`
-The `activity` has an `origin` describing the system which has initiated the `activity`. The `origin` has:
+The `activity` has an `origin` describing the system which has sent the notification. The `origin` has:
 * An `id` which is an HTTP URI identifying the {{ $thisPayload.origin.lookup | default "**[UNDEFINED]**"}}.
 * A `type` which should include the value *{{ index $systemType "type" }}* from AS 2.0.
 * An `inbox` which is the HTTP URI of the LDN inbox for the {{ $thisPayload.origin.lookup | default "**[UNDEFINED]**"}}
