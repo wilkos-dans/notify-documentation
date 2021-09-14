@@ -19,7 +19,7 @@ payload:
         lookup: submission
     in_reply_to:
         id: urn:uuid:0370c0fb-bb78-4a9b-87f5-bed307a509dd
-        type: ["Offer","coar-notify:IngestRequest"]
+        type: ["Offer","coar-notify:IngestAction"]
         object: 
 ---
 

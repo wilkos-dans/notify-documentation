@@ -17,6 +17,6 @@ payload:
         lookup: "journal-review"
     in_reply_to:
         id: urn:uuid:0370c0fb-bb78-4a9b-87f5-bed307a509dd
-        # type: ["Offer","coar-notify:ReviewRequest"]
+        # type: ["Offer","coar-notify:ReviewAction"]
 ---
 
