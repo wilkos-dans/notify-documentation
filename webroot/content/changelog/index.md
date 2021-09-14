@@ -32,12 +32,22 @@ These general changes have been made across all patterns and scenarios.
 * `inReplyTo` changed to just contain URI to `offer` activity
 * `context` added
 
-##### Changes to scenarios
-
-Terms from the COAR Notify vocabulary have changed in the scenarios:
+##### Changes to the vocabularies
+The following terms from the COAR Notify vocabulary have changed:
 * `coar-notify:ReviewSuccess` has become `coar-notify:ReviewAction`
 * `coar-notify:EndorsementSuccess` has become `coar-notify:EndorsementAction`
 * `coar-notify:IngestSuccess` has become `coar-notify:IngestAction`
+
+The following terms from the COAR Notify vocabulary have been removed:
+* `ReviewRequest`
+* `ReviewFailure`
+* `EndorsementRequest`
+* `EndorsementFailure`
+* `IngestRequest`
+* `reviews`
+* `endorses`
+
+##### Changes to scenarios
 
 ###### Scenario 1
 * `object` in steps 3 and 5 no longer references the resource that was reviewed
