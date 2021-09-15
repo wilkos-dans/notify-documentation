@@ -24,17 +24,17 @@ The `activity` has an `object` representing the {{ $objectTypeLabel }}. The `obj
 * An `id` which is the HTTP URI of the "landing page" for the resource.
 * A `type` which should include the value *Document* from AS 2.0.
 * An `ietf:cite-as` which contains the persistent HTTP URI (sometimes called the "PID") which is to be used to cite or link to the resource.
-* An `coar-notify:reviews` which contains the details of the resource which has been reviewed. The `coar-notify:reviews` property has:
-  * An `id` containing the HTTP URI of the content file for the resource.
-  * An `ietf:cite-as` which contains the persistent HTTP URI (sometimes called the "PID") which is to be used to cite or link to the resource.
+{{/** An `coar-notify:reviews` which contains the details of the resource which has been reviewed. The `coar-notify:reviews` property has:*/}}
+{{/*  * An `id` containing the HTTP URI of the content file for the resource.*/}}
+{{/*  * An `ietf:cite-as` which contains the persistent HTTP URI (sometimes called the "PID") which is to be used to cite or link to the resource.*/}}
 {{ else if eq $objectTypeLabel "endorsement" }}
 The `activity` has an `object` representing the {{ $objectTypeLabel }}. The `object`has:
 * An `id` which is the HTTP URI of the "landing page" for the resource.
 * A `type` which should include the value *Page* from AS 2.0.
 * An `ietf:cite-as` which contains the persistent HTTP URI (sometimes called the "PID") which is to be used to cite or link to the resource.
-* An `coar-notify:endorses` which contains the details of the resource which has been reviewed. The `coar-notify:endorses` property has:
-  * An `id` containing the HTTP URI of the content file for the resource.
-  * An `ietf:cite-as` which contains the persistent HTTP URI (sometimes called the "PID") which is to be used to cite or link to the resource.
+{{/** An `coar-notify:endorses` which contains the details of the resource which has been reviewed. The `coar-notify:endorses` property has:*/}}
+{{/*  * An `id` containing the HTTP URI of the content file for the resource.*/}}
+{{/*  * An `ietf:cite-as` which contains the persistent HTTP URI (sometimes called the "PID") which is to be used to cite or link to the resource.*/}}
 {{ else if eq $objectTypeLabel "submission" }}
 The `activity` has an `object` representing the {{ $objectTypeLabel }}. The `object`has:
 * An `id` which is the HTTP URI of the "landing page" for the resource.
